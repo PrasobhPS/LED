@@ -293,7 +293,7 @@ export function useSiteEffects(title) {
     const heroNext = document.getElementById('hero-next');
     const heroCounter = document.getElementById('hero-counter');
     if (heroSlider && heroPrev && heroNext && heroCounter) {
-      const totalSlides = 6;
+      const totalSlides = heroSlider.children.length;
       let currentSlide = 0;
       const updateSlider = () => {
         heroSlider.style.transform = `translateX(-${currentSlide * 100}%)`;

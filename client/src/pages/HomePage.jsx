@@ -1,6 +1,23 @@
 import { Link } from 'react-router-dom';
 import { useSiteEffects } from '../hooks/useSiteEffects';
 
+const heroSlides = [
+  { src: '/images/sgm-signage-color.jpg', alt: 'SANS GLOWMETRIC digital billboard at night' },
+  { src: '/images/screens/sr-9.png', alt: 'Premium LED Billboard' },
+  { src: '/images/sgm-signage-accent.jpg', alt: 'SANS GLOWMETRIC illuminated building sign' },
+  { src: '/images/screens/sr-10.png', alt: 'Premium LED Billboard' },
+  { src: '/images/screens/sr-3.jpeg', alt: 'Premium LED Billboard' },
+];
+
+const heroSlideOverlay = {
+  position: 'absolute',
+  inset: 0,
+  width: '100%',
+  height: '100%',
+  pointerEvents: 'none',
+  background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)',
+};
+
 export default function HomePage() {
   useSiteEffects("SANS GLOWMETRIC | LED Displays & Digital Media");
   return (
@@ -121,36 +138,12 @@ export default function HomePage() {
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
       {/* Slider Track Container */}
       <div id="hero-slider" className="absolute inset-0 w-full h-full z-0 flex transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
-        {/* Slide 1 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-9.png" className="w-full h-full object-cover" alt="Premium LED Billboard 1" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
-        {/* Slide 2 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-10.png" className="w-full h-full object-cover" alt="Premium LED Billboard 2" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
-        {/* Slide 3 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-3.jpeg" className="w-full h-full object-cover" alt="Premium LED Billboard 3" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
-        {/* Slide 4 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-4.jpeg" className="w-full h-full object-cover" alt="Premium LED Billboard 4" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
-        {/* Slide 5 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-5.jpeg" className="w-full h-full object-cover" alt="Premium LED Billboard 5" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
-        {/* Slide 6 */}
-        <div className="relative w-full h-full flex-shrink-0">
-          <img src="/images/screens/sr-7.jpeg" className="w-full h-full object-cover" alt="Premium LED Billboard 6" />
-          <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
-        </div>
+        {heroSlides.map((slide) => (
+          <div key={slide.src} className="relative w-full h-full flex-shrink-0">
+            <img src={slide.src} className="w-full h-full object-cover object-center" alt={slide.alt} />
+            <div className="hero-slide-overlay" style={heroSlideOverlay} />
+          </div>
+        ))}
       </div>
     </div>
     {/* The True Glass Background (Left panel) */}
@@ -208,7 +201,7 @@ export default function HomePage() {
       <button id="hero-prev" className="hover:text-[#168BEB] transition-colors"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg></button>
-      <span id="hero-counter">01 / 06</span>
+      <span id="hero-counter">01 / 05</span>
       <button id="hero-next" className="hover:text-[#168BEB] transition-colors"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3">
           </path>
@@ -460,14 +453,14 @@ export default function HomePage() {
         <div className="lg:col-span-8 w-full">
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-ew-resize select-none" data-reveal="true">
             {/* After Image (Base Layer) */}
-            <img src="/images/led_billboard.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Digital Billboard" />
+            <img src="/images/sgm-signage-color.jpg" className="absolute inset-0 w-full h-full object-cover object-center" alt="Digital Billboard" />
             {/* After Label */}
             <div className="absolute bottom-6 right-6 bg-[#071521]/90 backdrop-blur-md px-4 py-2 rounded-full text-white text-[11px] font-bold tracking-[0.15em] uppercase z-10 border border-white/10 shadow-lg">
               After
             </div>
             {/* Before Image (Clipped Overlay - slides left on hover) */}
             <div className="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)] [clip-path:inset(0_0_0_0)] group-hover:[clip-path:inset(0_100%_0_0)] z-20">
-              <img src="/images/led_billboard.jpg" className="absolute inset-0 w-full h-full object-cover grayscale" alt="Static Billboard" />
+              <img src="/images/sgm-signage-mono.jpg" className="absolute inset-0 w-full h-full object-cover object-center" alt="Static Billboard" />
               {/* Overlay divider line */}
               <div className="absolute top-0 right-0 w-[2px] h-full bg-[#168BEB] shadow-[0_0_20px_rgba(22, 139, 235, 0.8)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               </div>
