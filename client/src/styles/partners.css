@@ -171,9 +171,14 @@ textarea.deal-input {
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 5.5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .partners-hero-container {
+    padding: 6rem 3rem;
+  }
 }
 .partners-hero-title {
   font-size: clamp(34px, 4.5vw, 56px);
@@ -196,17 +201,23 @@ textarea.deal-input {
 
 /* 2. HOW A WALL IS BUILT SECTION */
 .partners-build-sec {
-  padding: 6rem 1.5rem;
+  padding: 6rem 0;
   background-color: #ffffff;
   border-bottom: 1px solid #f1f5f9;
 }
 .partners-build-container {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 4.5rem;
   align-items: start;
+}
+@media (min-width: 768px) {
+  .partners-build-container {
+    padding: 0 3rem;
+  }
 }
 .partners-section-title {
   font-size: clamp(28px, 3.2vw, 42px);
@@ -335,13 +346,19 @@ textarea.deal-input {
 
 /* 3. ON THE WALL SECTION */
 .partners-wall-sec {
-  padding: 6rem 1.5rem;
+  padding: 6rem 0;
   background-color: #f8fafc;
   border-bottom: 1px solid #f1f5f9;
 }
 .partners-wall-container {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .partners-wall-container {
+    padding: 0 3rem;
+  }
 }
 .partners-subrow-head {
   display: flex;
@@ -686,7 +703,16 @@ textarea.deal-input {
     opacity: 0.25;
   }
   .partners-build-sec {
-    padding: 4rem 1.25rem;
+    padding: 4rem 0;
+  }
+  .partners-wall-sec {
+    padding: 4rem 0;
+  }
+  .partners-hero-container,
+  .partners-build-container,
+  .partners-wall-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   .partners-capabilities-grid {
     grid-template-columns: 1fr;
@@ -697,9 +723,6 @@ textarea.deal-input {
     height: 160px;
     bottom: -15px;
     right: -10px;
-  }
-  .partners-wall-sec {
-    padding: 4rem 1.25rem;
   }
   .partners-subrow-head {
     align-items: flex-start;

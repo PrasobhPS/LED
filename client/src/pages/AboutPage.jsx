@@ -5,22 +5,22 @@ export default function AboutPage() {
   return (
 <>
   {/* Hero Section: Index Mirror Layout */}
-  <section className="relative w-full overflow-hidden flex mt-[72px] bg-[#071521]">
+  <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[500px] md:min-h-[580px] lg:min-h-[620px]">
     {/* Right Side Image Container (With Feathered Left Edge) */}
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
       <img src="/images/2.png" className="w-full h-full object-cover" alt="About Hero" />
       <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
     </div>
-    <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full" style={{paddingTop: '5rem', paddingBottom: '5rem'}}>
-      <div className="max-w-2xl w-full py-10 gsap-fade-up">
-        <div className="flex items-center gap-3 mb-6">
+    <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-12 md:py-24 lg:py-28">
+      <div className="max-w-2xl w-full py-2 md:py-6 gsap-fade-up">
+        <div className="flex items-center gap-3 mb-5 md:mb-6">
           <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">LED Screen
             Solutions</span>
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-6 tracking-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight">
           Big Screens.<br />Bigger Impressions.
         </h1>
-        <p className="text-gray-300 text-[15px] md:text-lg leading-relaxed mb-10 max-w-[500px]">
+        <p className="text-gray-300 text-[15px] md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[500px]">
           We design, supply and install high-quality LED screens for events, retail, corporate and public
           spaces. Turn your ideas into stunning visual experiences.
         </p>

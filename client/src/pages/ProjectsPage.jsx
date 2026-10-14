@@ -17,32 +17,52 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#071521]">
-        <img src="/images/screens/sr-10.png" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" alt="LED wall project" />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #071521 0%, rgba(7, 21, 33, 0.75) 50%, rgba(7, 21, 33, 0.45) 100%)', pointerEvents: 'none' }} />
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="text-[10px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Projects</span>
+      {/* Hero Section */}
+      <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521', minHeight: '500px' }}>
+        <div className="absolute inset-0 z-0 w-full h-full">
+          <img
+            src="/images/screens/sr-10.png"
+            className="w-full h-full object-cover object-center md:object-right"
+            alt="LED wall project"
+          />
+          <div
+            className="absolute inset-0 w-full h-full"
+            style={{
+              background: 'linear-gradient(to top, #071521 0%, transparent 25%), linear-gradient(to right, #071521 0%, #071521 38%, rgba(7, 21, 33, 0.85) 60%, rgba(7, 21, 33, 0.35) 100%)',
+              pointerEvents: 'none',
+            }}
+          />
+        </div>
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full py-16 md:py-24">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Projects</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-[56px] xl:text-[62px] font-bold text-white leading-[1.15] mb-6 tracking-tight">
+              LED installations.<br />Completed work.
+            </h1>
+            <p className="text-gray-300 text-[15px] md:text-base leading-relaxed max-w-[520px]">
+              Outdoor walls, facades, billboards, indoor displays and retail installations, with the specification for each one.
+            </p>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white mb-6 leading-tight tracking-tight max-w-4xl mx-auto">
-            LED installations.<br />Completed work.
-          </h1>
-          <p className="text-gray-300 text-[15px] max-w-2xl mx-auto leading-relaxed">
-            Outdoor walls, facades, billboards, indoor displays and retail installations, with the specification for each one.
-          </p>
         </div>
       </section>
-      <section className="py-24 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="flex items-center gap-2 mb-10 md:mb-16 md:flex-wrap md:justify-center">
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
+          <div id="portfolio-filters" className="projects-filter-bar">
             {FILTERS.map((item) => (
               <button
                 key={item}
                 type="button"
-                onClick={() => setFilter(item)}
-                className={item === filter
-                  ? 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase bg-[#071521] text-white rounded-full'
-                  : 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase text-gray-500 hover:text-[#071521] hover:bg-gray-100 transition-colors rounded-full'}
+                onClick={(e) => {
+                  setFilter(item);
+                  e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }}
+                className={`filter-btn ${
+                  item === filter
+                    ? 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase bg-[#071521] text-white rounded-full shadow-sm'
+                    : 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase text-gray-500 hover:text-[#071521] hover:bg-gray-100 transition-colors rounded-full'
+                }`}
               >
                 {item}
               </button>

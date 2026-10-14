@@ -105,6 +105,15 @@
 #mobile-menu-panel {
     transform: translateX(100%);
     z-index: 10000;
+    width: 90% !important;
+    max-width: 420px !important;
+}
+
+@media (min-width: 640px) {
+    #mobile-menu-panel {
+        width: 85% !important;
+        max-width: 440px !important;
+    }
 }
 
 /* Hero Section & Decorative Glass */

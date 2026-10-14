@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import { NAV } from '../data/navigation';
 
 function linkClass(active, id) {
-  if (active === id) return 'text-[#071521] border-b-2 border-[#168BEB] pb-1';
-  return 'hover:text-[#071521] transition-colors pb-1';
+  const base = 'outline-none focus:outline-none focus:ring-0 transition-colors pb-1 select-none';
+  if (active === id) return `${base} text-[#071521] border-b-2 border-[#168BEB]`;
+  return `${base} hover:text-[#071521] border-b-2 border-transparent`;
 }
 
 export default function SiteHeader({ active }) {
@@ -11,7 +12,7 @@ export default function SiteHeader({ active }) {
     <>
       <nav className="w-full bg-white border-b border-gray-100 py-4 fixed top-0 z-[100]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
-          <Link to="/" className="flex items-center shrink-0">
+          <Link to="/" className="flex items-center shrink-0 outline-none focus:outline-none">
             <img src="/images/sanspng-bluetheme.png" alt="SANS GLOWMETRIC" className="h-8 w-auto object-contain shrink-0 navbar-brand-logo" />
           </Link>
           <div className="hidden lg:flex gap-8 text-[13px] font-medium text-gray-500">
@@ -20,7 +21,7 @@ export default function SiteHeader({ active }) {
             ))}
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/contact" className="px-5 py-2 rounded-lg text-[13px] font-semibold text-white bg-[#168BEB] hover:bg-[#0D2942] transition-colors">
+            <Link to="/contact" className="px-5 py-2 rounded-lg text-[13px] font-semibold text-white bg-[#168BEB] hover:bg-[#0D2942] transition-colors outline-none focus:outline-none">
               Get an LED Wall
             </Link>
           </div>
@@ -38,7 +39,7 @@ export default function SiteHeader({ active }) {
       </nav>
       <div id="mobile-menu" className="fixed inset-0 hidden">
         <div id="mobile-menu-overlay" className="absolute inset-0 bg-[#071521]/80 backdrop-blur-md opacity-0 transition-opacity duration-300" />
-        <div id="mobile-menu-panel" className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[360px] bg-white shadow-2xl transition-transform duration-300 flex flex-col">
+        <div id="mobile-menu-panel" className="absolute right-0 top-0 bottom-0 w-[90%] sm:w-[85%] max-w-[420px] bg-white shadow-2xl transition-transform duration-300 flex flex-col">
           <div className="p-5 border-b border-gray-100 flex justify-between items-center bg-gray-50/60">
             <Link to="/" className="flex items-center">
               <img src="/images/sanspng-bluetheme.png" alt="SANS GLOWMETRIC" className="h-6 object-contain mobile-menu-logo" />
