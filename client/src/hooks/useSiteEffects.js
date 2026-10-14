@@ -399,7 +399,8 @@ export function useSiteEffects(title) {
 
     const pinnedSection = document.getElementById('gsap-pinned-stack');
     const stackItems = gsap.utils.toArray('.stack-item');
-    if (pinnedSection && stackItems.length >= 5) {
+    const stackIsMobile = window.matchMedia('(max-width: 767px)').matches;
+    if (pinnedSection && stackItems.length >= 5 && !stackIsMobile) {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: pinnedSection,
@@ -419,6 +420,36 @@ export function useSiteEffects(title) {
         .to(stackItems[4], { y: 0, duration: 1 })
         .to(stackItems[3], { scale: 0.95, opacity: 0.5, duration: 1 }, '<')
         .to({}, { duration: 0.5 });
+    }
+
+    const stackContainer = document.getElementById('stack-container');
+    if (stackContainer && stackItems.length > 1 && stackIsMobile) {
+      let slideTimer;
+      const advanceStack = () => {
+        const slide = stackContainer.querySelector('.stack-item');
+        if (!slide) return;
+        const gap = Number.parseFloat(getComputedStyle(stackContainer).columnGap) || 0;
+        const step = slide.offsetWidth + gap;
+        const maxScroll = stackContainer.scrollWidth - stackContainer.clientWidth;
+        const next = stackContainer.scrollLeft + step;
+        stackContainer.scrollTo({
+          left: next >= maxScroll - 8 ? 0 : next,
+          behavior: next >= maxScroll - 8 ? 'auto' : 'smooth',
+        });
+      };
+      const startStackTimer = () => {
+        window.clearInterval(slideTimer);
+        slideTimer = window.setInterval(advanceStack, 3500);
+      };
+      const stopStackTimer = () => window.clearInterval(slideTimer);
+      startStackTimer();
+      stackContainer.addEventListener('touchstart', stopStackTimer, { passive: true });
+      stackContainer.addEventListener('touchend', startStackTimer);
+      track(() => {
+        stopStackTimer();
+        stackContainer.removeEventListener('touchstart', stopStackTimer);
+        stackContainer.removeEventListener('touchend', startStackTimer);
+      });
     }
 
     const nextStepsSection = document.getElementById('next-steps-section');

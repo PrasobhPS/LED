@@ -129,23 +129,23 @@ export default function NetworkPage() {
   {/* Global Footprint Stats */}
   <section className="py-16 bg-white border-b border-gray-100">
     <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-      <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem'}}>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
         <div className="flex flex-col">
           <h3 className="text-4xl md:text-5xl font-bold text-[#071521] mb-2">150+</h3>
           <p className="text-[13px] font-semibold text-gray-800 uppercase tracking-widest mb-2">Premium Screens</p>
           <p className="text-[12px] text-gray-500">LED &amp; digital billboards worldwide</p>
         </div>
-        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8 mt-6 lg:mt-0">
+        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8">
           <h3 className="text-4xl md:text-5xl font-bold text-[#071521] mb-2">25+</h3>
           <p className="text-[13px] font-semibold text-gray-800 uppercase tracking-widest mb-2">Major Cities</p>
           <p className="text-[12px] text-gray-500">Business &amp; leisure destinations</p>
         </div>
-        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8 mt-6 lg:mt-0">
+        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8">
           <h3 className="text-4xl md:text-5xl font-bold text-[#071521] mb-2">12+</h3>
           <p className="text-[13px] font-semibold text-gray-800 uppercase tracking-widest mb-2">Key Markets</p>
           <p className="text-[12px] text-gray-500">Across 4 distinct continents</p>
         </div>
-        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8 mt-6 lg:mt-0">
+        <div className="flex flex-col lg:border-l border-gray-100 lg:px-8">
           <h3 className="text-4xl md:text-5xl font-bold text-[#071521] mb-2">24/7</h3>
           <p className="text-[13px] font-semibold text-gray-800 uppercase tracking-widest mb-2">Active Network</p>
           <p className="text-[12px] text-gray-500">Always on, always visible</p>
