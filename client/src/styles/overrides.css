@@ -1,3 +1,34 @@
+.mobile-nav-current {
+  color: #071521;
+  background: rgba(22, 139, 235, 0.14);
+  padding: 0.875rem 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #168BEB;
+}
+
+.mobile-nav-join {
+  color: #ffffff;
+  background: #071521;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  padding: 0.35rem 0.7rem;
+  border-radius: 9999px;
+}
+
+.mobile-nav-current-badge {
+  color: #ffffff;
+  background: #168BEB;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.35rem 0.7rem;
+  border-radius: 9999px;
+}
+
 .screens-directory-scroll {
   overflow-y: auto !important;
   flex: 1 1 0% !important;

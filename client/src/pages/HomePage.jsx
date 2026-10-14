@@ -58,7 +58,7 @@ export default function HomePage() {
       </div>
       {/* Mobile & Tablet Controls (lg:hidden) */}
       <div className="flex items-center gap-2.5 lg:hidden shrink-0">
-        <Link to="/contact" className="whitespace-nowrap px-3.5 py-1.5 rounded-lg text-[12px] font-semibold text-[#071521] border border-gray-200 hover:border-[#071521] transition-colors bg-gray-50 shrink-0">
+        <Link to="/contact" className="whitespace-nowrap px-5 py-2.5 rounded-lg text-[12px] font-semibold text-[#071521] border border-gray-200 hover:border-[#071521] transition-colors bg-gray-50 shrink-0">
           Get Quote
         </Link>
         <button id="mobile-menu-open" className="p-2 rounded-md text-[#071521] hover:text-[#168BEB] hover:bg-gray-100 transition-colors focus:outline-none shrink-0" aria-label="Open Navigation Menu">
@@ -100,7 +100,7 @@ export default function HomePage() {
         <Link to="/projects" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">Projects</Link>
         <Link to="/partners" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors flex items-center justify-between">
           <span>Partners</span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#071521] text-white font-normal">Join
+          <span className="mobile-nav-join">Join
             Us</span>
         </Link>
         <Link to="/contact" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">Contact</Link>

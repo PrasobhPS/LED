@@ -32,7 +32,7 @@ export default function AdvertisePage() {
       </div>
       {/* Mobile & Tablet Controls (lg:hidden) */}
       <div className="flex items-center gap-2.5 lg:hidden shrink-0">
-        <Link to="/contact" className="whitespace-nowrap px-3.5 py-1.5 rounded-lg text-[12px] font-semibold text-[#071521] border border-gray-200 hover:border-[#071521] transition-colors bg-gray-50 shrink-0">
+        <Link to="/contact" className="whitespace-nowrap px-5 py-2.5 rounded-lg text-[12px] font-semibold text-[#071521] border border-gray-200 hover:border-[#071521] transition-colors bg-gray-50 shrink-0">
           Get Quote
         </Link>
         <button id="mobile-menu-open" className="p-2 rounded-md text-[#071521] hover:text-[#168BEB] hover:bg-gray-100 transition-colors focus:outline-none shrink-0" aria-label="Open Navigation Menu">
@@ -67,15 +67,15 @@ export default function AdvertisePage() {
       {/* Nav Links */}
       <div className="flex-grow overflow-y-auto px-5 py-4 flex flex-col gap-2 text-[15px] font-medium text-[#071521]">
         <Link to="/about" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">About</Link>
-        <Link to="/advertise" className="flex items-center justify-between font-bold text-white bg-[#168BEB]/10 px-3 py-2.5 rounded-lg border-l-4 border-[#168BEB]">
+        <Link to="/advertise" className="mobile-nav-current flex items-center justify-between font-bold rounded-lg">
           <span>Advertise</span>
-          <span className="text-[10px] uppercase font-bold text-[#168BEB] tracking-wider">Current</span>
+          <span className="mobile-nav-current-badge">Current</span>
         </Link>
         <Link to="/network" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">Our Screens</Link>
         <Link to="/projects" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">Projects</Link>
         <Link to="/partners" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors flex items-center justify-between">
           <span>Partners</span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#071521] text-white font-normal">Join
+          <span className="mobile-nav-join">Join
             Us</span>
         </Link>
         <Link to="/contact" className="px-3 py-2 rounded-lg hover:bg-gray-50 hover:text-[#168BEB] transition-colors">Contact</Link>
