@@ -1,0 +1,8 @@
+[
+  { "id": "new-york", "name": "New York", "screens": 12, "image": "/images/city_ny.jpg" },
+  { "id": "dubai", "name": "Dubai", "screens": 10, "image": "/images/city_dubai.jpg" },
+  { "id": "london", "name": "London", "screens": 8, "image": "/images/city_london.jpg" },
+  { "id": "singapore", "name": "Singapore", "screens": 6, "image": "/images/city_singapore.jpg" },
+  { "id": "tokyo", "name": "Tokyo", "screens": 5, "image": "/images/premium_tech_world_map.jpg" },
+  { "id": "paris", "name": "Paris", "screens": 3, "image": "/images/premium_led_display.jpg" }
+]

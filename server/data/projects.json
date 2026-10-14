@@ -1,0 +1,58 @@
+[
+  {
+    "id": "times-square-mega-screen",
+    "title": "Times Square Mega Screen",
+    "summary": "8,000 sq ft 3D capable wrap",
+    "category": "Facades",
+    "image": "/images/city_ny.jpg"
+  },
+  {
+    "id": "i-95-spectaculars",
+    "title": "I-95 Spectaculars",
+    "summary": "High-frequency commuter network",
+    "category": "Billboards",
+    "image": "/images/led_billboard.jpg"
+  },
+  {
+    "id": "fifth-ave-flagship",
+    "title": "5th Ave Flagship Store",
+    "summary": "Transparent window displays",
+    "category": "Retail",
+    "image": "/images/retail.jpg"
+  },
+  {
+    "id": "downtown-dubai-wrap",
+    "title": "Downtown Dubai Wrap",
+    "summary": "Curved 3D immersive display",
+    "category": "Outdoor LED",
+    "image": "/images/city_dubai.jpg"
+  },
+  {
+    "id": "tech-hub-lobby",
+    "title": "Tech Hub Lobby",
+    "summary": "Fine-pitch interactive wall",
+    "category": "Indoor LED",
+    "image": "/images/corporate.jpg"
+  },
+  {
+    "id": "global-expo-center",
+    "title": "Global Expo Center",
+    "summary": "Immersive LED flooring & canopy",
+    "category": "Advertising Network",
+    "image": "/images/city_singapore.jpg"
+  },
+  {
+    "id": "london-gateway",
+    "title": "London Gateway",
+    "summary": "High-definition dual roadside",
+    "category": "Billboards",
+    "image": "/images/premium_led_display.jpg"
+  },
+  {
+    "id": "flagship-concert-hall",
+    "title": "Flagship Concert Hall",
+    "summary": "Dynamic stage backdrop",
+    "category": "Indoor LED",
+    "image": "/images/hero.jpg"
+  }
+]

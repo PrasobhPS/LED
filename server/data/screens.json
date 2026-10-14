@@ -1,0 +1,56 @@
+[
+  {
+    "id": "times-square",
+    "name": "Times Square",
+    "city": "New York City, NY",
+    "region": "NY",
+    "size": "18,000 sq ft",
+    "spec": "P6.67 LED",
+    "image": "/images/city_ny.jpg",
+    "locationQuery": "times square new york city ny usa",
+    "featured": true,
+    "address": "Broadway & 45th St, NY",
+    "hours": "24/7 Continuous",
+    "formats": "MP4, MOV, Static (16:9)"
+  },
+  {
+    "id": "marina-screen",
+    "name": "Marina Screen",
+    "city": "Dubai Marina, UAE",
+    "region": "DXB",
+    "size": "12,500 sq ft",
+    "spec": "3,840Hz Refresh",
+    "image": "/images/city_dubai.jpg",
+    "locationQuery": "marina screen dubai uae"
+  },
+  {
+    "id": "central-station",
+    "name": "Central Station",
+    "city": "London, UK",
+    "region": "LDN",
+    "size": "8,200 sq ft",
+    "spec": "Indoor Curved",
+    "image": "/images/corporate.jpg",
+    "locationQuery": "central station london uk europe"
+  },
+  {
+    "id": "highway-spectacular",
+    "name": "Highway Spectacular",
+    "city": "Los Angeles, CA",
+    "region": "LA",
+    "size": "14,000 sq ft",
+    "spec": "10,000 Nits",
+    "image": "/images/led_billboard.jpg",
+    "locationQuery": "highway billboard los angeles ca usa"
+  },
+  {
+    "id": "marina-bay-gateway",
+    "name": "Marina Bay Gateway",
+    "city": "Downtown, Singapore",
+    "region": "SG",
+    "size": "9,800 sq ft",
+    "spec": "Ultra-Fine Pitch",
+    "image": "/images/city_singapore.jpg",
+    "locationQuery": "marina bay sands singapore downtown asia"
+  }
+]

@@ -1,0 +1,63 @@
+input[type="radio"]:checked + div {
+  border-color: #168BEB !important;
+}
+
+input[type="radio"]:checked + div > div {
+  opacity: 1 !important;
+}
+
+label:has(input[type="radio"]:checked) {
+  border-color: #168BEB !important;
+  background-color: #fef9f0 !important;
+}
+
+.field-error {
+  margin: 0.45rem 0 0;
+  color: #b42318;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.field-error[hidden],
+.enquiry-status[hidden] {
+  display: none;
+}
+
+input.is-invalid,
+textarea.is-invalid {
+  border-color: #b42318 !important;
+}
+
+#intent-options.is-invalid label {
+  border-color: #b42318 !important;
+}
+
+.enquiry-status {
+  margin-bottom: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.enquiry-status.is-error {
+  background: #fef3f2;
+  color: #b42318;
+  border: 1px solid #fecdca;
+}
+
+.enquiry-status.is-success {
+  background: #ecfdf3;
+  color: #067647;
+  border: 1px solid #abefc6;
+}
+
+@media (min-width: 1024px) {
+  .contact-sidebar-sticky {
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+  }
+}
