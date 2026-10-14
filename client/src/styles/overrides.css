@@ -109,66 +109,51 @@
   padding: 1rem 1.1rem 1.15rem;
 }
 
-.logo-wall {
+.clientele-block {
+  padding-top: 4.5rem;
+}
+
+.partner-logo-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
 
-@media (min-width: 900px) {
-  .logo-wall {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .logo-wall.is-trio {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 700px) {
+  .partner-logo-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.logo-tile {
-  min-height: 132px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f4f7fa;
-  border: 1px solid #dce4ec;
-  border-radius: 0.25rem;
-  padding: 1.25rem 1.5rem;
-}
-
-.logo-tile img {
-  display: block;
-  width: 220px;
-  height: 76px;
-  max-width: 100%;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-
-.logo-mark {
+.partner-logo-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: center;
+  gap: 0.9rem;
+  min-height: 180px;
+  margin: 0;
+  padding: 1.75rem 1.25rem 1.35rem;
+  background: #fff;
+  border: 1px solid #e8edf2;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 32px rgba(7, 21, 33, 0.05);
+}
+
+.partner-logo-card img {
+  display: block;
+  width: 190px;
+  height: 78px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.partner-logo-card figcaption {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   text-align: center;
-}
-
-.logo-mark strong {
-  color: #071521;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-.logo-mark span {
-  color: #168beb;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
 
 .project-spec-grid {
