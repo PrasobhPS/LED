@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import InstallationCard from '../components/InstallationCard';
-import RecentWork from '../components/RecentWork';
+import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlides = [
@@ -684,7 +684,7 @@ export default function HomePage() {
       </div>
     </div>
   </section>
-  <RecentWork />
+  <ProjectClose />
 </>
 
 
