@@ -25,7 +25,8 @@ label:has(input[type="radio"]:checked) {
 }
 
 input.is-invalid,
-textarea.is-invalid {
+textarea.is-invalid,
+select.is-invalid {
   border-color: #b42318 !important;
 }
 
@@ -54,10 +55,42 @@ textarea.is-invalid {
   border: 1px solid #abefc6;
 }
 
+.contact-sidebar-title {
+  font-size: 1.85rem;
+  line-height: 1.08;
+}
+
+.contact-sidebar-copy {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-sidebar-label {
+  font-size: 10px;
+}
+
+.contact-sidebar-value {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .contact-sidebar-title {
+    font-size: 2.15rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .contact-sidebar-sticky {
     position: sticky;
     top: 72px;
     height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+    justify-content: safe center;
+    overflow: hidden;
+    padding: 1.75rem 2.75rem 1.5rem;
+  }
+
+  .contact-sidebar-title {
+    font-size: clamp(1.9rem, 2.15vw, 2.45rem);
   }
 }

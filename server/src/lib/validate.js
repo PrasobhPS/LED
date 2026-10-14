@@ -41,6 +41,16 @@ export function readEmail(value) {
   return { value: email, error: '' };
 }
 
+export function readPhone(value) {
+  const text = readBoundedText(value, 'Phone', 30, { required: true, singleLine: true });
+  if (text.error) return text;
+  const digits = text.value.replace(/\D/g, '');
+  if (digits.length < 7 || digits.length > 15) {
+    return { value: '', error: 'Enter a valid phone number' };
+  }
+  return text;
+}
+
 export function readOneOf(value, field, allowed) {
   const text = readBoundedText(value, field, 80, { required: true });
   if (text.error) return text;

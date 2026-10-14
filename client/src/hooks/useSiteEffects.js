@@ -58,18 +58,22 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_FILES = 5;
 const MAX_FILE_BYTES = 8 * 1024 * 1024;
 const FILE_EXTENSIONS = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'pdf', 'mp4']);
+const DISPLAY_TYPES = new Set([
+  'Indoor LED',
+  'Outdoor LED',
+  'Billboard',
+  'Building Facade',
+  'Retail',
+  'Other',
+]);
 const INTENT_FIELDS = {
   led_wall: [
     ['company', 'Company', 160],
-    ['projectDescription', 'Project description', 4000],
+    ['phone', 'Phone', 30],
+    ['needType', 'Display type', 40],
+    ['location', 'Project location', 200],
+    ['projectDescription', 'Requirement', 4000],
   ],
-  advertise: [
-    ['brandName', 'Brand or agency name', 160],
-    ['campaignGoals', 'Campaign goals', 4000],
-  ],
-  property: [['propertyAddress', 'Property address', 300]],
-  agency: [['agencyDetails', 'Agency details', 4000]],
-  digitize: [['billboardDetails', 'Billboard details', 4000]],
 };
 
 function textIssue(value, label, maxLength) {
@@ -161,6 +165,20 @@ function validateEnquiry(form, files) {
   (INTENT_FIELDS[intent] || []).forEach(([name, label, maxLength]) => {
     const issue = textIssue(fieldValue(form, name), label, maxLength);
     if (issue) errors[name] = issue;
+  });
+
+  const phone = fieldValue(form, 'phone');
+  const digits = phone.replace(/\D/g, '');
+  if (phone && !errors.phone && (digits.length < 7 || digits.length > 15)) {
+    errors.phone = 'Enter a valid phone number';
+  }
+  const needType = fieldValue(form, 'needType');
+  if (needType && !errors.needType && !DISPLAY_TYPES.has(needType)) {
+    errors.needType = 'Choose a display type';
+  }
+  [['width', 'Approx. width', 40], ['height', 'Approx. height', 40]].forEach(([name, label, maxLength]) => {
+    const value = fieldValue(form, name);
+    if (value && value.length > maxLength) errors[name] = `${label} must be ${maxLength} characters or fewer`;
   });
 
   const list = [...(files || [])];
@@ -611,18 +629,23 @@ export function useSiteEffects(title) {
         const maxScroll = installTrack.scrollWidth - installTrack.clientWidth;
         if (maxScroll <= 0) return;
         const progress = Math.min(Math.max(installTrack.scrollLeft / maxScroll, 0), 1);
+        const total = installTrack.querySelectorAll('.installation-card').length || 1;
         if (installProgress) {
-          installProgress.style.width = `${16.66 + (progress * (100 - 16.66))}%`;
+          const visibleFraction = installTrack.scrollWidth > 0
+            ? (installTrack.clientWidth / installTrack.scrollWidth) * 100
+            : 100;
+          installProgress.style.width = `${visibleFraction + (progress * (100 - visibleFraction))}%`;
         }
         if (installCounter) {
-          const total = installTrack.querySelectorAll('.installation-card').length;
           const current = Math.min(Math.round(progress * (total - 1)) + 1, total);
-          installCounter.textContent = `0${current} / 0${total}`;
+          const pad = (value) => String(value).padStart(2, '0');
+          installCounter.textContent = `${pad(current)} / ${pad(total)}`;
         }
       };
       installNext.addEventListener('click', onNext);
       installPrev.addEventListener('click', onPrev);
       installTrack.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
       track(() => {
         installNext.removeEventListener('click', onNext);
         installPrev.removeEventListener('click', onPrev);
@@ -746,7 +769,7 @@ export function useSiteEffects(title) {
         }
 
         const formData = new FormData();
-        ['intent', 'firstName', 'lastName', 'email', 'company', 'projectDescription', 'brandName', 'campaignGoals', 'propertyAddress', 'agencyDetails', 'billboardDetails']
+        ['intent', 'firstName', 'lastName', 'email', 'company', 'phone', 'needType', 'location', 'width', 'height', 'projectDescription']
           .forEach((name) => formData.append(name, fieldValue(leadForm, name)));
         if (fileInput?.files) {
           [...fileInput.files].forEach((file) => formData.append('attachments', file));
@@ -763,14 +786,16 @@ export function useSiteEffects(title) {
           leadForm.reset();
           const fileLabel = dropzone?.querySelector('p');
           if (fileLabel) fileLabel.textContent = 'Drag & drop files or browse';
-          if (step2) {
+          if (radios.length > 0 && step2) {
             step2.classList.add('hidden');
             step2.classList.remove('grid');
           }
-          dynamicGroups.forEach((group) => {
-            group.classList.add('hidden');
-            group.classList.remove('grid', 'block');
-          });
+          if (radios.length > 0) {
+            dynamicGroups.forEach((group) => {
+              group.classList.add('hidden');
+              group.classList.remove('grid', 'block');
+            });
+          }
         } catch (error) {
           if (error.fields) applyEnquiryErrors(leadForm, error.fields);
           else setEnquiryStatus(leadForm, error.message || 'Unable to submit', 'error');

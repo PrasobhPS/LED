@@ -1,40 +1,15 @@
 import crypto from 'node:crypto';
 import { updateJson } from '../lib/store.js';
-import { cleanText, readBoundedText, readEmail, readOneOf, validationError } from '../lib/validate.js';
+import { cleanText, readBoundedText, readEmail, readOneOf, readPhone, validationError } from '../lib/validate.js';
 import { sendEnquiryEmail } from './mailService.js';
 
-const INTENTS = ['led_wall', 'advertise', 'property', 'agency', 'digitize'];
-
-const INTENT_LABELS = {
-  led_wall: 'Custom LED wall',
-  advertise: 'Advertise',
-  property: 'Property location',
-  agency: 'Agency enquiry',
-  digitize: 'Digitize billboard',
-};
-
-const INTENT_FIELDS = {
-  led_wall: [
-    ['company', 'Company', 160],
-    ['projectDescription', 'Project description', 4000],
-  ],
-  advertise: [
-    ['brandName', 'Brand or agency name', 160],
-    ['campaignGoals', 'Campaign goals', 4000],
-  ],
-  property: [['propertyAddress', 'Property address', 300]],
-  agency: [['agencyDetails', 'Agency details', 4000]],
-  digitize: [['billboardDetails', 'Billboard details', 4000]],
-};
-
-const OPTIONAL_FIELDS = [
-  ['company', 'Company', 160, true],
-  ['projectDescription', 'Project description', 4000, false],
-  ['brandName', 'Brand or agency name', 160, true],
-  ['campaignGoals', 'Campaign goals', 4000, false],
-  ['propertyAddress', 'Property address', 300, true],
-  ['agencyDetails', 'Agency details', 4000, false],
-  ['billboardDetails', 'Billboard details', 4000, false],
+const DISPLAY_TYPES = [
+  'Indoor LED',
+  'Outdoor LED',
+  'Billboard',
+  'Building Facade',
+  'Retail',
+  'Other',
 ];
 
 function take(errors, key, result) {
@@ -45,46 +20,35 @@ function take(errors, key, result) {
 function enquiryRows(enquiry) {
   const rows = [
     ['Reference', enquiry.id],
-    ['Intent', INTENT_LABELS[enquiry.intent]],
     ['Name', `${enquiry.firstName} ${enquiry.lastName}`],
-    ['Email', enquiry.email],
-  ];
-  const extras = [
     ['Company', enquiry.company],
-    ['Project description', enquiry.projectDescription],
-    ['Brand', enquiry.brandName],
-    ['Campaign goals', enquiry.campaignGoals],
-    ['Property address', enquiry.propertyAddress],
-    ['Agency details', enquiry.agencyDetails],
-    ['Billboard details', enquiry.billboardDetails],
+    ['Phone', enquiry.phone],
+    ['Email', enquiry.email],
+    ['Display type', enquiry.needType],
+    ['Project location', enquiry.location],
+    ['Requirement', enquiry.projectDescription],
   ];
-  extras.forEach(([label, value]) => {
-    if (value) rows.push([label, value]);
-  });
+  if (enquiry.width) rows.push(['Approx. width', enquiry.width]);
+  if (enquiry.height) rows.push(['Approx. height', enquiry.height]);
   if (enquiry.attachments.length > 0) {
-    rows.push(['Attachments', enquiry.attachments.map((file) => file.originalName).join(', ')]);
+    rows.push(['Location photos', enquiry.attachments.map((file) => file.originalName).join(', ')]);
   }
   return rows;
 }
 
 export function parseEnquiry(body, files = []) {
   const errors = {};
-  const intentResult = readOneOf(body.intent, 'Intent', INTENTS);
-  if (!String(body.intent || '').trim()) intentResult.error = 'Choose what you are looking for';
-  const intent = take(errors, 'intent', intentResult);
+  const intent = take(errors, 'intent', readOneOf(body.intent, 'Intent', ['led_wall']));
   const firstName = take(errors, 'firstName', readBoundedText(body.firstName, 'First name', 80, { required: true, singleLine: true }));
   const lastName = take(errors, 'lastName', readBoundedText(body.lastName, 'Last name', 80, { required: true, singleLine: true }));
+  const company = take(errors, 'company', readBoundedText(body.company, 'Company', 160, { required: true, singleLine: true }));
+  const phone = take(errors, 'phone', readPhone(body.phone));
   const email = take(errors, 'email', readEmail(body.email));
-
-  const requiredKeys = new Set((INTENT_FIELDS[intent] || []).map(([key]) => key));
-  const details = {};
-  OPTIONAL_FIELDS.forEach(([key, label, maxLength, singleLine]) => {
-    details[key] = take(
-      errors,
-      key,
-      readBoundedText(body[key], label, maxLength, { required: requiredKeys.has(key), singleLine }),
-    );
-  });
+  const needType = take(errors, 'needType', readOneOf(body.needType, 'Display type', DISPLAY_TYPES));
+  const location = take(errors, 'location', readBoundedText(body.location, 'Project location', 200, { required: true, singleLine: true }));
+  const width = take(errors, 'width', readBoundedText(body.width, 'Approx. width', 40, { singleLine: true }));
+  const height = take(errors, 'height', readBoundedText(body.height, 'Approx. height', 40, { singleLine: true }));
+  const projectDescription = take(errors, 'projectDescription', readBoundedText(body.projectDescription, 'Requirement', 4000, { required: true }));
 
   if (Object.keys(errors).length > 0) {
     throw validationError('Please correct the highlighted fields', errors);
@@ -95,14 +59,14 @@ export function parseEnquiry(body, files = []) {
     intent,
     firstName,
     lastName,
+    company,
+    phone,
     email,
-    company: details.company,
-    projectDescription: details.projectDescription,
-    brandName: details.brandName,
-    campaignGoals: details.campaignGoals,
-    propertyAddress: details.propertyAddress,
-    agencyDetails: details.agencyDetails,
-    billboardDetails: details.billboardDetails,
+    needType,
+    location,
+    width,
+    height,
+    projectDescription,
     attachments: files.map((file) => ({
       storedName: file.filename,
       originalName: cleanText(file.originalname, 180),
