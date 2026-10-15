@@ -1,9 +1,15 @@
 import path from 'node:path';
 import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import dotenv from 'dotenv';
 
-const envPath = path.resolve(process.cwd(), '../.env');
-if (fs.existsSync(envPath)) dotenv.config({ path: envPath });
+const serverDir = path.dirname(fileURLToPath(import.meta.url));
+const envPath = [
+  path.resolve(serverDir, '../../.env'),
+  path.resolve(process.cwd(), '.env'),
+  path.resolve(process.cwd(), '../.env'),
+].find((candidate) => fs.existsSync(candidate));
+if (envPath) dotenv.config({ path: envPath });
 
 const { default: app } = await import('./app.js');
 

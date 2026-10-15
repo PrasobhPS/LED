@@ -809,7 +809,12 @@ export function useSiteEffects(title) {
           const fields = Object.fromEntries(formData.entries());
           const fileNames = fileInput?.files ? [...fileInput.files].map((file) => file.name) : [];
           await sendEnquiryEmail(fields, fileNames);
-          await createEnquiry(formData);
+          try {
+            await createEnquiry(formData);
+          } catch (error) {
+            if (error.fields) throw error;
+            if (error.code !== 'mail_failed' && error.code !== 'mail_not_configured') throw error;
+          }
           setButtonLabel(submitButton, 'Enquiry received');
           setEnquiryStatus(leadForm, 'Enquiry received. We will reply by email.', 'success');
           leadForm.reset();

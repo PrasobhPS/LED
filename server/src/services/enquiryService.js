@@ -96,8 +96,7 @@ export async function createEnquiry(body, files = []) {
     try {
       await sendEnquiryEmail(enquiry, files);
     } catch (error) {
-      if (error.code !== 'mail_not_configured') throw error;
-      console.warn(`Enquiry ${enquiry.id} was saved. Email was not sent because mail is not configured.`);
+      console.warn(`Enquiry ${enquiry.id} was saved. Server mail was skipped: ${error.message}`);
     }
   }
 
