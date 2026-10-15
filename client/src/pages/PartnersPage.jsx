@@ -402,18 +402,18 @@ export default function PartnersPage() {
               <div className="partners-stacked-backdrop" />
               <div className="partners-main-card">
                 <img
-                  src="/images/work/susi-fragrances.png"
-                  alt="SUSI Fragrances storefront"
+                  src="/images/work/techvista.png"
+                  alt="TechVista showroom facade"
                   className="partners-main-img"
-                  style={{ objectPosition: 'center 30%' }}
+                  style={{ objectPosition: 'center 28%' }}
                 />
               </div>
               <div className="partners-overlap-card">
                 <img
-                  src="/images/work/thx-mobiles.png"
-                  alt="THX Premium Mobiles storefront"
+                  src="/images/work/glass-facade.png"
+                  alt="LED screen on a glass building facade"
                   className="partners-overlap-img"
-                  style={{ objectPosition: 'center 40%' }}
+                  style={{ objectPosition: 'center 38%' }}
                 />
               </div>
             </div>
@@ -470,8 +470,8 @@ export default function PartnersPage() {
       <section className="partners-cta-sec">
         <div className="partners-cta-media">
           <img
-            src="/images/work/brighter-tomorrow.png"
-            alt="Architectural LED wall, A Brighter Tomorrow"
+            src="/images/work/event-stage.png"
+            alt="Event stage LED backdrop"
             className="partners-cta-img"
           />
           <div className="partners-cta-vignette" />

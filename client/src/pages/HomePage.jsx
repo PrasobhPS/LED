@@ -4,10 +4,10 @@ import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlides = [
-  { src: '/images/work/brighter-tomorrow.png', alt: 'Architectural LED facade, A Brighter Tomorrow', focus: 'center' },
-  { src: '/images/work/vara-alath-tower.png', alt: 'Outdoor LED screen on Vara Alath Tower, Alathur', focus: 'center 22%' },
-  { src: '/images/work/dream-home-billboard.png', alt: 'Outdoor residential LED billboard', focus: 'center' },
-  { src: '/images/work/aakash-edappally.png', alt: 'Aakash LED billboard in Edappally', focus: 'center 28%' },
+  { src: '/images/work/downtown-corner.png', alt: 'Corner LED wrap at Downtown Business Center', focus: 'center 35%' },
+  { src: '/images/work/hyundai-billboard.png', alt: 'Hyundai roadside LED billboard', focus: 'center' },
+  { src: '/images/work/techvista.png', alt: 'TechVista showroom facade screen', focus: 'center 28%' },
+  { src: '/images/work/iphone-billboard.png', alt: 'iPhone roadside LED billboard', focus: 'center' },
   { src: '/images/work/dream-haven-truck.png', alt: 'Dream Haven mobile LED truck', focus: 'center' },
 ];
 
@@ -122,7 +122,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/work/susi-fragrances.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 30%' }} alt="SUSI Fragrances illuminated storefront" />
+          <img src="/images/work/techvista.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="TechVista showroom facade screen" />
         </div>
       </div>
     </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
   <section className="relative py-24 md:py-32 overflow-hidden bg-[#071521]">
     {/* Background Image with Overlay */}
     <div className="absolute inset-0 z-0">
-      <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover opacity-20 filter grayscale" style={{ objectPosition: 'center 22%' }} alt="Alathur street at dusk" />
+      <img src="/images/work/downtown-corner.png" className="w-full h-full object-cover opacity-20 filter grayscale" style={{ objectPosition: 'center 35%' }} alt="Downtown corner LED wrap" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-[#071521]/80 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#071521] to-transparent" />
     </div>
@@ -297,7 +297,7 @@ export default function HomePage() {
         </div>
         <div className="lg:col-span-8 w-full">
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-            <img src="/images/work/dream-home-billboard.png" className="absolute inset-0 w-full h-full object-cover" alt="Outdoor LED billboard for a residential project" />
+            <img src="/images/work/hyundai-billboard.png" className="absolute inset-0 w-full h-full object-cover" alt="Hyundai roadside LED billboard" />
           </div>
         </div>
       </div>

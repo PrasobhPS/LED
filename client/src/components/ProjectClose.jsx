@@ -4,7 +4,7 @@ export default function ProjectClose() {
   return (
     <section className="bg-[#071521] text-white flex flex-col md:flex-row items-stretch">
       <div className="w-full md:w-[40%] lg:w-[45%] shrink-0 relative min-h-[300px]">
-        <img src="/images/work/brighter-tomorrow.png" className="absolute inset-0 w-full h-full object-cover" alt="Architectural LED wall, A Brighter Tomorrow" />
+        <img src="/images/work/glass-facade.png" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 38%' }} alt="LED screen on a glass building facade" />
       </div>
       <div className="w-full md:w-[60%] lg:w-[55%] p-10 md:p-16 lg:p-24 flex flex-col justify-center">
         <div className="max-w-[800px]">
