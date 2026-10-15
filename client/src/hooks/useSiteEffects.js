@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { createDeal, createEnquiry } from '../api/client';
@@ -223,7 +224,27 @@ function applyEnquiryErrors(form, errors) {
   firstInvalid?.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
+function destroyTestimonialsCarousel() {
+  const carousel = document.querySelector('.testimonials-carousel');
+  const jquery = window.jQuery;
+  if (!carousel?.isConnected || !jquery?.fn?.owlCarousel || !carousel.classList.contains('owl-loaded')) return;
+  jquery(carousel).trigger('destroy.owl.carousel');
+}
+
+function revertManagedDom() {
+  destroyTestimonialsCarousel();
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill(true));
+  gsap.killTweensOf('*');
+}
+
 export function useSiteEffects(title) {
+  const { pathname } = useLocation();
+  const pathRef = useRef(pathname);
+  if (pathRef.current !== pathname) {
+    pathRef.current = pathname;
+    revertManagedDom();
+  }
+
   useEffect(() => {
     document.title = title;
     window.scrollTo(0, 0);
@@ -918,7 +939,7 @@ export function useSiteEffects(title) {
           track(() => {
             prev?.removeEventListener('click', onPrev);
             next?.removeEventListener('click', onNext);
-            $carousel.trigger('destroy.owl.carousel');
+            destroyTestimonialsCarousel();
           });
         })
         .catch(() => {});
@@ -927,8 +948,7 @@ export function useSiteEffects(title) {
     return () => {
       cancelled = true;
       cleanups.forEach((fn) => fn());
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill(true));
-      gsap.killTweensOf('*');
+      revertManagedDom();
     };
   }, [title]);
 }
