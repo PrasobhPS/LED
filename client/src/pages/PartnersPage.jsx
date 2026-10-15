@@ -410,10 +410,10 @@ export default function PartnersPage() {
               </div>
               <div className="partners-overlap-card">
                 <img
-                  src="/images/work/glass-facade.png"
-                  alt="LED screen on a glass building facade"
+                  src="/images/work/kanju-hut.png"
+                  alt="Kanji Hut illuminated storefront"
                   className="partners-overlap-img"
-                  style={{ objectPosition: 'center 38%' }}
+                  style={{ objectPosition: 'center 28%' }}
                 />
               </div>
             </div>

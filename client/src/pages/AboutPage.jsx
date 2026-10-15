@@ -145,7 +145,7 @@ export default function AboutPage() {
         {/* Card 1 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 1}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/susi-fragrances.png" alt="SUSI Fragrances storefront" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%'}} />
+            <img src="/images/work/kanju-hut.png" alt="Kanji Hut illuminated storefront" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>

@@ -1,5 +1,18 @@
 export const installations = [
   {
+    id: 'kanju-hut',
+    title: 'Kanji Hut Storefront',
+    image: '/images/work/kanju-hut.png',
+    location: 'Storefront',
+    environment: 'Outdoor',
+    type: 'Illuminated storefront',
+    category: 'Retail',
+    badge: 'Retail',
+    note: 'Storefront',
+    focus: 'center 28%',
+    description: 'Kanji Hut shopfront with an illuminated fascia and lit display counters along the open counter.',
+  },
+  {
     id: 'downtown-corner',
     title: 'Downtown Business Center Corner',
     image: '/images/work/downtown-corner.png',

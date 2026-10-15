@@ -1,5 +1,12 @@
 [
   {
+    "id": "kanju-hut",
+    "title": "Kanji Hut Storefront",
+    "summary": "Illuminated shopfront and display counters",
+    "category": "Retail",
+    "image": "/images/work/kanju-hut.png"
+  },
+  {
     "id": "downtown-corner",
     "title": "Downtown Business Center Corner",
     "summary": "Corner LED wrap across two street faces",
