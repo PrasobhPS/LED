@@ -348,10 +348,10 @@ export default function PartnersPage() {
       <section className="partners-hero">
         <div className="partners-hero-media">
           <img
-            src="/images/work/vara-alath-tower.png"
-            alt="Vara Alath Tower LED screen in Alathur"
+            src="/images/work/susi-fragrances.png"
+            alt="SUSI Fragrances storefront, a client installation"
             className="partners-hero-img"
-            style={{ objectPosition: 'center 22%' }}
+            style={{ objectPosition: 'center 32%' }}
           />
         </div>
         <div className="partners-hero-overlay" />
