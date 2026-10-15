@@ -17,7 +17,7 @@ export default function RecentWork() {
           <div className="screen-gallery">
             {selected.map((item) => (
               <figure key={item.id}>
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
                 <figcaption>
                   <h3 className="text-[15px] font-bold text-[#071521] mb-1">{item.title}</h3>
                   <p className="text-[12px] text-gray-500">{item.location} · {item.environment} · {item.type}</p>

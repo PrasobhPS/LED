@@ -21,9 +21,10 @@ export default function ProjectsPage() {
       <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521', minHeight: '500px' }}>
         <div className="absolute inset-0 z-0 w-full h-full">
           <img
-            src="/images/screens/sr-10.png"
-            className="w-full h-full object-cover object-center md:object-right"
-            alt="LED wall project"
+            src="/images/work/vara-alath-tower.png"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center 22%' }}
+            alt="Vara Alath Tower LED screen in Alathur"
           />
           <div
             className="absolute inset-0 w-full h-full"
@@ -42,7 +43,7 @@ export default function ProjectsPage() {
               LED installations.<br />Completed work.
             </h1>
             <p className="text-gray-300 text-[15px] md:text-base leading-relaxed max-w-[520px]">
-              Outdoor walls, facades, billboards, indoor displays and retail installations, with the specification for each one.
+              Outdoor walls, facades, billboards, indoor displays and retail installations from completed work.
             </p>
           </div>
         </div>
@@ -71,17 +72,15 @@ export default function ProjectsPage() {
           <div className="project-spec-grid">
             {visible.map((item) => (
               <article key={item.id} className="project-spec-card">
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
                 <div className="project-spec-body">
                   <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mb-2">{item.environment} · {item.type}</p>
                   <h2 className="text-xl font-bold text-[#071521] mb-2">{item.title}</h2>
                   <p className="text-[13px] text-gray-500 leading-relaxed mb-4">{item.description}</p>
                   <dl className="project-spec-list">
                     <div><dt>Location</dt><dd>{item.location}</dd></div>
-                    <div><dt>Indoor / Outdoor</dt><dd>{item.environment}</dd></div>
-                    <div><dt>Dimensions</dt><dd>{item.dimensions}</dd></div>
-                    <div><dt>Pixel pitch</dt><dd>{item.pitch}</dd></div>
-                    <div><dt>Installation type</dt><dd>{item.type}</dd></div>
+                    <div><dt>Setting</dt><dd>{item.environment}</dd></div>
+                    <div><dt>Type</dt><dd>{item.type}</dd></div>
                   </dl>
                 </div>
               </article>

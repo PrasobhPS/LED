@@ -8,7 +8,7 @@ export default function AboutPage() {
   <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[500px] md:min-h-[580px] lg:min-h-[620px]">
     {/* Right Side Image Container (With Feathered Left Edge) */}
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
-      <img src="/images/2.png" className="w-full h-full object-cover" alt="About Hero" />
+      <img src="/images/work/brighter-tomorrow.png" className="w-full h-full object-cover" alt="Architectural LED facade" />
       <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
     </div>
     <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-12 md:py-24 lg:py-28">
@@ -94,11 +94,11 @@ export default function AboutPage() {
       <div className="relative gsap-fade-up mt-12 lg:mt-0" style={{paddingBottom: '10%', paddingRight: '8%'}}>
         {/* Main Background Image */}
         <div className="rounded-sm overflow-hidden relative z-10 shadow-lg border border-gray-100 bg-gray-100" style={{aspectRatio: '4/3'}}>
-          <img src="/images/hero3.jpg" alt="Event LED Stage" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+          <img src="/images/work/thx-mobiles.png" alt="THX Premium Mobiles storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 40%' }} />
         </div>
         {/* Overlapping Image (Bottom Right) */}
         <div className="absolute rounded-sm overflow-hidden z-20 shadow-2xl bg-white" style={{bottom: 0, right: 0, width: '60%', border: '8px solid white', aspectRatio: '4/3'}}>
-          <img src="/images/retail.jpg" alt="Retail LED" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" />
+          <img src="/images/work/susi-fragrances.png" alt="SUSI Fragrances storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 30%' }} />
         </div>
         {/* Floating Badge (Top Left) */}
         <div className="absolute bg-white border border-gray-100 p-4 lg:p-5 rounded-sm z-30 shadow-xl flex items-center gap-4" style={{top: '-1.5rem', left: '-1.5rem'}}>
@@ -145,7 +145,7 @@ export default function AboutPage() {
         {/* Card 1 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 1}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/sr-2.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+            <img src="/images/work/susi-fragrances.png" alt="SUSI Fragrances storefront" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
         {/* Card 2 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 2, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/sr-3.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+            <img src="/images/work/aakash-edappally.png" alt="Aakash outdoor LED billboard" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -197,7 +197,7 @@ export default function AboutPage() {
         {/* Card 3 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 3, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/screens/sr-5.jpeg" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+            <img src="/images/work/dream-haven-truck.png" alt="Dream Haven mobile LED truck" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -210,12 +210,11 @@ export default function AboutPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Event &amp; Stage Screens</h3>
-            <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Lightweight, modular, and
-              easy to assemble. Engineered for concerts, exhibitions, and live shows to provide fast
-              deployment with spectacular visual impact.</p>
+            <h3 className="text-2xl font-bold text-white mb-2">Mobile LED Displays</h3>
+            <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Vehicle-mounted LED panels
+              that carry a campaign on the road, with a screen large enough to read from the street.</p>
             <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Events <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              Explore Mobile <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -224,7 +223,7 @@ export default function AboutPage() {
         {/* Card 4 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 4, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/sr-5.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+            <img src="/images/work/brighter-tomorrow.png" alt="Architectural LED facade" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -250,7 +249,7 @@ export default function AboutPage() {
         {/* Card 5 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 5, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/sr-6.png" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} />
+            <img src="/images/work/matha-jewellers.png" alt="Matha Jewellers storefront LED" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 42%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -373,7 +372,7 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative group gsap-fade-up">
-          <img src="/images/screens/sr-0.png" data-fallback="/images/screens/sr-10.png" alt="Featured LED Projects" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" />
+          <img src="/images/work/vara-alath-tower.png" alt="Vara Alath Tower LED screen in Alathur" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center 22%' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-transparent to-transparent opacity-80 pointer-events-none" />
           <div className="absolute bottom-6 left-6 right-6">
             <div className="p-4 sm:p-5 rounded-xl border border-white/20 shadow-xl backdrop-blur-md" style={{backgroundColor: 'rgba(7, 21, 33, 0.85)', WebkitBackdropFilter: 'blur(12px)', backdropFilter: 'blur(12px)'}}>
@@ -399,9 +398,9 @@ export default function AboutPage() {
             {/* List Item 1 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/led_billboard.jpg" className="w-16 h-12 rounded-md object-cover" alt="Billboard" />
+                <img src="/images/work/aakash-edappally.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash billboard" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">City Billboard - Dubai</h4>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Aakash Billboard - Edappally</h4>
                   <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
                 </div>
               </div>
@@ -412,10 +411,10 @@ export default function AboutPage() {
             {/* List Item 2 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/retail.jpg" className="w-16 h-12 rounded-md object-cover" alt="Retail Store" />
+                <img src="/images/work/susi-fragrances.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 30%' }} alt="SUSI storefront" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Retail Store - Kochi</h4>
-                  <p className="text-[11px] text-gray-500">Indoor LED Screen</p>
+                  <h4 className="font-bold text-[#071521] text-[13px]">SUSI Fragrances - Retail mall</h4>
+                  <p className="text-[11px] text-gray-500">Illuminated storefront</p>
                 </div>
               </div>
               <svg className="w-5 h-5 text-gray-400 group-hover:text-[#168BEB] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -425,10 +424,10 @@ export default function AboutPage() {
             {/* List Item 3 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/hero3.jpg" className="w-16 h-12 rounded-md object-cover" alt="Event Stage" />
+                <img src="/images/work/dream-haven-truck.png" className="w-16 h-12 rounded-md object-cover" alt="Dream Haven truck" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Event Stage - Calicut</h4>
-                  <p className="text-[11px] text-gray-500">Rental LED Screen</p>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Dream Haven - Mobile LED</h4>
+                  <p className="text-[11px] text-gray-500">Vehicle LED Screen</p>
                 </div>
               </div>
               <svg className="w-5 h-5 text-gray-400 group-hover:text-[#168BEB] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -535,10 +534,10 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/corporate.jpg" alt="Strategic Discovery & Site Audit" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
+              <img src="/images/work/vara-alath-tower.png" alt="Vara Alath Tower on site" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
-                Site Audit
+                On site
               </span>
             </div>
             <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>Strategic Feasibility</h3>
@@ -565,10 +564,10 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/screen-1.webp" data-fallback="/images/retail.jpg" alt="3D CAD & Simulation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
+              <img src="/images/work/brighter-tomorrow.png" alt="Architectural LED facade" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
-                3D CAD Render
+                Facade
               </span>
             </div>
             <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>3D CAD &amp; Engineering</h3>
@@ -595,10 +594,10 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/led_billboard.jpg" alt="Certified Rigging & Deploy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
+              <img src="/images/work/thx-mobiles.png" alt="THX Premium Mobiles storefront" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 40%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
-                Rigging &amp; Setup
+                Installed
               </span>
             </div>
             <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>Precision Rigging</h3>
@@ -625,10 +624,10 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/screens/sr-0.png" data-fallback="/images/screens/sr-10.png" alt="Live Telemetry & 24/7 SLA" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
+              <img src="/images/work/aakash-edappally.png" alt="Aakash LED billboard in Edappally" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
-                Live Telemetry
+                On air
               </span>
             </div>
             <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>CMS &amp; 24/7 SLA</h3>
@@ -701,9 +700,7 @@ export default function AboutPage() {
               launch.
               The LED screen quality was outstanding and the team was incredibly professional."</p>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-sm bg-gray-200 overflow-hidden">
-                <img src="/images/retail.jpg" className="w-full h-full object-cover" alt="Avatar" />
-              </div>
+              <div className="w-10 h-10 rounded-sm bg-[#071521] text-white text-[12px] font-bold flex items-center justify-center" aria-hidden="true">AM</div>
               <div>
                 <h5 className="font-bold text-[13px] text-[#071521]">Anjali Menon</h5>
                 <p className="text-[11px] text-gray-500">Marketing Head, Kochi</p>
@@ -718,9 +715,7 @@ export default function AboutPage() {
             <p className="text-[14px] font-medium leading-relaxed mb-8">"We've worked with many vendors, but
               SANS GLOWMETRIC stands out for their quality, support and attention to detail."</p>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-sm bg-gray-200 overflow-hidden">
-                <img src="/images/corporate.jpg" className="w-full h-full object-cover" alt="Avatar" />
-              </div>
+              <div className="w-10 h-10 rounded-sm bg-[#071521] text-white text-[12px] font-bold flex items-center justify-center" aria-hidden="true">RN</div>
               <div>
                 <h5 className="font-bold text-[13px] text-[#071521]">Rahul Nair</h5>
                 <p className="text-[11px] text-gray-500">Event Manager, Calicut</p>
@@ -735,9 +730,7 @@ export default function AboutPage() {
             <p className="text-[14px] font-medium leading-relaxed mb-8">"The best LED screen experience we've
               had. Crystal clear visuals and on-time installation."</p>
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-sm bg-gray-200 overflow-hidden">
-                <img src="/images/hero3.jpg" className="w-full h-full object-cover" alt="Avatar" />
-              </div>
+              <div className="w-10 h-10 rounded-sm bg-[#071521] text-white text-[12px] font-bold flex items-center justify-center" aria-hidden="true">SV</div>
               <div>
                 <h5 className="font-bold text-[13px] text-[#071521]">Sneha Varghese</h5>
                 <p className="text-[11px] text-gray-500">Brand Manager, Dubai</p>

@@ -4,11 +4,11 @@ import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlides = [
-  { src: '/images/sgm-signage-color.jpg', alt: 'SANS GLOWMETRIC digital billboard at night' },
-  { src: '/images/screens/sr-9.png', alt: 'Premium LED Billboard' },
-  { src: '/images/sgm-signage-accent.jpg', alt: 'SANS GLOWMETRIC illuminated building sign' },
-  { src: '/images/screens/sr-10.png', alt: 'Premium LED Billboard' },
-  { src: '/images/screens/sr-3.jpeg', alt: 'Premium LED Billboard' },
+  { src: '/images/work/brighter-tomorrow.png', alt: 'Architectural LED facade, A Brighter Tomorrow', focus: 'center' },
+  { src: '/images/work/vara-alath-tower.png', alt: 'Outdoor LED screen on Vara Alath Tower, Alathur', focus: 'center 22%' },
+  { src: '/images/work/dream-home-billboard.png', alt: 'Outdoor residential LED billboard', focus: 'center' },
+  { src: '/images/work/aakash-edappally.png', alt: 'Aakash LED billboard in Edappally', focus: 'center 28%' },
+  { src: '/images/work/dream-haven-truck.png', alt: 'Dream Haven mobile LED truck', focus: 'center' },
 ];
 
 const heroSlideOverlay = {
@@ -40,7 +40,7 @@ export default function HomePage() {
       <div id="hero-slider" className="absolute inset-0 w-full h-full z-0 flex transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
         {heroSlides.map((slide) => (
           <div key={slide.src} className="relative w-full h-full flex-shrink-0">
-            <img src={slide.src} className="w-full h-full object-cover object-center" alt={slide.alt} />
+            <img src={slide.src} className="w-full h-full object-cover" style={{ objectPosition: slide.focus }} alt={slide.alt} />
             <div className="hero-slide-overlay" style={heroSlideOverlay} />
           </div>
         ))}
@@ -122,7 +122,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/screens/sr-9.png" className="w-full h-full object-cover" alt="Custom LED wall" />
+          <img src="/images/work/susi-fragrances.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 30%' }} alt="SUSI Fragrances illuminated storefront" />
         </div>
       </div>
     </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
   <section className="relative py-24 md:py-32 overflow-hidden bg-[#071521]">
     {/* Background Image with Overlay */}
     <div className="absolute inset-0 z-0">
-      <img src="/images/city_ny.jpg" className="w-full h-full object-cover opacity-20 filter grayscale" alt="Global Cityscape" />
+      <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover opacity-20 filter grayscale" style={{ objectPosition: 'center 22%' }} alt="Alathur street at dusk" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-[#071521]/80 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#071521] to-transparent" />
     </div>
@@ -296,35 +296,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="lg:col-span-8 w-full">
-          <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-ew-resize select-none" data-reveal="true">
-            {/* After Image (Base Layer) */}
-            <img src="/images/sgm-signage-color.jpg" className="absolute inset-0 w-full h-full object-cover object-center" alt="Digital Billboard" />
-            {/* After Label */}
-            <div className="absolute bottom-6 right-6 bg-[#071521]/90 backdrop-blur-md px-4 py-2 rounded-full text-white text-[11px] font-bold tracking-[0.15em] uppercase z-10 border border-white/10 shadow-lg">
-              After
-            </div>
-            {/* Before Image (Clipped Overlay - slides left on hover) */}
-            <div className="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-[cubic-bezier(0.19,1,0.22,1)] [clip-path:inset(0_0_0_0)] group-hover:[clip-path:inset(0_100%_0_0)] z-20">
-              <img src="/images/sgm-signage-mono.jpg" className="absolute inset-0 w-full h-full object-cover object-center" alt="Static Billboard" />
-              {/* Overlay divider line */}
-              <div className="absolute top-0 right-0 w-[2px] h-full bg-[#168BEB] shadow-[0_0_20px_rgba(22, 139, 235, 0.8)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              </div>
-              {/* Before Label */}
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full text-[#071521] text-[11px] font-bold tracking-[0.15em] uppercase z-30 border border-gray-200 shadow-lg">
-                Before
-              </div>
-            </div>
-            {/* Hover Instruction Overlay */}
-            <div className="absolute inset-0 z-40 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500 pointer-events-none">
-              <div className="bg-black/60 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-[12px] font-semibold flex items-center gap-2.5 shadow-2xl border border-white/20 tracking-wide">
-                <svg className="w-4 h-4 text-[#168BEB]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                  </path>
-                </svg>
-                Hover to Reveal
-              </div>
-            </div>
+          <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
+            <img src="/images/work/dream-home-billboard.png" className="absolute inset-0 w-full h-full object-cover" alt="Outdoor LED billboard for a residential project" />
           </div>
         </div>
       </div>

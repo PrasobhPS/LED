@@ -348,9 +348,10 @@ export default function PartnersPage() {
       <section className="partners-hero">
         <div className="partners-hero-media">
           <img
-            src="/images/partners/partners-boardroom.jpg"
-            alt="Boardroom LED wall"
+            src="/images/work/vara-alath-tower.png"
+            alt="Vara Alath Tower LED screen in Alathur"
             className="partners-hero-img"
+            style={{ objectPosition: 'center 22%' }}
           />
         </div>
         <div className="partners-hero-overlay" />
@@ -401,16 +402,18 @@ export default function PartnersPage() {
               <div className="partners-stacked-backdrop" />
               <div className="partners-main-card">
                 <img
-                  src="/images/partners/partners-showroom.jpg"
-                  alt="LED showroom display"
+                  src="/images/work/susi-fragrances.png"
+                  alt="SUSI Fragrances storefront"
                   className="partners-main-img"
+                  style={{ objectPosition: 'center 30%' }}
                 />
               </div>
               <div className="partners-overlap-card">
                 <img
-                  src="/images/partners/partners-cabinet.jpg"
-                  alt="Modular LED cabinet hardware"
+                  src="/images/work/thx-mobiles.png"
+                  alt="THX Premium Mobiles storefront"
                   className="partners-overlap-img"
+                  style={{ objectPosition: 'center 40%' }}
                 />
               </div>
             </div>
@@ -467,8 +470,8 @@ export default function PartnersPage() {
       <section className="partners-cta-sec">
         <div className="partners-cta-media">
           <img
-            src="/images/screens/sr-7.jpeg"
-            alt="Completed luxury LED wall project"
+            src="/images/work/brighter-tomorrow.png"
+            alt="Architectural LED wall, A Brighter Tomorrow"
             className="partners-cta-img"
           />
           <div className="partners-cta-vignette" />

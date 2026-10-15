@@ -1,58 +1,58 @@
 [
   {
-    "id": "times-square-mega-screen",
-    "title": "Times Square Mega Screen",
-    "summary": "8,000 sq ft 3D capable wrap",
+    "id": "vara-alath-tower",
+    "title": "Vara Alath Tower LED Screen",
+    "summary": "Outdoor facade screen in Alathur",
     "category": "Facades",
-    "image": "/images/city_ny.jpg"
+    "image": "/images/work/vara-alath-tower.png"
   },
   {
-    "id": "i-95-spectaculars",
-    "title": "I-95 Spectaculars",
-    "summary": "High-frequency commuter network",
+    "id": "aakash-edappally",
+    "title": "Aakash Edappally Billboard",
+    "summary": "Roadside LED billboard in Edappally",
     "category": "Billboards",
-    "image": "/images/led_billboard.jpg"
+    "image": "/images/work/aakash-edappally.png"
   },
   {
-    "id": "fifth-ave-flagship",
-    "title": "5th Ave Flagship Store",
-    "summary": "Transparent window displays",
+    "id": "susi-fragrances",
+    "title": "SUSI Fragrances Storefront",
+    "summary": "Illuminated mall storefront",
     "category": "Retail",
-    "image": "/images/retail.jpg"
+    "image": "/images/work/susi-fragrances.png"
   },
   {
-    "id": "downtown-dubai-wrap",
-    "title": "Downtown Dubai Wrap",
-    "summary": "Curved 3D immersive display",
-    "category": "Outdoor LED",
-    "image": "/images/city_dubai.jpg"
+    "id": "thx-mobiles",
+    "title": "THX Premium Mobiles",
+    "summary": "Retail fascia and in-store display",
+    "category": "Retail",
+    "image": "/images/work/thx-mobiles.png"
   },
   {
-    "id": "tech-hub-lobby",
-    "title": "Tech Hub Lobby",
-    "summary": "Fine-pitch interactive wall",
-    "category": "Indoor LED",
-    "image": "/images/corporate.jpg"
+    "id": "matha-jewellers",
+    "title": "Matha Jewellers Display",
+    "summary": "Storefront LED poster",
+    "category": "Retail",
+    "image": "/images/work/matha-jewellers.png"
   },
   {
-    "id": "global-expo-center",
-    "title": "Global Expo Center",
-    "summary": "Immersive LED flooring & canopy",
-    "category": "Advertising Network",
-    "image": "/images/city_singapore.jpg"
-  },
-  {
-    "id": "london-gateway",
-    "title": "London Gateway",
-    "summary": "High-definition dual roadside",
+    "id": "dream-home-billboard",
+    "title": "Dream Home Billboard",
+    "summary": "Outdoor residential billboard",
     "category": "Billboards",
-    "image": "/images/premium_led_display.jpg"
+    "image": "/images/work/dream-home-billboard.png"
   },
   {
-    "id": "flagship-concert-hall",
-    "title": "Flagship Concert Hall",
-    "summary": "Dynamic stage backdrop",
-    "category": "Indoor LED",
-    "image": "/images/hero.jpg"
+    "id": "dream-haven-truck",
+    "title": "Dream Haven Mobile LED",
+    "summary": "Vehicle-mounted LED panel",
+    "category": "Billboards",
+    "image": "/images/work/dream-haven-truck.png"
+  },
+  {
+    "id": "brighter-tomorrow",
+    "title": "A Brighter Tomorrow Facade",
+    "summary": "Architectural LED wall",
+    "category": "Facades",
+    "image": "/images/work/brighter-tomorrow.png"
   }
 ]

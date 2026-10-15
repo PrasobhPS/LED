@@ -7,7 +7,7 @@ export default function NetworkPage() {
     <>
       <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521' }}>
         <div className="absolute inset-0 z-0 w-full h-full">
-          <img src="/images/screens/sr-9.png" className="w-full h-full object-cover" alt="Completed LED wall" />
+          <img src="/images/work/aakash-edappally.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash LED billboard in Edappally" />
           <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(to right, rgba(7, 21, 33, 0.94) 0%, rgba(7, 21, 33, 0.72) 48%, rgba(7, 21, 33, 0.28) 100%)' }} />
         </div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
@@ -38,7 +38,7 @@ export default function NetworkPage() {
           <div className="screen-gallery">
             {installations.map((item) => (
               <figure key={item.id}>
-                <img src={item.image} alt={item.title} />
+                <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
                 <figcaption>
                   <h3 className="text-[15px] font-bold text-[#071521] mb-1">{item.title}</h3>
                   <p className="text-[12px] text-gray-500">{item.location} · {item.environment}</p>
