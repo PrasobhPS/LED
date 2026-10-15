@@ -1,6 +1,6 @@
 import crypto from 'node:crypto';
 import { updateJson } from '../lib/store.js';
-import { cleanText, readBoundedText, readEmail, readOneOf, readPhone, validationError } from '../lib/validate.js';
+import { cleanText, readBoundedText, readEmail, readOneOf, readOptionalNumber, readPhone, validationError } from '../lib/validate.js';
 import { sendEnquiryEmail } from './mailService.js';
 
 const DISPLAY_TYPES = [
@@ -46,8 +46,8 @@ export function parseEnquiry(body, files = []) {
   const email = take(errors, 'email', readEmail(body.email));
   const needType = take(errors, 'needType', readOneOf(body.needType, 'Display type', DISPLAY_TYPES));
   const location = take(errors, 'location', readBoundedText(body.location, 'Project location', 200, { required: true, singleLine: true }));
-  const width = take(errors, 'width', readBoundedText(body.width, 'Approx. width', 40, { singleLine: true }));
-  const height = take(errors, 'height', readBoundedText(body.height, 'Approx. height', 40, { singleLine: true }));
+  const width = take(errors, 'width', readOptionalNumber(body.width, 'Approx. width'));
+  const height = take(errors, 'height', readOptionalNumber(body.height, 'Approx. height'));
   const projectDescription = take(errors, 'projectDescription', readBoundedText(body.projectDescription, 'Requirement', 4000, { required: true }));
 
   if (Object.keys(errors).length > 0) {
@@ -81,8 +81,6 @@ export function parseEnquiry(body, files = []) {
 
 export async function createEnquiry(body, files = []) {
   const enquiry = parseEnquiry(body, files);
-  await sendEnquiryEmail(enquiry, files);
-
   const stored = { ...enquiry };
   delete stored.rows;
   await updateJson('enquiries.json', async (current) => {
@@ -90,6 +88,18 @@ export async function createEnquiry(body, files = []) {
     list.push(stored);
     return list;
   });
+
+  const emailJsReady = process.env.EMAILJS_PUBLIC_KEY?.trim()
+    && process.env.EMAILJS_SERVICE_ID?.trim()
+    && process.env.EMAILJS_TEMPLATE_ID?.trim();
+  if (!emailJsReady) {
+    try {
+      await sendEnquiryEmail(enquiry, files);
+    } catch (error) {
+      if (error.code !== 'mail_not_configured') throw error;
+      console.warn(`Enquiry ${enquiry.id} was saved. Email was not sent because mail is not configured.`);
+    }
+  }
 
   return { id: enquiry.id, intent: enquiry.intent, createdAt: enquiry.createdAt };
 }

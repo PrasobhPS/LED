@@ -13,7 +13,9 @@ fs.mkdirSync(uploadsDir, { recursive: true });
 
 app.listen(port, () => {
   console.log(`API listening on http://localhost:${port}`);
-  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-    console.warn('Contact enquiries will not be emailed until SMTP_HOST, SMTP_USER, and SMTP_PASS are set.');
+  const emailJsReady = process.env.EMAILJS_SERVICE_ID && process.env.EMAILJS_TEMPLATE_ID && process.env.EMAILJS_PUBLIC_KEY;
+  const smtpReady = process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS;
+  if (!emailJsReady && !smtpReady) {
+    console.warn('Contact enquiries will not be emailed until EmailJS or SMTP settings are complete.');
   }
 });

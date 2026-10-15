@@ -49,11 +49,11 @@ export default function EnquiryForm() {
         </div>
         <div>
           <label className="block text-[11px] uppercase tracking-widest text-gray-500 mb-2 font-semibold" htmlFor="width">Approx. Width</label>
-          <input id="width" name="width" type="text" maxLength={40} className={fieldClass} placeholder="If known" />
+          <input id="width" name="width" type="text" inputMode="decimal" maxLength={12} autoComplete="off" className={fieldClass} placeholder="If known" />
         </div>
         <div>
           <label className="block text-[11px] uppercase tracking-widest text-gray-500 mb-2 font-semibold" htmlFor="height">Approx. Height</label>
-          <input id="height" name="height" type="text" maxLength={40} className={fieldClass} placeholder="If known" />
+          <input id="height" name="height" type="text" inputMode="decimal" maxLength={12} autoComplete="off" className={fieldClass} placeholder="If known" />
         </div>
         <div className="md:col-span-2">
           <label className="block text-[11px] uppercase tracking-widest text-gray-500 mb-2 font-semibold" htmlFor="projectDescription">Requirement</label>

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { createDeal, createEnquiry } from '../api/client';
+import { createDeal, createEnquiry, sendEnquiryEmail } from '../api/client';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,9 +177,10 @@ function validateEnquiry(form, files) {
   if (needType && !errors.needType && !DISPLAY_TYPES.has(needType)) {
     errors.needType = 'Choose a display type';
   }
-  [['width', 'Approx. width', 40], ['height', 'Approx. height', 40]].forEach(([name, label, maxLength]) => {
+  const dimensionPattern = /^\d+(\.\d+)?$/;
+  [['width', 'Approx. width'], ['height', 'Approx. height']].forEach(([name, label]) => {
     const value = fieldValue(form, name);
-    if (value && value.length > maxLength) errors[name] = `${label} must be ${maxLength} characters or fewer`;
+    if (value && !dimensionPattern.test(value)) errors[name] = `${label} must be a number`;
   });
 
   const list = [...(files || [])];
@@ -777,6 +778,10 @@ export function useSiteEffects(title) {
       const onFieldInput = (event) => {
         const name = event.target?.name;
         if (!name || name === 'attachments') return;
+        if (name === 'width' || name === 'height') {
+          const next = event.target.value.replace(/[^\d.]/g, '').replace(/^(\d*\.?\d*).*$/, '$1');
+          if (next !== event.target.value) event.target.value = next;
+        }
         showFieldError(leadForm, name, '');
       };
       const onSubmit = async (event) => {
@@ -801,6 +806,9 @@ export function useSiteEffects(title) {
         submitButton.disabled = true;
         setButtonLabel(submitButton, 'Submitting...');
         try {
+          const fields = Object.fromEntries(formData.entries());
+          const fileNames = fileInput?.files ? [...fileInput.files].map((file) => file.name) : [];
+          await sendEnquiryEmail(fields, fileNames);
           await createEnquiry(formData);
           setButtonLabel(submitButton, 'Enquiry received');
           setEnquiryStatus(leadForm, 'Enquiry received. We will reply by email.', 'success');

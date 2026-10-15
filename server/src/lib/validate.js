@@ -41,6 +41,17 @@ export function readEmail(value) {
   return { value: email, error: '' };
 }
 
+const DIMENSION_PATTERN = /^\d+(\.\d+)?$/;
+
+export function readOptionalNumber(value, field) {
+  const text = readBoundedText(value, field, 12, { singleLine: true });
+  if (text.error || !text.value) return text;
+  if (!DIMENSION_PATTERN.test(text.value)) {
+    return { value: '', error: `${field} must be a number` };
+  }
+  return text;
+}
+
 export function readPhone(value) {
   const text = readBoundedText(value, 'Phone', 30, { required: true, singleLine: true });
   if (text.error) return text;
