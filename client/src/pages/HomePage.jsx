@@ -4,10 +4,10 @@ import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlides = [
-  { src: '/images/work/downtown-corner.png', alt: 'Corner LED wrap at Downtown Business Center', focus: 'center 35%' },
-  { src: '/images/work/hyundai-billboard.png', alt: 'Hyundai roadside LED billboard', focus: 'center' },
-  { src: '/images/work/techvista.png', alt: 'TechVista showroom facade screen', focus: 'center 28%' },
-  { src: '/images/work/iphone-billboard.png', alt: 'iPhone roadside LED billboard', focus: 'center' },
+  { src: '/images/work/brighter-tomorrow.png', alt: 'Architectural LED facade, A Brighter Tomorrow', focus: 'center' },
+  { src: '/images/work/vara-alath-tower.png', alt: 'Outdoor LED screen on Vara Alath Tower, Alathur', focus: 'center 22%' },
+  { src: '/images/work/dream-home-billboard.png', alt: 'Outdoor residential LED billboard', focus: 'center' },
+  { src: '/images/work/aakash-edappally.png', alt: 'Aakash LED billboard in Edappally', focus: 'center 28%' },
   { src: '/images/work/dream-haven-truck.png', alt: 'Dream Haven mobile LED truck', focus: 'center' },
 ];
 

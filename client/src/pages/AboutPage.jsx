@@ -8,7 +8,7 @@ export default function AboutPage() {
   <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[500px] md:min-h-[580px] lg:min-h-[620px]">
     {/* Right Side Image Container (With Feathered Left Edge) */}
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
-      <img src="/images/work/downtown-corner.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 35%' }} alt="Corner LED wrap at Downtown Business Center" />
+      <img src="/images/work/brighter-tomorrow.png" className="w-full h-full object-cover" alt="Architectural LED facade, A Brighter Tomorrow" />
       <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
     </div>
     <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-12 md:py-24 lg:py-28">

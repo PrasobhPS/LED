@@ -2,12 +2,26 @@ import { Link } from 'react-router-dom';
 import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
+const originalWorkIds = new Set([
+  'kanju-hut',
+  'vara-alath-tower',
+  'aakash-edappally',
+  'susi-fragrances',
+  'thx-mobiles',
+  'matha-jewellers',
+  'dream-home-billboard',
+  'dream-haven-truck',
+  'brighter-tomorrow',
+]);
+
+const originalWork = installations.filter((item) => originalWorkIds.has(item.id));
+
 export default function NetworkPage() {
   return (
     <>
       <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521' }}>
         <div className="absolute inset-0 z-0 w-full h-full">
-          <img src="/images/work/iphone-billboard.png" className="w-full h-full object-cover" alt="iPhone roadside LED billboard" />
+          <img src="/images/work/aakash-edappally.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash LED billboard in Edappally" />
           <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(to right, rgba(7, 21, 33, 0.94) 0%, rgba(7, 21, 33, 0.72) 48%, rgba(7, 21, 33, 0.28) 100%)' }} />
         </div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
@@ -36,7 +50,7 @@ export default function NetworkPage() {
             </p>
           </div>
           <div className="screen-gallery">
-            {installations.map((item) => (
+            {originalWork.map((item) => (
               <figure key={item.id}>
                 <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
                 <figcaption>
