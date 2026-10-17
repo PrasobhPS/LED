@@ -86,7 +86,7 @@ select.is-invalid {
     height: calc(100vh - 72px);
     max-height: calc(100vh - 72px);
     justify-content: safe center;
-    overflow: hidden;
+    overflow: auto;
     padding: 1.75rem 2.75rem 1.5rem;
   }
 

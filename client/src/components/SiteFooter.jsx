@@ -17,12 +17,16 @@ export default function SiteFooter() {
           <div>
             <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mb-3">USA Office</p>
             <p className="text-[13px] text-gray-300 leading-relaxed">
-              Columbus, Ohio<br />
+              8425 Pulsar Place, Suite #280<br />
+              Columbus, OH 43240<br />
               United States
             </p>
             <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mt-8 mb-3">India Office</p>
             <p className="text-[13px] text-gray-300 leading-relaxed">
-              Kochi, Kerala<br />
+              Niche Techies Inc.<br />
+              Anaarworx Building<br />
+              Rajagiri Valley Road, Infopark Expressway<br />
+              Kakkanad, Kochi, Kerala 682039<br />
               India
             </p>
           </div>

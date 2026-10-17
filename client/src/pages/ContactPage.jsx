@@ -19,11 +19,21 @@ export default function ContactPage() {
             <div className="flex flex-col gap-4">
               <div>
                 <p className="contact-sidebar-label uppercase tracking-widest text-gray-400 font-semibold mb-1">USA Office</p>
-                <p className="contact-sidebar-value font-semibold text-white">Columbus, Ohio, United States</p>
+                <p className="contact-sidebar-value font-semibold text-white leading-relaxed">
+                  8425 Pulsar Place, Suite #280<br />
+                  Columbus, OH 43240<br />
+                  United States
+                </p>
               </div>
               <div>
                 <p className="contact-sidebar-label uppercase tracking-widest text-gray-400 font-semibold mb-1">India Office</p>
-                <p className="contact-sidebar-value font-semibold text-white">Kochi, Kerala, India</p>
+                <p className="contact-sidebar-value font-semibold text-white leading-relaxed">
+                  Niche Techies Inc.<br />
+                  Anaarworx Building<br />
+                  Rajagiri Valley Road, Infopark Expressway<br />
+                  Kakkanad, Kochi, Kerala 682039<br />
+                  India
+                </p>
               </div>
               <div>
                 <p className="contact-sidebar-label uppercase tracking-widest text-gray-400 font-semibold mb-1">Phone</p>
