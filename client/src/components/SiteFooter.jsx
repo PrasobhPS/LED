@@ -17,8 +17,8 @@ export default function SiteFooter() {
           <div>
             <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mb-3">USA Office</p>
             <p className="text-[13px] text-gray-300 leading-relaxed">
-              8425 Pulsar Place, Suite #280<br />
-              Columbus, OH 43240<br />
+              470 Olde Worthington Rd<br />
+              Westerville, OH 43082<br />
               United States
             </p>
             <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mt-8 mb-3">India Office</p>

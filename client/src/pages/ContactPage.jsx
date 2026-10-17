@@ -20,8 +20,8 @@ export default function ContactPage() {
               <div>
                 <p className="contact-sidebar-label uppercase tracking-widest text-gray-400 font-semibold mb-1">USA Office</p>
                 <p className="contact-sidebar-value font-semibold text-white leading-relaxed">
-                  8425 Pulsar Place, Suite #280<br />
-                  Columbus, OH 43240<br />
+                  470 Olde Worthington Rd<br />
+                  Westerville, OH 43082<br />
                   United States
                 </p>
               </div>

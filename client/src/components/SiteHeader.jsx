@@ -53,7 +53,7 @@ export default function SiteHeader({ active }) {
           <div className="px-5 pt-4 pb-1">
             <div className="flex items-center gap-2 px-3 py-1.5 bg-[#071521]/5 rounded-lg text-[11px] font-semibold text-[#071521]">
               <span className="w-2 h-2 rounded-full bg-[#168BEB] animate-pulse" />
-              <span>Columbus, USA · Kochi, India</span>
+              <span>Westerville, USA · Kochi, India</span>
             </div>
           </div>
           <div className="flex-grow overflow-y-auto px-5 py-4 flex flex-col gap-2 text-[15px] font-medium text-[#071521]">

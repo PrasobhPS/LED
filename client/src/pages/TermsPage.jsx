@@ -14,7 +14,7 @@ export default function TermsPage() {
         <h2>Your content</h2>
         <p>Photos and descriptions you upload should be yours to share. We use them only to understand the site and reply to you.</p>
         <h2>Contact</h2>
-        <p>SANS GLOWMETRIC can be reached at <a href="mailto:contact@sansglowmetric.com">contact@sansglowmetric.com</a> and <a href="tel:+919746021869">+91 97460 21869</a>. Offices are in Columbus, Ohio, United States and Kochi, Kerala, India.</p>
+        <p>SANS GLOWMETRIC can be reached at <a href="mailto:contact@sansglowmetric.com">contact@sansglowmetric.com</a> and <a href="tel:+919746021869">+91 97460 21869</a>. Offices are in Westerville, Ohio, United States and Kochi, Kerala, India.</p>
         <p><Link to="/contact">Back to the enquiry form</Link></p>
       </article>
     </>
