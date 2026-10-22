@@ -1,5 +1,18 @@
 export const installations = [
   {
+    id: 'biggest-screen-kerala',
+    title: 'Biggest LED Screen in Kerala',
+    image: '/images/work/biggest-screen-kerala.jpg',
+    location: 'Kerala',
+    environment: 'Outdoor',
+    type: 'Roadside LED wall',
+    category: 'Billboards',
+    badge: 'Biggest',
+    note: 'Kerala',
+    focus: '28% 38%',
+    description: 'The biggest screen in Kerala: a roadside LED wall above a busy night street, sized so traffic and the footpath can read it from a distance.',
+  },
+  {
     id: 'kanju-hut',
     title: 'Kanji Hut Storefront',
     image: '/images/work/kanju-hut.png',

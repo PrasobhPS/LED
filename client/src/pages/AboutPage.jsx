@@ -168,7 +168,7 @@ export default function AboutPage() {
         {/* Card 2 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 2, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/aakash-edappally.png" alt="Aakash LED billboard in Edappally" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
+            <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest LED screen in Kerala" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '28% 38%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -369,13 +369,12 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative group gsap-fade-up">
-          <img src="/images/work/brighter-tomorrow.png" alt="Architectural LED facade, A Brighter Tomorrow" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center' }} />
+          <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest LED screen in Kerala" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: '28% 38%' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-transparent to-transparent opacity-80 pointer-events-none" />
           <div className="absolute bottom-6 left-6 right-6">
             <div className="p-4 sm:p-5 rounded-xl border border-white/20 shadow-xl backdrop-blur-md" style={{backgroundColor: 'rgba(7, 21, 33, 0.85)', WebkitBackdropFilter: 'blur(12px)', backdropFilter: 'blur(12px)'}}>
-              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#35C1F4] mb-1">NEXT LEVEL
-                VISUALS</p>
-              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">Pushing boundaries of digital display</p>
+              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#35C1F4] mb-1">KERALA</p>
+              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">The biggest screen in Kerala</p>
             </div>
           </div>
         </div>
@@ -395,10 +394,10 @@ export default function AboutPage() {
             {/* List Item 1 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/vara-alath-tower.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 22%' }} alt="Vara Alath Tower" />
+                <img src="/images/work/biggest-screen-kerala.jpg" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: '28% 38%' }} alt="The biggest LED screen in Kerala" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Vara Alath Tower, Alathur</h4>
-                  <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Biggest screen in Kerala</h4>
+                  <p className="text-[11px] text-gray-500">Roadside LED wall</p>
                 </div>
               </div>
               <svg className="w-5 h-5 text-gray-400 group-hover:text-[#168BEB] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
