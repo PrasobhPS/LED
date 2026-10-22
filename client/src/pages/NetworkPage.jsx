@@ -2,20 +2,6 @@ import { Link } from 'react-router-dom';
 import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
-const originalWorkIds = new Set([
-  'kanju-hut',
-  'vara-alath-tower',
-  'aakash-edappally',
-  'susi-fragrances',
-  'thx-mobiles',
-  'matha-jewellers',
-  'dream-home-billboard',
-  'dream-haven-truck',
-  'brighter-tomorrow',
-]);
-
-const originalWork = installations.filter((item) => originalWorkIds.has(item.id));
-
 export default function NetworkPage() {
   return (
     <>
@@ -50,7 +36,7 @@ export default function NetworkPage() {
             </p>
           </div>
           <div className="screen-gallery">
-            {originalWork.map((item) => (
+            {installations.map((item) => (
               <figure key={item.id}>
                 <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
                 <figcaption>

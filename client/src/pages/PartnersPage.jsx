@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { clientLogos } from '../data/clients';
 
 const CAPABILITIES = [
   {
@@ -82,151 +83,6 @@ const CAPABILITIES = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
       </svg>
     ),
-  },
-];
-
-const BRANDS = [
-  {
-    id: 'novastar',
-    name: 'NovaStar',
-    content: (
-      <svg className="h-6 sm:h-7 w-auto max-w-[130px]" viewBox="0 0 170 36" fill="none">
-        <path d="M4 28V6h5.4l9.8 14.2V6h4.8v22h-5L9.2 13.6V28H4z" fill="#0066CC" />
-        <path d="M37 5.8c6.6 0 11.5 4.8 11.5 11.2s-4.9 11.2-11.5 11.2-11.5-4.8-11.5-11.2S30.4 5.8 37 5.8zm0 4.2c-4 0-6.8 3.2-6.8 7s2.8 7 6.8 7 6.8-3.2 6.8-7-2.8-7-6.8-7z" fill="#0066CC" />
-        <path d="M37 13.5l1.2 3.2 3.3.3-2.5 2.1.8 3.2-2.8-1.7-2.8 1.7.8-3.2-2.5-2.1 3.3-.3L37 13.5z" fill="#00A3E0" />
-        <path d="M51 6h5.2l5.6 15.5L67.4 6h5.2L64.8 28h-4.8L51 6z" fill="#0066CC" />
-        <path d="M79 6h5l7.5 22h-4.8l-1.8-5.2h-7.2l-1.8 5.2h-4.4L79 6zm4.8 13l-2.4-7.2-2.4 7.2h4.8z" fill="#0066CC" />
-        <path d="M96 23.5c1.4.9 3 1.4 4.8 1.4 2.2 0 3.6-1 3.6-2.4 0-3.6-8.8-1.5-8.8-7.8 0-3 2.6-5.2 6.8-5.2 2 0 3.8.5 5.2 1.4l-1.2 3.2c-1.2-.7-2.6-1.1-4-1.1-1.8 0-3 .8-3 2 0 3.4 8.8 1.4 8.8 7.7 0 3.3-2.6 5.5-7.2 5.5-2.4 0-4.6-.6-6.2-1.7l1.4-3z" fill="#0066CC" />
-        <path d="M109 9.6V6h13.8v3.6h-4.6V28h-4.6V9.6H109z" fill="#0066CC" />
-        <path d="M127 6h5l7.5 22h-4.8l-1.8-5.2h-7.2l-1.8 5.2h-4.4L127 6zm4.8 13l-2.4-7.2-2.4 7.2h4.8z" fill="#0066CC" />
-        <path d="M142 6h7.8c4.2 0 7 2.2 7 5.8 0 2.8-1.6 4.5-3.8 5.3l4.6 10.9h-4.9l-4.1-9.6h-2V28h-4.6V6zm7.2 8.6c1.8 0 3-1 3-2.6 0-1.6-1.2-2.6-3-2.6h-2.6v5.2h2.6z" fill="#0066CC" />
-      </svg>
-    ),
-  },
-  {
-    id: 'hikvision',
-    name: 'Hikvision',
-    content: (
-      <div style={{ display: 'flex', alignItems: 'center', fontSize: '20px', fontWeight: 900, fontStyle: 'italic', fontFamily: 'sans-serif', letterSpacing: '-0.02em' }}>
-        <span style={{ color: '#231F20' }}>HIK</span>
-        <span style={{ color: '#D71920' }}>VISION</span>
-      </div>
-    ),
-  },
-  {
-    id: 'unilumin',
-    name: 'Unilumin',
-    content: (
-      <span style={{ color: '#0065B3', fontWeight: 900, fontStyle: 'italic', fontSize: '23px', letterSpacing: '-0.02em', fontFamily: 'sans-serif' }}>
-        Unilumin
-      </span>
-    ),
-  },
-  {
-    id: 'linsn',
-    name: 'Linsn',
-    content: (
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 5px)', gap: '2px', width: '19px', height: '19px' }}>
-          <div style={{ background: '#00A3E0', borderRadius: '1px' }} />
-          <div style={{ background: '#10B981', borderRadius: '1px' }} />
-          <div style={{ background: '#0072CE', borderRadius: '1px' }} />
-          <div style={{ background: '#00A3E0', borderRadius: '1px' }} />
-          <div />
-          <div />
-          <div style={{ background: '#10B981', borderRadius: '1px' }} />
-          <div style={{ background: '#00A3E0', borderRadius: '1px' }} />
-          <div style={{ background: '#0072CE', borderRadius: '1px' }} />
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ color: '#1E293B', fontWeight: 800, fontSize: '16px', letterSpacing: '0.02em' }}>
-            linsn
-          </span>
-          <span style={{ color: '#64748B', fontWeight: 600, fontSize: '8px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-            LED Technology
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 'dahua',
-    name: 'Dahua',
-    content: (
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-        <svg style={{ width: '22px', height: '22px', flexShrink: 0 }} viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="13" stroke="#D71920" strokeWidth="3" strokeDasharray="55 25" />
-          <circle cx="16" cy="16" r="5.5" fill="#D71920" />
-        </svg>
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
-          <span style={{ color: '#D71920', fontWeight: 900, fontSize: '17px', letterSpacing: '-0.02em' }}>
-            alhua
-          </span>
-          <span style={{ color: '#475569', fontWeight: 700, fontSize: '7.5px', letterSpacing: '0.18em', textTransform: 'uppercase' }}>
-            Technology
-          </span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 'compunet',
-    name: 'Compunet Digital',
-    content: (
-      <img
-        src="/images/partners/compunet.png"
-        alt="Compunet Digital"
-        className="partners-client-logo"
-      />
-    ),
-  },
-  {
-    id: 'absen',
-    name: 'Absen',
-    content: (
-      <span style={{ color: '#E60012', fontWeight: 900, fontStyle: 'italic', fontSize: '23px', letterSpacing: '-0.02em', fontFamily: 'sans-serif' }}>
-        Absen
-      </span>
-    ),
-  },
-  {
-    id: 'colorlight',
-    name: 'Colorlight',
-    content: (
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
-        <div style={{ width: '15px', height: '15px', borderRadius: '3px', background: '#0085CA' }} />
-        <span style={{ color: '#002B49', fontWeight: 900, fontSize: '18px', letterSpacing: '-0.02em', fontFamily: 'sans-serif' }}>
-          Colorlight
-        </span>
-      </div>
-    ),
-  },
-];
-
-const CLIENTELE = [
-  {
-    name: 'Alpha Academy',
-    src: '/images/partners/alpha.png',
-  },
-  {
-    name: 'Indian Overseas Bank',
-    src: '/images/partners/indian-overseas-bank.png',
-  },
-  {
-    name: 'Thalassery Co-operative Rural Bank Ltd.',
-    src: '/images/partners/rural-cooperative-bank.svg',
-  },
-  {
-    name: 'susi PERFUME LAB',
-    src: '/images/partners/susi-perfume.png',
-  },
-  {
-    name: 'Moon Hut',
-    src: '/images/partners/meen-hut.jpg',
-  },
-  {
-    name: 'Compunet Digital',
-    src: '/images/partners/compunet.png',
   },
 ];
 
@@ -402,10 +258,10 @@ export default function PartnersPage() {
               <div className="partners-stacked-backdrop" />
               <div className="partners-main-card">
                 <img
-                  src="/images/work/techvista.png"
-                  alt="TechVista showroom facade"
+                  src="/images/work/vara-alath-tower.png"
+                  alt="Outdoor LED screen on Vara Alath Tower, Alathur"
                   className="partners-main-img"
-                  style={{ objectPosition: 'center 28%' }}
+                  style={{ objectPosition: 'center 22%' }}
                 />
               </div>
               <div className="partners-overlap-card">
@@ -431,38 +287,24 @@ export default function PartnersPage() {
               and the clientele behind them.
             </h2>
             <p className="partners-section-intro" style={{ marginBottom: 0 }}>
-              We partner with leading brands and trusted clients to deliver reliable and high-performance LED solutions across industries.
+              Logos from clients whose screens we have supplied and installed.
             </p>
           </div>
 
-          {/* Sub-block 1: Brands we work with Slider */}
-          <div style={{ marginBottom: '3.5rem' }}>
-            <PartnerCardSlider
-              title="Brands we work with"
-              linkText="View all brands"
-              linkTo="/contact"
-              items={BRANDS}
-              renderItem={(brand) => brand.content}
-            />
-          </div>
-
-          {/* Sub-block 2: Clientele Slider */}
-          <div>
-            <PartnerCardSlider
-              title="Clientele"
-              subtitle="Organizations where screens from our work are already installed."
-              linkText="View all clients"
-              linkTo="/contact"
-              items={CLIENTELE}
-              renderItem={(client) => (
-                <img
-                  src={client.src}
-                  alt={client.name}
-                  className="partners-client-logo"
-                />
-              )}
-            />
-          </div>
+          <PartnerCardSlider
+            title="Brands and clientele"
+            subtitle="Organizations where screens from our work are already installed."
+            linkText="Get an LED Wall"
+            linkTo="/contact"
+            items={clientLogos}
+            renderItem={(client) => (
+              <img
+                src={client.src}
+                alt={client.name}
+                className="partners-client-logo"
+              />
+            )}
+          />
         </div>
       </section>
 
@@ -470,8 +312,8 @@ export default function PartnersPage() {
       <section className="partners-cta-sec">
         <div className="partners-cta-media">
           <img
-            src="/images/work/event-stage.png"
-            alt="Event stage LED backdrop"
+            src="/images/work/aakash-edappally.png"
+            alt="Aakash LED billboard in Edappally"
             className="partners-cta-img"
           />
           <div className="partners-cta-vignette" />

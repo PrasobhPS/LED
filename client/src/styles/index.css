@@ -166,6 +166,8 @@
         left: 0 !important;
         width: 100% !important;
         height: 100% !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
     }
 
     #hero-content-container {
@@ -193,9 +195,8 @@
     }
 
     .hero-slide-overlay {
-        background: 
-            linear-gradient(to bottom, rgba(7, 21, 33, 0.92) 0%, rgba(7, 21, 33, 0.7) 45%, rgba(7, 21, 33, 0.96) 100%),
-            linear-gradient(rgba(7, 21, 33, 0.35), rgba(7, 21, 33, 0.35)) !important;
+        background:
+            linear-gradient(to bottom, rgba(7, 21, 33, 0.84) 0%, rgba(7, 21, 33, 0.68) 34%, rgba(7, 21, 33, 0.18) 68%, rgba(7, 21, 33, 0.5) 100%) !important;
     }
 }
 

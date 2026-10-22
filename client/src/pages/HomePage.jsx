@@ -70,22 +70,13 @@ export default function HomePage() {
           the space is used.
         </p>
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="flex items-center justify-center gap-3 px-6 py-3.5 bg-[#168BEB] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
             Get an LED Wall
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
-        </div>
-        {/* Location */}
-        <div className="flex items-center gap-2 text-[12px] text-gray-400 font-medium">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z">
-            </path>
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          Offices in Westerville, Ohio and Kochi, India
         </div>
       </div>
     </div>
@@ -122,7 +113,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/work/techvista.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="TechVista showroom facade screen" />
+          <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 22%' }} alt="Outdoor LED screen on Vara Alath Tower, Alathur" />
         </div>
       </div>
     </div>
@@ -144,7 +135,7 @@ export default function HomePage() {
             We create immersive, high-quality LED displays for a wide range of industries and environments.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#071521] text-white text-[13px] font-medium hover:bg-[#0D2942] transition-colors rounded-lg">
-            Request a Site Assessment
+            Get an LED Wall
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -223,55 +214,6 @@ export default function HomePage() {
       </div>
     </div>
   </section>
-  <section className="relative py-24 md:py-32 overflow-hidden bg-[#071521]">
-    {/* Background Image with Overlay */}
-    <div className="absolute inset-0 z-0">
-      <img src="/images/work/downtown-corner.png" className="w-full h-full object-cover opacity-20 filter grayscale" style={{ objectPosition: 'center 35%' }} alt="Downtown corner LED wrap" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-[#071521]/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#071521] to-transparent" />
-    </div>
-    <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10">
-      <div className="text-center mb-24">
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Global Scale</span>
-        </div>
-        <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.22] tracking-tight">
-          Powering the World's<br />Most Iconic Locations.
-        </h2>
-      </div>
-      {/* Stats Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
-        <div className="flex flex-col items-center text-center pt-8 lg:pt-0 lg:px-8 first:pt-0 first:lg:pl-0 last:lg:pr-0">
-          <div className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-3 tracking-tighter drop-shadow-lg">
-            <span className="stat-counter" data-target={50}>0</span><span className="text-[#168BEB]">+</span>
-          </div>
-          <span className="text-[12px] md:text-[13px] text-gray-400 font-medium tracking-widest uppercase">Global
-            Cities</span>
-        </div>
-        <div className="flex flex-col items-center text-center pt-8 lg:pt-0 lg:px-8">
-          <div className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-3 tracking-tighter drop-shadow-lg">
-            <span className="stat-counter" data-target={12}>0</span>K<span className="text-[#168BEB]">+</span>
-          </div>
-          <span className="text-[12px] md:text-[13px] text-gray-400 font-medium tracking-widest uppercase">Screens
-            Deployed</span>
-        </div>
-        <div className="flex flex-col items-center text-center pt-8 lg:pt-0 lg:px-8">
-          <div className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-3 tracking-tighter drop-shadow-lg">
-            <span className="stat-counter" data-target={15}>0</span>M<span className="text-[#168BEB]">+</span>
-          </div>
-          <span className="text-[12px] md:text-[13px] text-gray-400 font-medium tracking-widest uppercase">Daily
-            Impressions</span>
-        </div>
-        <div className="flex flex-col items-center text-center pt-8 lg:pt-0 lg:px-8">
-          <div className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-3 tracking-tighter drop-shadow-lg">
-            <span className="stat-counter" data-target={99}>0</span><span className="text-[#168BEB]">.9%</span>
-          </div>
-          <span className="text-[12px] md:text-[13px] text-gray-400 font-medium tracking-widest uppercase">Network
-            Uptime</span>
-        </div>
-      </div>
-    </div>
-  </section>
   {/* Billboard Conversion */}
   <section id="billboard-conversion" className="bg-slate-50">
     <div className="max-w-[1400px] mx-auto px-6 md:px-12">
@@ -289,7 +231,7 @@ export default function HomePage() {
             real-time content.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#071521] text-white text-[13px] font-medium hover:bg-[#0D2942] transition-colors rounded-lg">
-            Digitize My Billboard
+            Get an LED Wall
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
@@ -297,7 +239,7 @@ export default function HomePage() {
         </div>
         <div className="lg:col-span-8 w-full">
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-            <img src="/images/work/hyundai-billboard.png" className="absolute inset-0 w-full h-full object-cover" alt="Hyundai roadside LED billboard" />
+            <img src="/images/work/aakash-edappally.png" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash LED billboard in Edappally" />
           </div>
         </div>
       </div>
@@ -356,7 +298,7 @@ export default function HomePage() {
         <div className="mt-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span id="installations-counter" className="text-[12px] font-bold tracking-wider text-[#071521]">01
-              / 06</span>
+              / 09</span>
             <div className="w-28 sm:w-44 h-1 bg-gray-200 rounded-full overflow-hidden">
               <div id="installations-progress" className="h-full bg-[#168BEB] transition-all duration-300">
               </div>
@@ -387,7 +329,7 @@ export default function HomePage() {
             seamless experience and a brilliant final display.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#071521] text-white text-[13px] font-medium hover:bg-[#0D2942] transition-colors rounded-lg">
-            Get a Quote
+            Get an LED Wall
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>

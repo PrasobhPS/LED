@@ -7,48 +7,6 @@
     "image": "/images/work/kanju-hut.png"
   },
   {
-    "id": "downtown-corner",
-    "title": "Downtown Business Center Corner",
-    "summary": "Corner LED wrap across two street faces",
-    "category": "Facades",
-    "image": "/images/work/downtown-corner.png"
-  },
-  {
-    "id": "hyundai-billboard",
-    "title": "Hyundai Roadside Billboard",
-    "summary": "Elevated roadside LED billboard",
-    "category": "Billboards",
-    "image": "/images/work/hyundai-billboard.png"
-  },
-  {
-    "id": "event-stage",
-    "title": "Event Stage Backdrop",
-    "summary": "Wide LED backdrop for a seated event",
-    "category": "Indoor LED",
-    "image": "/images/work/event-stage.png"
-  },
-  {
-    "id": "iphone-billboard",
-    "title": "iPhone Roadside Billboard",
-    "summary": "Large junction LED billboard",
-    "category": "Billboards",
-    "image": "/images/work/iphone-billboard.png"
-  },
-  {
-    "id": "glass-facade",
-    "title": "Glass Building Facade Screen",
-    "summary": "LED screen set into a glass facade",
-    "category": "Facades",
-    "image": "/images/work/glass-facade.png"
-  },
-  {
-    "id": "techvista",
-    "title": "TechVista Showroom Facade",
-    "summary": "Showroom facade screen",
-    "category": "Facades",
-    "image": "/images/work/techvista.png"
-  },
-  {
     "id": "vara-alath-tower",
     "title": "Vara Alath Tower LED Screen",
     "summary": "Outdoor facade screen in Alathur",

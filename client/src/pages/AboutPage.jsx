@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProjectClose from '../components/ProjectClose';
+import { clientLogos } from '../data/clients';
 
 export default function AboutPage() {
   return (
@@ -30,9 +31,6 @@ export default function AboutPage() {
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </Link>
-          <Link to="/projects" className="inline-flex items-center justify-center gap-3 px-8 py-4 border border-gray-400 text-white text-[13px] font-bold hover:border-white transition-colors rounded-lg">
-            Watch Our Showreel
           </Link>
         </div>
       </div>
@@ -65,8 +63,8 @@ export default function AboutPage() {
             </div>
             <div>
               <h4 className="text-[15px] font-bold text-[#071521] mb-1">Premium Quality Engineering</h4>
-              <p className="text-[13px] text-gray-500 leading-relaxed">We utilize top-tier diodes and advanced
-                manufacturing processes to ensure vibrant, long-lasting displays.</p>
+              <p className="text-[13px] text-gray-500 leading-relaxed">We use display hardware chosen for
+                brightness, colour and the life of the installation.</p>
             </div>
           </div>
           {/* Feature 2 */}
@@ -79,12 +77,12 @@ export default function AboutPage() {
             <div>
               <h4 className="text-[15px] font-bold text-[#071521] mb-1">End-to-End Solutions</h4>
               <p className="text-[13px] text-gray-500 leading-relaxed">From structural design and permissions
-                to flawless installation and content management.</p>
+                to installation and support after the screen is live.</p>
             </div>
           </div>
         </div>
-        <Link to="/projects" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#071521] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
-          Explore Our Work
+        <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#071521] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
+          Get an LED Wall
           <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
@@ -94,11 +92,11 @@ export default function AboutPage() {
       <div className="relative gsap-fade-up mt-12 lg:mt-0" style={{paddingBottom: '10%', paddingRight: '8%'}}>
         {/* Main Background Image */}
         <div className="rounded-sm overflow-hidden relative z-10 shadow-lg border border-gray-100 bg-gray-100" style={{aspectRatio: '4/3'}}>
-          <img src="/images/work/event-stage.png" alt="Event stage LED backdrop" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 32%' }} />
+          <img src="/images/work/susi-fragrances.png" alt="SUSI Fragrances storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 28%' }} />
         </div>
         {/* Overlapping Image (Bottom Right) */}
         <div className="absolute rounded-sm overflow-hidden z-20 shadow-2xl bg-white" style={{bottom: 0, right: 0, width: '60%', border: '8px solid white', aspectRatio: '4/3'}}>
-          <img src="/images/work/techvista.png" alt="TechVista showroom facade" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 28%' }} />
+          <img src="/images/work/vara-alath-tower.png" alt="Outdoor LED screen on Vara Alath Tower, Alathur" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 22%' }} />
         </div>
         {/* Floating Badge (Top Left) */}
         <div className="absolute bg-white border border-gray-100 p-4 lg:p-5 rounded-sm z-30 shadow-xl flex items-center gap-4" style={{top: '-1.5rem', left: '-1.5rem'}}>
@@ -128,8 +126,8 @@ export default function AboutPage() {
           Screens for<br />Every Space
         </h2>
         <p className="text-lg leading-relaxed text-gray-600 mb-8 max-w-md">
-          From ultra-fine pitch indoor displays to weather-resistant outdoor billboards, our comprehensive
-          range of LED solutions is engineered to deliver breathtaking visual experiences in any environment.
+          Indoor walls, outdoor billboards, facades and retail displays, sized for the space and the
+          distance people view them from.
         </p>
         <div>
           <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-[#071521] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
@@ -159,10 +157,9 @@ export default function AboutPage() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Indoor LED Solutions</h3>
             <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Designed for retail spaces,
-              corporate environments, and broadcasting studios. Our indoor panels feature ultra-fine pixel
-              pitches for stunning close-up clarity and vibrant color reproduction.</p>
-            <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Indoor <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              offices and indoor venues where people stand close to the screen.</p>
+            <Link to="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
+              Get an LED Wall <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -171,7 +168,7 @@ export default function AboutPage() {
         {/* Card 2 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 2, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/hyundai-billboard.png" alt="Hyundai roadside LED billboard" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
+            <img src="/images/work/aakash-edappally.png" alt="Aakash LED billboard in Edappally" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -185,10 +182,10 @@ export default function AboutPage() {
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Outdoor LED Displays</h3>
             <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Built to withstand the
-              elements. Perfect for billboards, stadiums, and public spaces, delivering extreme brightness
-              and weather-resistant durability that captivates audiences day and night.</p>
-            <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Outdoor <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              elements. Built for billboards, building facades and outdoor sites that need to stay readable
+              in daylight and after dark.</p>
+            <Link to="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
+              Get an LED Wall <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -213,8 +210,8 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold text-white mb-2">Mobile LED Displays</h3>
             <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Vehicle-mounted LED panels
               that carry a campaign on the road, with a screen large enough to read from the street.</p>
-            <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Mobile <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link to="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
+              Get an LED Wall <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -223,7 +220,7 @@ export default function AboutPage() {
         {/* Card 4 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 4, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/downtown-corner.png" alt="Corner LED wrap at Downtown Business Center" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 35%'}} />
+            <img src="/images/work/brighter-tomorrow.png" alt="Architectural LED facade, A Brighter Tomorrow" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -239,8 +236,8 @@ export default function AboutPage() {
             <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>Curved, flexible, and
               innovative architectural designs that push the boundaries of imagination. If you can dream
               it, we can build it.</p>
-            <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Custom <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link to="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
+              Get an LED Wall <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -249,7 +246,7 @@ export default function AboutPage() {
         {/* Card 5 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 5, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/techvista.png" alt="TechVista showroom facade" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
+            <img src="/images/work/matha-jewellers.png" alt="Matha Jewellers storefront display" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 42%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -265,8 +262,8 @@ export default function AboutPage() {
             <p className="text-[14px] leading-relaxed mb-4" style={{color: '#9ca3af'}}>High-impact commercial
               displays designed to capture attention and communicate your message dynamically in malls,
               airports, and public venues.</p>
-            <Link to="/network" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
-              Explore Signage <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <Link to="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-[11px]" style={{color: '#168BEB'}}>
+              Get an LED Wall <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -294,11 +291,11 @@ export default function AboutPage() {
             Why Partner<br />With Us?
           </h2>
           <p className="text-gray-400 text-[15px] leading-relaxed mb-8">
-            We don't just sell screens; we engineer complete visual ecosystems. From structural design to
-            content management, we handle everything end-to-end.
+            We supply and install the wall, then stay available for service. From the structure on site
+            to the screen that is switched on, the same team handles the job.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 text-white font-bold text-[12px] uppercase tracking-widest hover:text-[#168BEB] transition-colors">
-            Start Your Project
+            Get an LED Wall
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -346,8 +343,8 @@ export default function AboutPage() {
               </svg>
             </div>
             <h4 className="text-xl font-bold text-white mb-3">Seamless Integration</h4>
-            <p className="text-[14px] text-gray-400 leading-relaxed">Our advanced CMS software allows you to
-              control, schedule, and update your content from anywhere in the world.</p>
+            <p className="text-[14px] text-gray-400 leading-relaxed">After installation we walk your team
+              through the display and stay available when the screen needs attention.</p>
           </div>
           {/* Feature 4 */}
           <div className="group mt-[20px]">
@@ -358,9 +355,9 @@ export default function AboutPage() {
                 <circle cx={12} cy={12} r="1.5" fill="currentColor" />
               </svg>
             </div>
-            <h4 className="text-xl font-bold text-white mb-3">24/7 Support</h4>
-            <p className="text-[14px] text-gray-400 leading-relaxed">Dedicated monitoring and maintenance teams
-              ensure your screens are always active, minimizing any potential downtime.</p>
+            <h4 className="text-xl font-bold text-white mb-3">Aftercare</h4>
+            <p className="text-[14px] text-gray-400 leading-relaxed">The same team can come back for service
+              and maintenance after the screen is installed.</p>
           </div>
         </div>
       </div>
@@ -372,7 +369,7 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative group gsap-fade-up">
-          <img src="/images/work/glass-facade.png" alt="LED screen on a glass building facade" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center 38%' }} />
+          <img src="/images/work/brighter-tomorrow.png" alt="Architectural LED facade, A Brighter Tomorrow" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-transparent to-transparent opacity-80 pointer-events-none" />
           <div className="absolute bottom-6 left-6 right-6">
             <div className="p-4 sm:p-5 rounded-xl border border-white/20 shadow-xl backdrop-blur-md" style={{backgroundColor: 'rgba(7, 21, 33, 0.85)', WebkitBackdropFilter: 'blur(12px)', backdropFilter: 'blur(12px)'}}>
@@ -398,9 +395,9 @@ export default function AboutPage() {
             {/* List Item 1 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/hyundai-billboard.png" className="w-16 h-12 rounded-md object-cover" alt="Hyundai billboard" />
+                <img src="/images/work/vara-alath-tower.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 22%' }} alt="Vara Alath Tower" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Hyundai Billboard - Roadside</h4>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Vara Alath Tower, Alathur</h4>
                   <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
                 </div>
               </div>
@@ -411,10 +408,10 @@ export default function AboutPage() {
             {/* List Item 2 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/event-stage.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 32%' }} alt="Event stage" />
+                <img src="/images/work/aakash-edappally.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash billboard in Edappally" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Event Stage Backdrop</h4>
-                  <p className="text-[11px] text-gray-500">Indoor LED Screen</p>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Aakash, Edappally</h4>
+                  <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
                 </div>
               </div>
               <svg className="w-5 h-5 text-gray-400 group-hover:text-[#168BEB] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -424,10 +421,10 @@ export default function AboutPage() {
             {/* List Item 3 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/techvista.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="TechVista showroom" />
+                <img src="/images/work/susi-fragrances.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="SUSI Fragrances storefront" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">TechVista Showroom Facade</h4>
-                  <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
+                  <h4 className="font-bold text-[#071521] text-[13px]">SUSI Fragrances</h4>
+                  <p className="text-[11px] text-gray-500">Retail LED Screen</p>
                 </div>
               </div>
               <svg className="w-5 h-5 text-gray-400 group-hover:text-[#168BEB] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -456,24 +453,11 @@ export default function AboutPage() {
     {/* Infinite Logo Slider */}
     <div className="logo-slider max-w-[1400px] mx-auto w-full px-6">
       <div className="logo-slide-track">
-        {/* First Set */}
-        <div className="logo-item"><span className="font-bold text-[#071521] tracking-widest text-2xl">TATA</span></div>
-        <div className="logo-item"><span className="font-serif italic text-[#071521] text-2xl">Reliance</span></div>
-        <div className="logo-item"><span className="font-bold text-[#071521] text-xl uppercase tracking-wider">HDFC
-            BANK</span></div>
-        <div className="logo-item"><span className="font-bold text-[#071521] lowercase text-3xl">airtel</span></div>
-        <div className="logo-item"><span className="font-black text-[#071521] text-2xl tracking-tight">SAMSUNG</span>
-        </div>
-        <div className="logo-item"><span className="font-bold text-[#071521] lowercase text-3xl tracking-tighter">amazon</span></div>
-        {/* Second Set (Duplicate for smooth infinite scroll) */}
-        <div className="logo-item"><span className="font-bold text-[#071521] tracking-widest text-2xl">TATA</span></div>
-        <div className="logo-item"><span className="font-serif italic text-[#071521] text-2xl">Reliance</span></div>
-        <div className="logo-item"><span className="font-bold text-[#071521] text-xl uppercase tracking-wider">HDFC
-            BANK</span></div>
-        <div className="logo-item"><span className="font-bold text-[#071521] lowercase text-3xl">airtel</span></div>
-        <div className="logo-item"><span className="font-black text-[#071521] text-2xl tracking-tight">SAMSUNG</span>
-        </div>
-        <div className="logo-item"><span className="font-bold text-[#071521] lowercase text-3xl tracking-tighter">amazon</span></div>
+        {[...clientLogos, ...clientLogos].map((logo, index) => (
+          <div className="logo-item" key={`${logo.name}-${index}`}>
+            <img src={logo.src} alt={logo.name} />
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -492,7 +476,7 @@ export default function AboutPage() {
           From Blueprint to <span className="text-[#168BEB]">Illuminated Screen.</span>
         </h2>
         <p className="text-gray-400 text-[15px] md:text-[17px] max-w-2xl mx-auto leading-relaxed font-normal">
-          A disciplined 4-stage engineering methodology built to ensure zero-tolerance precision, structural integrity, and 99.9% uptime.
+          Four stages from the first site visit through installation and support.
         </p>
       </div>
       {/* Horizontal Connecting Progress Rail (Desktop Only) */}
@@ -517,7 +501,7 @@ export default function AboutPage() {
         {/* Node 04 */}
         <div className="relative z-10 flex items-center gap-2.5 bg-[#071521] px-4 py-1.5 rounded-full border border-white/10 shadow-sm">
           <span className="w-6 h-6 rounded-full bg-white/10 text-gray-300 flex items-center justify-center text-[11px] font-bold">04</span>
-          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-300">24/7 SLA</span>
+          <span className="text-[11px] font-bold uppercase tracking-wider text-gray-300">Support</span>
         </div>
       </div>
       {/* Process Cards Grid */}
@@ -534,7 +518,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/techvista.png" alt="TechVista showroom on site" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
+              <img src="/images/work/kanju-hut.png" alt="Kanji Hut illuminated storefront" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 On site
@@ -564,7 +548,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/downtown-corner.png" alt="Corner LED wrap at Downtown Business Center" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 35%'}} />
+              <img src="/images/work/vara-alath-tower.png" alt="Outdoor LED screen on Vara Alath Tower" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 Facade
@@ -594,7 +578,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/event-stage.png" alt="Event stage LED backdrop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 32%'}} />
+              <img src="/images/work/dream-haven-truck.png" alt="Dream Haven mobile LED truck" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 Installed
@@ -624,22 +608,22 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/hyundai-billboard.png" alt="Hyundai roadside LED billboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover'}} />
+              <img src="/images/work/aakash-edappally.png" alt="Aakash LED billboard in Edappally" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 On air
               </span>
             </div>
-            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>CMS &amp; 24/7 SLA</h3>
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#35C1F4] transition-colors" style={{marginBottom: '0.75rem'}}>Launch &amp; Support</h3>
             <p className="text-gray-400 text-[13px] leading-relaxed mb-6" style={{marginBottom: '1.5rem'}}>
-              We configure cloud CMS scheduling, train your operational team, and activate continuous diagnostic health telemetry with guaranteed on-site SLA response.
+              We switch the display on, walk your team through how it runs, and stay available for service after installation.
             </p>
           </div>
           {/* Technical Micro-Chips (Generous Padding & Real Gap) */}
           <div className="border-t border-white/10 flex flex-wrap mt-auto" style={{borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.25rem', gap: '0.5rem'}}>
-            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: '#cbd5e1'}}>Cloud CMS</span>
-            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: '#cbd5e1'}}>24/7 Telemetry</span>
-            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(22,139,235,0.15)', border: '1px solid rgba(22,139,235,0.3)', color: '#38bdf8'}}>Rapid SLA</span>
+            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: '#cbd5e1'}}>Handover</span>
+            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: '#cbd5e1'}}>On-site support</span>
+            <span className="inline-flex items-center text-[11px] font-medium rounded" style={{padding: '0.3rem 0.65rem', background: 'rgba(22,139,235,0.15)', border: '1px solid rgba(22,139,235,0.3)', color: '#38bdf8'}}>Aftercare</span>
           </div>
         </div>
       </div>
@@ -654,7 +638,7 @@ export default function AboutPage() {
           <div>
             <div className="flex flex-wrap items-center gap-3 mb-2" style={{gap: '0.75rem', marginBottom: '0.5rem'}}>
               <h4 className="font-bold text-white text-base">Certified Engineering &amp; Lifetime Turnkey Support</h4>
-              <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider rounded-full" style={{padding: '0.3rem 0.75rem', background: 'rgba(22, 139, 235, 0.18)', border: '1px solid rgba(22, 139, 235, 0.4)', color: '#38bdf8', lineHeight: 1}}>Zero Downtime</span>
+              <span className="inline-flex items-center text-[10px] font-bold uppercase tracking-wider rounded-full" style={{padding: '0.3rem 0.75rem', background: 'rgba(22, 139, 235, 0.18)', border: '1px solid rgba(22, 139, 235, 0.4)', color: '#38bdf8', lineHeight: 1}}>After install</span>
             </div>
             <p className="text-gray-400 text-[13px] leading-relaxed max-w-2xl font-normal">
               Every installation includes stamped structural engineering approvals, complete municipal permitting support, and a guaranteed rapid on-site SLA response.
@@ -662,7 +646,7 @@ export default function AboutPage() {
           </div>
         </div>
         <Link to="/contact" className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#168BEB] text-white text-[13px] font-bold hover:bg-white hover:text-[#071521] transition-all duration-300 rounded-xl shrink-0 shadow-lg shadow-[#168BEB]/25 group relative z-10">
-          <span>Initiate Project Consultation</span>
+          <span>Get an LED Wall</span>
           <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>

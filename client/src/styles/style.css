@@ -3973,6 +3973,13 @@ body {
     border-color: #168BEB;
     transform: scale(1.03);
 }
+.logo-item img {
+    max-width: 78%;
+    max-height: 58px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
 
 /* Owl Carousel Equal Height Fix */
 .testimonials-carousel .owl-stage {
