@@ -70,7 +70,7 @@ export default function HomePage() {
           the space is used.
         </p>
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="hidden lg:flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="flex items-center justify-center gap-3 px-6 py-3.5 bg-[#168BEB] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
             Get an LED Wall
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -3945,7 +3945,7 @@ body {
 .logo-slide-track {
     display: flex;
     gap: 2rem;
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 105s linear infinite;
     width: max-content;
 }
 .logo-slide-track:hover {
