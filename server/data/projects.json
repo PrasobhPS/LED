@@ -1,8 +1,8 @@
 [
   {
     "id": "biggest-screen-kerala",
-    "title": "Biggest LED Screen in Kerala",
-    "summary": "Roadside LED wall, the biggest screen in Kerala",
+    "title": "The biggest screen",
+    "summary": "Roadside LED wall, the biggest screen",
     "category": "Billboards",
     "image": "/images/work/biggest-screen-kerala.jpg"
   },
@@ -15,15 +15,15 @@
   },
   {
     "id": "vara-alath-tower",
-    "title": "Vara Alath Tower LED Screen",
-    "summary": "Outdoor facade screen in Alathur",
+    "title": "Nila Advertising",
+    "summary": "Outdoor LED screen for Nila Advertising",
     "category": "Facades",
     "image": "/images/work/vara-alath-tower.png"
   },
   {
     "id": "aakash-edappally",
-    "title": "Aakash Edappally Billboard",
-    "summary": "Roadside LED billboard in Edappally",
+    "title": "Moulavi Books Stationery",
+    "summary": "Roadside LED billboard for Moulavi Books Stationery",
     "category": "Billboards",
     "image": "/images/work/aakash-edappally.png"
   },
@@ -33,13 +33,6 @@
     "summary": "Illuminated mall storefront",
     "category": "Retail",
     "image": "/images/work/susi-fragrances.png"
-  },
-  {
-    "id": "thx-mobiles",
-    "title": "THX Premium Mobiles",
-    "summary": "Retail fascia and in-store display",
-    "category": "Retail",
-    "image": "/images/work/thx-mobiles.png"
   },
   {
     "id": "matha-jewellers",

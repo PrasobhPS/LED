@@ -7,7 +7,7 @@ export default function NetworkPage() {
     <>
       <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521' }}>
         <div className="absolute inset-0 z-0 w-full h-full">
-          <img src="/images/work/aakash-edappally.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash LED billboard in Edappally" />
+          <img src="/images/work/aakash-edappally.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Moulavi Books Stationery billboard" />
           <div className="absolute inset-0 w-full h-full" style={{ background: 'linear-gradient(to right, rgba(7, 21, 33, 0.94) 0%, rgba(7, 21, 33, 0.72) 48%, rgba(7, 21, 33, 0.28) 100%)' }} />
         </div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>

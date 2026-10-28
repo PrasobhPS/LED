@@ -96,7 +96,7 @@ export default function AboutPage() {
         </div>
         {/* Overlapping Image (Bottom Right) */}
         <div className="absolute rounded-sm overflow-hidden z-20 shadow-2xl bg-white" style={{bottom: 0, right: 0, width: '60%', border: '8px solid white', aspectRatio: '4/3'}}>
-          <img src="/images/work/vara-alath-tower.png" alt="Outdoor LED screen on Vara Alath Tower, Alathur" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 22%' }} />
+          <img src="/images/work/vara-alath-tower.png" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 22%' }} />
         </div>
         {/* Floating Badge (Top Left) */}
         <div className="absolute bg-white border border-gray-100 p-4 lg:p-5 rounded-sm z-30 shadow-xl flex items-center gap-4" style={{top: '-1.5rem', left: '-1.5rem'}}>
@@ -168,7 +168,7 @@ export default function AboutPage() {
         {/* Card 2 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 2, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest LED screen in Kerala" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '28% 38%'}} />
+            <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -369,12 +369,12 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative group gsap-fade-up">
-          <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest LED screen in Kerala" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: '28% 38%' }} />
+          <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-transparent to-transparent opacity-80 pointer-events-none" />
           <div className="absolute bottom-6 left-6 right-6">
             <div className="p-4 sm:p-5 rounded-xl border border-white/20 shadow-xl backdrop-blur-md" style={{backgroundColor: 'rgba(7, 21, 33, 0.85)', WebkitBackdropFilter: 'blur(12px)', backdropFilter: 'blur(12px)'}}>
               <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#35C1F4] mb-1">KERALA</p>
-              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">The biggest screen in Kerala</p>
+              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">The biggest screen</p>
             </div>
           </div>
         </div>
@@ -394,9 +394,9 @@ export default function AboutPage() {
             {/* List Item 1 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/biggest-screen-kerala.jpg" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: '28% 38%' }} alt="The biggest LED screen in Kerala" />
+                <img src="/images/work/biggest-screen-kerala.jpg" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Biggest screen in Kerala</h4>
+                  <h4 className="font-bold text-[#071521] text-[13px]">The biggest screen</h4>
                   <p className="text-[11px] text-gray-500">Roadside LED wall</p>
                 </div>
               </div>
@@ -407,9 +407,9 @@ export default function AboutPage() {
             {/* List Item 2 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/aakash-edappally.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="Aakash billboard in Edappally" />
+                <img src="/images/work/aakash-edappally.png" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center 28%' }} alt="Moulavi Books Stationery billboard" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">Aakash, Edappally</h4>
+                  <h4 className="font-bold text-[#071521] text-[13px]">Moulavi Books Stationery</h4>
                   <p className="text-[11px] text-gray-500">Outdoor LED Screen</p>
                 </div>
               </div>
@@ -547,7 +547,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/vara-alath-tower.png" alt="Outdoor LED screen on Vara Alath Tower" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
+              <img src="/images/work/vara-alath-tower.png" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 Facade
@@ -607,7 +607,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/aakash-edappally.png" alt="Aakash LED billboard in Edappally" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
+              <img src="/images/work/aakash-edappally.png" alt="Moulavi Books Stationery billboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 28%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 On air

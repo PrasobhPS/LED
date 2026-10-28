@@ -259,7 +259,7 @@ export default function PartnersPage() {
               <div className="partners-main-card">
                 <img
                   src="/images/work/vara-alath-tower.png"
-                  alt="Outdoor LED screen on Vara Alath Tower, Alathur"
+                  alt="Nila Advertising outdoor LED screen"
                   className="partners-main-img"
                   style={{ objectPosition: 'center 22%' }}
                 />
@@ -313,7 +313,7 @@ export default function PartnersPage() {
         <div className="partners-cta-media">
           <img
             src="/images/work/aakash-edappally.png"
-            alt="Aakash LED billboard in Edappally"
+            alt="Moulavi Books Stationery billboard"
             className="partners-cta-img"
           />
           <div className="partners-cta-vignette" />

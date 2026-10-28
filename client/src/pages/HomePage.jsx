@@ -5,9 +5,9 @@ import { installations } from '../data/installations';
 
 const heroSlides = [
   { src: '/images/work/brighter-tomorrow.png', alt: 'Architectural LED facade, A Brighter Tomorrow', focus: 'center' },
-  { src: '/images/work/vara-alath-tower.png', alt: 'Outdoor LED screen on Vara Alath Tower, Alathur', focus: 'center 22%' },
+  { src: '/images/work/vara-alath-tower.png', alt: 'Nila Advertising outdoor LED screen', focus: 'center 22%' },
   { src: '/images/work/dream-home-billboard.png', alt: 'Outdoor residential LED billboard', focus: 'center' },
-  { src: '/images/work/aakash-edappally.png', alt: 'Aakash LED billboard in Edappally', focus: 'center 28%' },
+  { src: '/images/work/aakash-edappally.png', alt: 'Moulavi Books Stationery billboard', focus: 'center 28%' },
   { src: '/images/work/dream-haven-truck.png', alt: 'Dream Haven mobile LED truck', focus: 'center' },
 ];
 
@@ -113,7 +113,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 22%' }} alt="Outdoor LED screen on Vara Alath Tower, Alathur" />
+          <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 22%' }} alt="Nila Advertising outdoor LED screen" />
         </div>
       </div>
     </div>
@@ -228,7 +228,7 @@ export default function HomePage() {
             Opportunity.</h2>
           <p className="text-gray-500 mb-8 leading-relaxed text-[15px]">
             Convert your static billboard to a dynamic LED display and reach more people with flexible,
-            real-time content. The biggest screen in Kerala is that kind of site: a roadside wall traffic can read after dark.
+            real-time content. The biggest screen is that kind of site: a roadside wall traffic can read after dark.
           </p>
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-[#071521] text-white text-[13px] font-medium hover:bg-[#0D2942] transition-colors rounded-lg">
             Get an LED Wall
@@ -239,10 +239,10 @@ export default function HomePage() {
         </div>
         <div className="lg:col-span-8 w-full">
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-            <img src="/images/work/biggest-screen-kerala.jpg" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center 42%' }} alt="The biggest LED screen in Kerala, above a busy night street" />
+            <img src="/images/work/biggest-screen-kerala.jpg" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen, above a busy night street" />
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 bg-gradient-to-t from-[#071521]/95 via-[#071521]/55 to-transparent">
               <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#35C1F4] mb-1">Kerala</p>
-              <p className="text-white text-lg md:text-2xl font-bold leading-snug">The biggest screen in Kerala</p>
+              <p className="text-white text-lg md:text-2xl font-bold leading-snug">The biggest screen</p>
             </div>
           </div>
         </div>

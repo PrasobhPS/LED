@@ -1,7 +1,7 @@
 export const installations = [
   {
     id: 'biggest-screen-kerala',
-    title: 'Biggest LED Screen in Kerala',
+    title: 'The biggest screen',
     image: '/images/work/biggest-screen-kerala.jpg',
     location: 'Kerala',
     environment: 'Outdoor',
@@ -9,8 +9,8 @@ export const installations = [
     category: 'Billboards',
     badge: 'Biggest',
     note: 'Kerala',
-    focus: '28% 38%',
-    description: 'The biggest screen in Kerala: a roadside LED wall above a busy night street, sized so traffic and the footpath can read it from a distance.',
+    focus: 'center',
+    description: 'The biggest screen: a roadside LED wall above a busy night street, sized so traffic and the footpath can read it from a distance.',
   },
   {
     id: 'kanju-hut',
@@ -27,7 +27,7 @@ export const installations = [
   },
   {
     id: 'vara-alath-tower',
-    title: 'Vara Alath Tower LED Screen',
+    title: 'Nila Advertising',
     image: '/images/work/vara-alath-tower.png',
     location: 'Alathur, Kerala',
     environment: 'Outdoor',
@@ -36,11 +36,11 @@ export const installations = [
     badge: 'Facade',
     note: 'Outdoor',
     focus: 'center 22%',
-    description: 'Large outdoor LED screen on the Vara Alath Tower facade, above the M S Bakery frontage.',
+    description: 'Large outdoor LED screen for Nila Advertising, above the M S Bakery frontage.',
   },
   {
     id: 'aakash-edappally',
-    title: 'Aakash Edappally Billboard',
+    title: 'Moulavi Books Stationery',
     image: '/images/work/aakash-edappally.png',
     location: 'Edappally, Kerala',
     environment: 'Outdoor',
@@ -49,7 +49,7 @@ export const installations = [
     badge: 'Billboard',
     note: 'Outdoor',
     focus: 'center 28%',
-    description: 'Roadside LED billboard for Aakash at the Edappally branch, built for night-time street viewing.',
+    description: 'Roadside LED billboard for Moulavi Books Stationery, built for night-time street viewing.',
   },
   {
     id: 'susi-fragrances',
@@ -63,19 +63,6 @@ export const installations = [
     note: 'Indoor',
     focus: 'center 28%',
     description: 'Mall storefront for SUSI Fragrances & More, with an illuminated fascia, arched entry and lit product walls.',
-  },
-  {
-    id: 'thx-mobiles',
-    title: 'THX Premium Mobiles',
-    image: '/images/work/thx-mobiles.png',
-    location: 'Retail storefront',
-    environment: 'Indoor',
-    type: 'Retail signage',
-    category: 'Retail',
-    badge: 'Retail',
-    note: 'Storefront',
-    focus: 'center 40%',
-    description: 'Premium mobiles storefront with an illuminated fascia and an in-store display for product offers.',
   },
   {
     id: 'matha-jewellers',
