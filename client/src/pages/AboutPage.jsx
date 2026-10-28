@@ -246,7 +246,7 @@ export default function AboutPage() {
         {/* Card 5 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 5, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/matha-jewellers.png" alt="Matha Jewellers storefront display" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 42%'}} />
+            <img src="/images/work/santa-monica.jpg" alt="Santa Monica building facade screen" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 32%'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>

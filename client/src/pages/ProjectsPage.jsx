@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
@@ -13,7 +14,22 @@ function matches(item, filter) {
 
 export default function ProjectsPage() {
   const [filter, setFilter] = useState('All');
+  const [active, setActive] = useState(null);
   const visible = installations.filter((item) => matches(item, filter));
+
+  useEffect(() => {
+    if (!active) return undefined;
+    const onKey = (event) => {
+      if (event.key === 'Escape') setActive(null);
+    };
+    document.addEventListener('keydown', onKey);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [active]);
 
   return (
     <>
@@ -72,7 +88,14 @@ export default function ProjectsPage() {
           <div className="project-spec-grid">
             {visible.map((item) => (
               <article key={item.id} className="project-spec-card">
-                <img src={item.image} alt={item.title} style={{ objectPosition: item.focus || 'center' }} />
+                <button
+                  type="button"
+                  className="project-spec-photo"
+                  aria-label={`View ${item.title}`}
+                  onClick={() => setActive(item)}
+                >
+                  <img src={item.image} alt="" style={{ objectPosition: item.focus || 'center' }} />
+                </button>
                 <div className="project-spec-body">
                   <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mb-2">{item.environment} · {item.type}</p>
                   <h2 className="text-xl font-bold text-[#071521] mb-2">{item.title}</h2>
@@ -88,6 +111,29 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
+          {active && createPortal(
+        <div
+          className="project-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={active.title}
+          onClick={() => setActive(null)}
+        >
+          <button
+            type="button"
+            className="project-lightbox-close"
+            aria-label="Close"
+            onClick={() => setActive(null)}
+          >
+            ×
+          </button>
+          <figure className="project-lightbox-frame" onClick={(event) => event.stopPropagation()}>
+            <img src={active.image} alt={active.title} />
+            <figcaption>{active.title}</figcaption>
+          </figure>
+        </div>,
+        document.body,
+      )}
       <ProjectClose />
     </>
   );
