@@ -7,6 +7,55 @@
     "image": "/images/work/biggest-screen-kerala.jpg"
   },
   {
+    "id": "mar-evanios-convent-school",
+    "title": "Mar Evanios Convent School, Pune",
+    "summary": "Indoor LED wall in the school hall, Pune",
+    "category": "Indoor",
+    "image": "/images/work/mar-evanios-convent-school.png"
+  },
+  {
+    "id": "indian-overseas-bank",
+    "title": "Indian Overseas Bank",
+    "summary": "Outdoor LED fascia on the building frontage",
+    "category": "Facades",
+    "image": "/images/work/indian-overseas-bank.jpg"
+  },
+  {
+    "id": "bosque-furniture-bangalore",
+    "title": "Bosque Furniture, Bangalore",
+    "summary": "Roadside LED billboard in Bangalore",
+    "category": "Billboards",
+    "image": "/images/work/bosque-furniture-bangalore.jpg"
+  },
+  {
+    "id": "nss-college-pandalam",
+    "title": "NSS College Pandalam",
+    "summary": "Indoor LED wall in the college hall",
+    "category": "Indoor",
+    "image": "/images/work/nss-college-pandalam.jpg"
+  },
+  {
+    "id": "alpha-genius-school",
+    "title": "Alpha Genius Integrated School",
+    "summary": "Stage LED wall in the school auditorium",
+    "category": "Indoor",
+    "image": "/images/work/alpha-genius-school.png"
+  },
+  {
+    "id": "santa-monica",
+    "title": "Santa Monica",
+    "summary": "Vertical LED screen on the building facade",
+    "category": "Facades",
+    "image": "/images/work/santa-monica.jpg"
+  },
+  {
+    "id": "vehicle-branding",
+    "title": "Vehicle Branding",
+    "summary": "Vehicle-mounted LED panel",
+    "category": "Billboards",
+    "image": "/images/work/vehicle-branding.jpg"
+  },
+  {
     "id": "kanju-hut",
     "title": "Kanji Hut Storefront",
     "summary": "Illuminated shopfront and display counters",
@@ -40,26 +89,5 @@
     "summary": "Storefront LED poster",
     "category": "Retail",
     "image": "/images/work/matha-jewellers.png"
-  },
-  {
-    "id": "dream-home-billboard",
-    "title": "Dream Home Billboard",
-    "summary": "Outdoor residential billboard",
-    "category": "Billboards",
-    "image": "/images/work/dream-home-billboard.png"
-  },
-  {
-    "id": "dream-haven-truck",
-    "title": "Dream Haven Mobile LED",
-    "summary": "Vehicle-mounted LED panel",
-    "category": "Billboards",
-    "image": "/images/work/dream-haven-truck.png"
-  },
-  {
-    "id": "brighter-tomorrow",
-    "title": "A Brighter Tomorrow Facade",
-    "summary": "Architectural LED wall",
-    "category": "Facades",
-    "image": "/images/work/brighter-tomorrow.png"
   }
 ]

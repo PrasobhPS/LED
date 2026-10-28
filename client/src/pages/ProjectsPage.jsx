@@ -21,10 +21,10 @@ export default function ProjectsPage() {
       <section className="relative w-full flex items-center mt-[72px] overflow-hidden" style={{ backgroundColor: '#071521', minHeight: '500px' }}>
         <div className="absolute inset-0 z-0 w-full h-full">
           <img
-            src="/images/work/dream-haven-truck.png"
+            src="/images/work/biggest-screen-kerala.jpg"
             className="w-full h-full object-cover"
-            style={{ objectPosition: 'center right' }}
-            alt="Dream Haven mobile LED truck"
+            style={{ objectPosition: 'center' }}
+            alt="The biggest screen"
           />
           <div
             className="absolute inset-0 w-full h-full"

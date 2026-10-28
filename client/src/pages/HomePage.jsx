@@ -4,11 +4,11 @@ import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlides = [
-  { src: '/images/work/brighter-tomorrow.png', alt: 'Architectural LED facade, A Brighter Tomorrow', focus: 'center' },
+  { src: '/images/work/nss-college-pandalam.jpg', alt: 'NSS College Pandalam indoor LED wall', focus: 'center' },
   { src: '/images/work/vara-alath-tower.png', alt: 'Nila Advertising outdoor LED screen', focus: 'center 22%' },
-  { src: '/images/work/dream-home-billboard.png', alt: 'Outdoor residential LED billboard', focus: 'center' },
+  { src: '/images/work/bosque-furniture-bangalore.jpg', alt: 'Bosque Furniture billboard in Bangalore', focus: 'center 28%' },
   { src: '/images/work/aakash-edappally.png', alt: 'Moulavi Books Stationery billboard', focus: 'center 28%' },
-  { src: '/images/work/dream-haven-truck.png', alt: 'Dream Haven mobile LED truck', focus: 'center' },
+  { src: '/images/work/vehicle-branding.jpg', alt: 'Vehicle branding LED panel', focus: 'center' },
 ];
 
 const heroSlideOverlay = {
@@ -113,7 +113,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/work/vara-alath-tower.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 22%' }} alt="Nila Advertising outdoor LED screen" />
+          <img src="/images/work/mar-evanios-convent-school.png" className="w-full h-full object-cover" style={{ objectPosition: 'center' }} alt="Mar Evanios Convent School, Pune" />
         </div>
       </div>
     </div>
