@@ -150,6 +150,92 @@
         radial-gradient(circle at 85% 20%, rgba(53, 193, 244, 0.14) 0%, transparent 50%);
 }
 
+.hero-services-card {
+    transform-style: preserve-3d;
+}
+
+.hero-screen-card {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: 1.75rem;
+    transform: translateY(-42%);
+    width: min(268px, 78%);
+    margin: 0;
+    padding: 1rem 1rem 0.85rem;
+    border-radius: 1.15rem;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 40px rgba(7, 21, 33, 0.18), 0 2px 8px rgba(7, 21, 33, 0.06);
+    color: #071521;
+    pointer-events: none;
+}
+
+.hero-screen-kicker {
+    margin: 0 0 0.2rem;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #168beb;
+}
+
+.hero-screen-title {
+    margin: 0 0 0.75rem;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #071521;
+}
+
+.hero-screen-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-screen-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1e293b;
+}
+
+.hero-screen-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    border-radius: 0.7rem;
+}
+
+.hero-screen-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.hero-screen-icon-blue {
+    background: #e8f3fd;
+    color: #168beb;
+}
+
+.hero-screen-icon-green {
+    background: #e7f8ef;
+    color: #15915a;
+}
+
+.hero-screen-icon-amber {
+    background: #fff4e8;
+    color: #e07a12;
+}
+
 /* Mobile-only Hero Adjustments: Ensures complete content visibility without cutting off height */
 @media (max-width: 767px) {
     #hero-section {
@@ -192,6 +278,15 @@
     #hero-controls {
         bottom: 1.25rem !important;
         right: 1.25rem !important;
+    }
+
+    .hero-screen-card {
+        top: auto !important;
+        bottom: 4.75rem !important;
+        left: 1.25rem !important;
+        right: auto !important;
+        transform: none !important;
+        width: min(260px, calc(100% - 6.5rem)) !important;
     }
 
     .hero-slide-overlay {

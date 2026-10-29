@@ -3,13 +3,17 @@ import InstallationCard from '../components/InstallationCard';
 import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
-const heroSlides = [
-  { src: '/images/work/nss-college-pandalam.jpg', alt: 'NSS College Pandalam indoor LED wall', focus: 'center' },
-  { src: '/images/work/vara-alath-tower.jpg', alt: 'Nila Advertising outdoor LED screen', focus: 'center 22%' },
-  { src: '/images/work/bosque-furniture-bangalore.jpg', alt: 'Bosque Furniture billboard in Bangalore', focus: 'center 28%' },
-  { src: '/images/work/aakash-edappally.png', alt: 'Moulavi Books Stationery billboard', focus: 'center 28%' },
-  { src: '/images/work/vehicle-branding.jpg', alt: 'Vehicle branding LED panel', focus: 'center' },
+const heroSlideIds = [
+  'nss-college-pandalam',
+  'vara-alath-tower',
+  'bosque-furniture-bangalore',
+  'aakash-edappally',
+  'vehicle-branding',
 ];
+
+const heroSlides = heroSlideIds
+  .map((id) => installations.find((item) => item.id === id))
+  .filter(Boolean);
 
 const heroSlideOverlay = {
   position: 'absolute',
@@ -35,15 +39,52 @@ export default function HomePage() {
   {/* Hero Section: Exact Mirror Layout */}
   <section id="hero-section" className="relative w-full h-[calc(100vh-72px)] overflow-hidden flex mt-[72px] bg-[#071521]">
     {/* Right Side Slider Container (With Feathered Left Edge to prevent hard seams under the glass) */}
-    <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
+    <div className="hero-slider-wrap hero-bg-parallax absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
+      <div className="absolute inset-0">
       {/* Slider Track Container */}
       <div id="hero-slider" className="absolute inset-0 w-full h-full z-0 flex transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
         {heroSlides.map((slide) => (
-          <div key={slide.src} className="relative w-full h-full flex-shrink-0">
-            <img src={slide.src} className="w-full h-full object-cover" style={{ objectPosition: slide.focus }} alt={slide.alt} />
+          <div key={slide.id} className="relative w-full h-full flex-shrink-0">
+            <img src={slide.image} className="hero-bg-art w-full h-full object-cover" style={{ objectPosition: slide.focus }} alt={slide.title} />
             <div className="hero-slide-overlay" style={heroSlideOverlay} />
+            <aside className="hero-screen-card" aria-label={`${slide.title} screen details`}>
+              <div className="hero-services-card">
+              <p className="hero-screen-kicker">This screen</p>
+              <p className="hero-screen-title">{slide.title}</p>
+              <ul className="hero-screen-list">
+                <li className="hero-service-row">
+                  <span className="hero-screen-icon hero-screen-icon-blue" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+                      <circle cx="12" cy="10" r="2.2" />
+                    </svg>
+                  </span>
+                  <span>{slide.location}</span>
+                </li>
+                <li className="hero-service-row">
+                  <span className="hero-screen-icon hero-screen-icon-green" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="4" />
+                      <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" />
+                    </svg>
+                  </span>
+                  <span>{slide.environment}</span>
+                </li>
+                <li className="hero-service-row">
+                  <span className="hero-screen-icon hero-screen-icon-amber" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="5" width="18" height="12" rx="2" />
+                      <path d="M8 21h8M12 17v4" />
+                    </svg>
+                  </span>
+                  <span>{slide.type}</span>
+                </li>
+              </ul>
+              </div>
+            </aside>
           </div>
         ))}
+      </div>
       </div>
     </div>
     {/* The True Glass Background (Left panel) */}
@@ -58,19 +99,20 @@ export default function HomePage() {
       <div id="hero-card" className="w-full md:w-[60%] lg:w-[45%] pr-0 md:pr-8 lg:pr-24 xl:pr-28 pointer-events-auto bg-transparent p-0 rounded-none shadow-none border-none">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-[11px] font-bold tracking-[0.2em] text-gray-400 uppercase">Custom LED Walls</span>
+          <span className="hero-eyebrow-tech text-[11px] font-bold tracking-[0.2em] text-gray-400 uppercase">Custom LED Walls</span>
         </div>
         {/* Headline (slightly reduced max-width to respect the slant) */}
-        <h1 className="font-bold text-white leading-[1.2] mb-6 tracking-tight text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] max-w-[500px]">
-          Make Your Location<br />Impossible to Miss.
+        <h1 className="hero-title font-bold text-white leading-[1.2] mb-6 tracking-tight text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] max-w-[500px]">
+          <span className="hero-title-line block">Make Your Location</span>
+          <span className="hero-title-line block">Impossible to Miss.</span>
         </h1>
         {/* Description */}
-        <p className="text-gray-300 text-[15px] md:text-base mb-10 max-w-[400px] leading-relaxed">
+        <p className="hero-description text-gray-300 text-[15px] md:text-base mb-10 max-w-[400px] leading-relaxed">
           Custom LED walls and display systems, designed around your location, viewing distance and the way
           the space is used.
         </p>
         {/* Buttons */}
-        <div className="hidden lg:flex flex-col sm:flex-row gap-4">
+        <div className="hero-cta-group hidden lg:flex flex-col sm:flex-row gap-4">
           <Link to="/contact" className="flex items-center justify-center gap-3 px-6 py-3.5 bg-[#168BEB] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg shadow-sm group">
             Get an LED Wall
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

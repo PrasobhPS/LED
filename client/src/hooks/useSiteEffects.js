@@ -232,6 +232,192 @@ function destroyTestimonialsCarousel() {
   jquery(carousel).trigger('destroy.owl.carousel');
 }
 
+function initHeroMotion(heroSection) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return () => {};
+
+  const heroTL = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.28 });
+  const heroBgArt = [...heroSection.querySelectorAll('.hero-bg-art')];
+  const servicesCards = [...heroSection.querySelectorAll('.hero-services-card')];
+  const heroContent = heroSection.querySelector('#hero-card');
+  const cleanups = [];
+
+  if (heroBgArt.length > 0) {
+    heroTL.fromTo(heroBgArt,
+      { scale: 1.08, opacity: 0, x: 25 },
+      { scale: 1, opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' },
+      0);
+    gsap.to(heroBgArt, {
+      scale: 1.025,
+      duration: 7,
+      ease: 'sine.inOut',
+      repeat: -1,
+      yoyo: true,
+      delay: 1.4,
+    });
+  }
+
+  const eyebrow = heroSection.querySelector('.hero-eyebrow-tech');
+  if (eyebrow) {
+    heroTL.fromTo(eyebrow,
+      { y: 18, opacity: 0, scale: 0.95 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.6 },
+      0.2);
+  }
+
+  const titleLines = heroSection.querySelectorAll('.hero-title .hero-title-line');
+  if (titleLines.length > 0) {
+    heroTL.fromTo(titleLines,
+      { y: 28, opacity: 0 },
+      { y: 0, opacity: 1, stagger: 0.05, duration: 0.35 },
+      0.3);
+  }
+
+  const description = heroSection.querySelector('.hero-description');
+  if (description) {
+    heroTL.fromTo(description,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.35 },
+      0.5);
+  }
+
+  const ctaButtons = [...heroSection.querySelectorAll('.hero-cta-group a')];
+  if (ctaButtons.length > 0) {
+    heroTL.fromTo(ctaButtons,
+      { y: 20, opacity: 0, scale: 0.96 },
+      { y: 0, opacity: 1, scale: 1, stagger: 0.05, duration: 0.6, ease: 'back.out(1.4)' },
+      0.65);
+  }
+
+  if (servicesCards.length > 0) {
+    heroTL.fromTo(servicesCards,
+      { opacity: 0, y: 45, scale: 0.92, rotationY: -10, rotationX: 8, transformPerspective: 1000 },
+      { opacity: 1, y: 0, scale: 1, rotationY: 0, rotationX: 0, duration: 1.1, ease: 'power3.out' },
+      0.4);
+    const serviceRows = heroSection.querySelectorAll('.hero-service-row');
+    if (serviceRows.length > 0) {
+      heroTL.fromTo(serviceRows,
+        { x: 20, opacity: 0 },
+        { x: 0, opacity: 1, stagger: 0.08, duration: 0.5, ease: 'power2.out' },
+        0.65);
+    }
+    gsap.to(servicesCards, {
+      y: -9,
+      duration: 3.8,
+      ease: 'sine.inOut',
+      repeat: -1,
+      yoyo: true,
+      delay: 2.1,
+    });
+  }
+
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    const bgMovers = heroBgArt.map((image) => ({
+      x: gsap.quickTo(image, 'x', { duration: 0.35, ease: 'power2.out' }),
+      y: gsap.quickTo(image, 'y', { duration: 0.35, ease: 'power2.out' }),
+    }));
+    const setContentX = heroContent ? gsap.quickTo(heroContent, 'x', { duration: 0.35, ease: 'power2.out' }) : null;
+    const setContentY = heroContent ? gsap.quickTo(heroContent, 'y', { duration: 0.35, ease: 'power2.out' }) : null;
+    const cardMovers = servicesCards.map((card) => ({
+      rotX: gsap.quickTo(card, 'rotationX', { duration: 0.6, ease: 'power2.out' }),
+      rotY: gsap.quickTo(card, 'rotationY', { duration: 0.6, ease: 'power2.out' }),
+      x: gsap.quickTo(card, 'x', { duration: 0.6, ease: 'power2.out' }),
+      y: gsap.quickTo(card, 'y', { duration: 0.6, ease: 'power2.out' }),
+    }));
+
+    const onMove = (event) => {
+      const rect = heroSection.getBoundingClientRect();
+      const normX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+      const normY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+      bgMovers.forEach((mover) => {
+        mover.x(-normX * 16);
+        mover.y(-normY * 12);
+      });
+      if (setContentX) setContentX(normX * 8);
+      if (setContentY) setContentY(normY * 6);
+      cardMovers.forEach((mover) => {
+        mover.rotX(-normY * 10);
+        mover.rotY(normX * 12);
+        mover.x(normX * 16);
+        mover.y(normY * 12);
+      });
+    };
+    const onLeave = () => {
+      bgMovers.forEach((mover) => {
+        mover.x(0);
+        mover.y(0);
+      });
+      if (setContentX) setContentX(0);
+      if (setContentY) setContentY(0);
+      cardMovers.forEach((mover) => {
+        mover.rotX(0);
+        mover.rotY(0);
+        mover.x(0);
+        mover.y(0);
+      });
+    };
+    heroSection.addEventListener('mousemove', onMove);
+    heroSection.addEventListener('mouseleave', onLeave);
+    cleanups.push(() => {
+      heroSection.removeEventListener('mousemove', onMove);
+      heroSection.removeEventListener('mouseleave', onLeave);
+    });
+  }
+
+  ctaButtons.forEach((button) => {
+    const onMove = (event) => {
+      const rect = button.getBoundingClientRect();
+      const x = event.clientX - rect.left - rect.width / 2;
+      const y = event.clientY - rect.top - rect.height / 2;
+      gsap.to(button, { x: x * 0.2, y: y * 0.2, duration: 0.3, ease: 'power2.out' });
+      const icon = button.querySelector('svg');
+      if (icon) gsap.to(icon, { x: x * 0.12, y: y * 0.12, duration: 0.3, ease: 'power2.out' });
+    };
+    const onLeave = () => {
+      gsap.to(button, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+      const icon = button.querySelector('svg');
+      if (icon) gsap.to(icon, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
+    };
+    button.addEventListener('mousemove', onMove);
+    button.addEventListener('mouseleave', onLeave);
+    cleanups.push(() => {
+      button.removeEventListener('mousemove', onMove);
+      button.removeEventListener('mouseleave', onLeave);
+    });
+  });
+
+  const parallaxBg = heroSection.querySelector('.hero-bg-parallax');
+  if (parallaxBg) {
+    gsap.to(parallaxBg, {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: heroSection,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.6,
+      },
+    });
+  }
+  if (heroContent) {
+    gsap.to(heroContent, {
+      y: -25,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: heroSection,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.3,
+      },
+    });
+  }
+
+  return () => {
+    heroTL.kill();
+    cleanups.forEach((fn) => fn());
+    gsap.killTweensOf([heroBgArt, heroContent, parallaxBg, ...servicesCards, ...ctaButtons].filter(Boolean));
+  };
+}
+
 function revertManagedDom() {
   destroyTestimonialsCarousel();
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill(true));
@@ -369,6 +555,9 @@ export function useSiteEffects(title) {
         heroPrev.removeEventListener('click', onPrev);
       });
     }
+
+    const heroSection = document.getElementById('hero-section');
+    if (heroSection) track(initHeroMotion(heroSection));
 
     const counters = [...document.querySelectorAll('.stat-counter')];
     if (counters.length > 0) {
