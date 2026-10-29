@@ -119,7 +119,7 @@ export const installations = [
   {
     id: 'vara-alath-tower',
     title: 'Nila Advertising',
-    image: '/images/work/vara-alath-tower.png',
+    image: '/images/work/vara-alath-tower.jpg',
     location: 'Alathur, Kerala',
     environment: 'Outdoor',
     type: 'Building facade screen',
@@ -127,7 +127,7 @@ export const installations = [
     badge: 'Facade',
     note: 'Outdoor',
     focus: 'center 22%',
-    description: 'Large outdoor LED screen for Nila Advertising, above the M S Bakery frontage.',
+    description: 'Large outdoor LED screen for Nila Advertising on the building facade.',
   },
   {
     id: 'aakash-edappally',

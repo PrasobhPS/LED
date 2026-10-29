@@ -96,7 +96,7 @@ export default function AboutPage() {
         </div>
         {/* Overlapping Image (Bottom Right) */}
         <div className="absolute rounded-sm overflow-hidden z-20 shadow-2xl bg-white" style={{bottom: 0, right: 0, width: '60%', border: '8px solid white', aspectRatio: '4/3'}}>
-          <img src="/images/work/vara-alath-tower.png" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 22%' }} />
+          <img src="/images/work/vara-alath-tower.jpg" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 22%' }} />
         </div>
         {/* Floating Badge (Top Left) */}
         <div className="absolute bg-white border border-gray-100 p-4 lg:p-5 rounded-sm z-30 shadow-xl flex items-center gap-4" style={{top: '-1.5rem', left: '-1.5rem'}}>
@@ -547,7 +547,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/vara-alath-tower.png" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
+              <img src="/images/work/vara-alath-tower.jpg" alt="Nila Advertising outdoor LED screen" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 22%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 Facade

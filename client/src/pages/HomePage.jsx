@@ -5,7 +5,7 @@ import { installations } from '../data/installations';
 
 const heroSlides = [
   { src: '/images/work/nss-college-pandalam.jpg', alt: 'NSS College Pandalam indoor LED wall', focus: 'center' },
-  { src: '/images/work/vara-alath-tower.png', alt: 'Nila Advertising outdoor LED screen', focus: 'center 22%' },
+  { src: '/images/work/vara-alath-tower.jpg', alt: 'Nila Advertising outdoor LED screen', focus: 'center 22%' },
   { src: '/images/work/bosque-furniture-bangalore.jpg', alt: 'Bosque Furniture billboard in Bangalore', focus: 'center 28%' },
   { src: '/images/work/aakash-edappally.png', alt: 'Moulavi Books Stationery billboard', focus: 'center 28%' },
   { src: '/images/work/vehicle-branding.jpg', alt: 'Vehicle branding LED panel', focus: 'center' },

@@ -64,7 +64,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-white overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#f5f7fa] overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12">
           <div id="portfolio-filters" className="projects-filter-bar">
             {FILTERS.map((item) => (
@@ -99,7 +99,7 @@ export default function ProjectsPage() {
                 <div className="project-spec-body">
                   <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#168BEB] mb-2">{item.environment} · {item.type}</p>
                   <h2 className="text-xl font-bold text-[#071521] mb-2">{item.title}</h2>
-                  <p className="text-[13px] text-gray-500 leading-relaxed mb-4">{item.description}</p>
+                  <p className="project-spec-copy text-[13px] text-gray-500 leading-relaxed mb-4">{item.description}</p>
                   <dl className="project-spec-list">
                     <div><dt>Location</dt><dd>{item.location}</dd></div>
                     <div><dt>Setting</dt><dd>{item.environment}</dd></div>
