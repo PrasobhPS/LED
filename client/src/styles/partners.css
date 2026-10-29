@@ -324,6 +324,22 @@ textarea.deal-input {
   object-fit: cover;
   display: block;
 }
+.partners-software-visual {
+  background-color: #071521;
+  border-color: rgba(22, 139, 235, 0.22);
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.25rem 2.5rem;
+}
+.partners-software-visual-logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 .partners-overlap-card {
   position: absolute;
   bottom: -22px;
@@ -717,6 +733,10 @@ textarea.deal-input {
   .partners-capabilities-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  .partners-software-visual {
+    min-height: 320px;
+    padding: 2.5rem 1.75rem;
   }
   .partners-overlap-card {
     width: 160px;

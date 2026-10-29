@@ -577,7 +577,7 @@ export default function AboutPage() {
             </div>
             {/* Architectural Visual Thumbnail (Strict Fixed Height) */}
             <div className="relative w-full rounded-xl overflow-hidden mb-6 border border-white/10 bg-black/40" style={{height: 160, marginBottom: '1.5rem'}}>
-              <img src="/images/work/matha-jewellers.png" alt="Matha Jewellers storefront display" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 42%'}} />
+              <img src="/images/work/mahila-jewellers.jpg" alt="Mahila Jewellers storefront display" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" style={{height: 160, width: '100%', objectFit: 'cover', objectPosition: 'center 42%'}} />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D1E2D] via-transparent to-transparent opacity-80 pointer-events-none" />
               <span className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold bg-[#071521]/90 text-white border border-white/15 uppercase tracking-wider">
                 Installed

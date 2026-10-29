@@ -8,7 +8,6 @@ export const clientLogos = [
   { name: 'Santa Monica Study Abroad', src: '/images/partners/santa-monica.png' },
   { name: 'Chase Group International', src: '/images/partners/chase-group.png' },
   { name: 'Bodhi Stays', src: '/images/partners/bodhi-stays.png' },
-  { name: 'Niche Global', src: '/images/partners/niche-global.png' },
   { name: 'Feather Advertising', src: '/images/partners/feather-advertising.png' },
   { name: 'Racket Lounge', src: '/images/partners/racket-lounge.png' },
   { name: 'Coffeetree Medias', src: '/images/partners/coffeetree.png' },

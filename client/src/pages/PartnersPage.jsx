@@ -229,10 +229,10 @@ export default function PartnersPage() {
           <div>
             <div className="partners-eyebrow">How a wall is built</div>
             <h2 className="partners-section-title">
-              Technology partners and suppliers.
+              Software Partners
             </h2>
             <p className="partners-section-intro">
-              We work with trusted technology partners and suppliers who help us deliver world-class LED wall solutions.
+              We work with trusted software partners who help us deliver world-class LED wall solutions.
             </p>
             <div className="partners-capabilities-grid">
               {CAPABILITIES.map((item) => (
@@ -252,24 +252,15 @@ export default function PartnersPage() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017a2 2 0 01-1.789-1.106l-3.5-7A2 2 0 017.746 10H10m4 0V4a2 2 0 00-2-2h-1a2 2 0 00-2 2v6m5 0H9" />
               </svg>
-              <span>Trusted technology. Lasting partnerships.</span>
+              <span>Trusted software. Lasting partnerships.</span>
             </div>
             <div className="partners-stacked-wrap">
               <div className="partners-stacked-backdrop" />
-              <div className="partners-main-card">
+              <div className="partners-main-card partners-software-visual">
                 <img
-                  src="/images/work/vara-alath-tower.png"
-                  alt="Nila Advertising outdoor LED screen"
-                  className="partners-main-img"
-                  style={{ objectPosition: 'center 22%' }}
-                />
-              </div>
-              <div className="partners-overlap-card">
-                <img
-                  src="/images/work/kanju-hut.png"
-                  alt="Kanji Hut illuminated storefront"
-                  className="partners-overlap-img"
-                  style={{ objectPosition: 'center 28%' }}
+                  src="/images/partners/niche-global-logo.png"
+                  alt="Niche Global"
+                  className="partners-software-visual-logo"
                 />
               </div>
             </div>
