@@ -287,10 +287,10 @@
     .hero-screen-card {
         top: auto !important;
         bottom: 4.75rem !important;
-        left: 1.25rem !important;
+        left: 50% !important;
         right: auto !important;
-        transform: none !important;
-        width: min(260px, calc(100% - 6.5rem)) !important;
+        transform: translateX(-50%) !important;
+        width: min(280px, calc(100% - 2.5rem)) !important;
     }
 
     .hero-slide-overlay {
