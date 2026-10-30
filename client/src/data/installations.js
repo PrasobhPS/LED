@@ -1,7 +1,7 @@
 export const installations = [
   {
     id: 'biggest-screen-kerala',
-    title: 'The biggest screen',
+    title: 'The biggest screen in Kerala',
     image: '/images/work/biggest-screen-kerala.jpg',
     location: 'Kerala',
     environment: 'Outdoor',

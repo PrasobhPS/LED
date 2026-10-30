@@ -40,7 +40,7 @@ export default function ProjectsPage() {
             src="/images/work/biggest-screen-kerala.jpg"
             className="w-full h-full object-cover"
             style={{ objectPosition: 'center' }}
-            alt="The biggest screen"
+            alt="The biggest screen in Kerala"
           />
           <div
             className="absolute inset-0 w-full h-full"

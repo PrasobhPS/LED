@@ -325,19 +325,17 @@ textarea.deal-input {
   display: block;
 }
 .partners-software-visual {
-  background-color: #071521;
-  border-color: rgba(22, 139, 235, 0.22);
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3.25rem 2.5rem;
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  min-height: 0;
+  display: block;
+  padding: 0;
 }
-.partners-software-visual-logo {
+.partners-software-visual-shot {
   width: 100%;
-  max-width: 360px;
-  height: auto;
-  object-fit: contain;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 .partners-overlap-card {
@@ -734,9 +732,8 @@ textarea.deal-input {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .partners-software-visual {
-    min-height: 320px;
-    padding: 2.5rem 1.75rem;
+  .partners-software-visual-shot {
+    height: 320px;
   }
   .partners-overlap-card {
     width: 160px;

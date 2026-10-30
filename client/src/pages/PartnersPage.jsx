@@ -229,10 +229,10 @@ export default function PartnersPage() {
           <div>
             <div className="partners-eyebrow">How a wall is built</div>
             <h2 className="partners-section-title">
-              Software Partners
+              Software Partner
             </h2>
             <p className="partners-section-intro">
-              We work with trusted software partners who help us deliver world-class LED wall solutions.
+              Niche Techies is our software partner, building the websites and digital products that sit alongside the screens we install.
             </p>
             <div className="partners-capabilities-grid">
               {CAPABILITIES.map((item) => (
@@ -252,15 +252,15 @@ export default function PartnersPage() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017a2 2 0 01-1.789-1.106l-3.5-7A2 2 0 017.746 10H10m4 0V4a2 2 0 00-2-2h-1a2 2 0 00-2 2v6m5 0H9" />
               </svg>
-              <span>Trusted software. Lasting partnerships.</span>
+              <span>Niche Techies</span>
             </div>
             <div className="partners-stacked-wrap">
               <div className="partners-stacked-backdrop" />
               <div className="partners-main-card partners-software-visual">
                 <img
-                  src="/images/partners/niche-global-logo.png"
-                  alt="Niche Global"
-                  className="partners-software-visual-logo"
+                  src="/images/partners/niche-techies.jpg"
+                  alt="Niche Techies"
+                  className="partners-software-visual-shot"
                 />
               </div>
             </div>

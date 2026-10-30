@@ -286,10 +286,9 @@ export default function HomePage() {
         </div>
         <div className="lg:col-span-8 w-full">
           <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-2xl">
-            <img src="/images/work/biggest-screen-kerala.jpg" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen, above a busy night street" />
+            <img src="/images/work/biggest-screen-kerala.jpg" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen in Kerala, above a busy night street" />
             <div className="absolute inset-x-0 bottom-0 p-5 md:p-7 bg-gradient-to-t from-[#071521]/95 via-[#071521]/55 to-transparent">
-              <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#35C1F4] mb-1">Kerala</p>
-              <p className="text-white text-lg md:text-2xl font-bold leading-snug">The biggest screen</p>
+              <p className="text-white text-lg md:text-2xl font-bold leading-snug">The biggest screen in Kerala</p>
             </div>
           </div>
         </div>

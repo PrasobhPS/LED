@@ -9,7 +9,7 @@ export default function AboutPage() {
   <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[500px] md:min-h-[580px] lg:min-h-[620px]">
     {/* Right Side Image Container (With Feathered Left Edge) */}
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
-      <img src="/images/work/biggest-screen-kerala.jpg" className="w-full h-full object-cover" alt="The biggest screen" />
+      <img src="/images/work/biggest-screen-kerala.jpg" className="w-full h-full object-cover" alt="The biggest screen in Kerala" />
       <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
     </div>
     <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-12 md:py-24 lg:py-28">
@@ -168,7 +168,7 @@ export default function AboutPage() {
         {/* Card 2 */}
         <div className="stack-item absolute inset-0 flex flex-col md:flex-row overflow-hidden shadow-2xl" style={{backgroundColor: '#071521', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '1.5rem', zIndex: 2, transform: 'translateY(150vh)'}}>
           <div style={{flex: 1, position: 'relative', minHeight: 200}}>
-            <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
+            <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen in Kerala" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center'}} />
             <div className="hidden md:block" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent, rgba(7, 21, 33, 1))'}}>
             </div>
             <div className="md:hidden" style={{position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(7, 21, 33, 1), transparent)'}}>
@@ -369,12 +369,12 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Image */}
         <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border border-gray-100 relative group gsap-fade-up">
-          <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center' }} />
+          <img src="/images/work/biggest-screen-kerala.jpg" alt="The biggest screen in Kerala" className="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700" style={{ objectPosition: 'center' }} />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071521] via-transparent to-transparent opacity-80 pointer-events-none" />
           <div className="absolute bottom-6 left-6 right-6">
             <div className="p-4 sm:p-5 rounded-xl border border-white/20 shadow-xl backdrop-blur-md" style={{backgroundColor: 'rgba(7, 21, 33, 0.85)', WebkitBackdropFilter: 'blur(12px)', backdropFilter: 'blur(12px)'}}>
               <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#35C1F4] mb-1">KERALA</p>
-              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">The biggest screen</p>
+              <p className="text-[14px] sm:text-[15px] font-semibold text-white leading-snug">The biggest screen in Kerala</p>
             </div>
           </div>
         </div>
@@ -394,9 +394,9 @@ export default function AboutPage() {
             {/* List Item 1 */}
             <div className="flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-[#168BEB] hover:bg-slate-50 transition-colors cursor-pointer group stagger-card">
               <div className="flex items-center gap-4">
-                <img src="/images/work/biggest-screen-kerala.jpg" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen" />
+                <img src="/images/work/biggest-screen-kerala.jpg" className="w-16 h-12 rounded-md object-cover" style={{ objectPosition: 'center' }} alt="The biggest screen in Kerala" />
                 <div>
-                  <h4 className="font-bold text-[#071521] text-[13px]">The biggest screen</h4>
+                  <h4 className="font-bold text-[#071521] text-[13px]">The biggest screen in Kerala</h4>
                   <p className="text-[11px] text-gray-500">Roadside LED wall</p>
                 </div>
               </div>
