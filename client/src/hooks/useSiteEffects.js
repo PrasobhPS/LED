@@ -236,25 +236,9 @@ function initHeroMotion(heroSection) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return () => {};
 
   const heroTL = gsap.timeline({ defaults: { ease: 'power3.out' }, delay: 0.28 });
-  const heroBgArt = [...heroSection.querySelectorAll('.hero-bg-art')];
   const servicesCards = [...heroSection.querySelectorAll('.hero-services-card')];
   const heroContent = heroSection.querySelector('#hero-card');
   const cleanups = [];
-
-  if (heroBgArt.length > 0) {
-    heroTL.fromTo(heroBgArt,
-      { scale: 1.08, opacity: 0, x: 25 },
-      { scale: 1, opacity: 1, x: 0, duration: 0.5, ease: 'power3.out' },
-      0);
-    gsap.to(heroBgArt, {
-      scale: 1.025,
-      duration: 7,
-      ease: 'sine.inOut',
-      repeat: -1,
-      yoyo: true,
-      delay: 1.4,
-    });
-  }
 
   const eyebrow = heroSection.querySelector('.hero-eyebrow-tech');
   if (eyebrow) {
@@ -311,10 +295,6 @@ function initHeroMotion(heroSection) {
   }
 
   if (window.matchMedia('(min-width: 1024px)').matches) {
-    const bgMovers = heroBgArt.map((image) => ({
-      x: gsap.quickTo(image, 'x', { duration: 0.35, ease: 'power2.out' }),
-      y: gsap.quickTo(image, 'y', { duration: 0.35, ease: 'power2.out' }),
-    }));
     const setContentX = heroContent ? gsap.quickTo(heroContent, 'x', { duration: 0.35, ease: 'power2.out' }) : null;
     const setContentY = heroContent ? gsap.quickTo(heroContent, 'y', { duration: 0.35, ease: 'power2.out' }) : null;
     const cardMovers = servicesCards.map((card) => ({
@@ -328,10 +308,6 @@ function initHeroMotion(heroSection) {
       const rect = heroSection.getBoundingClientRect();
       const normX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
       const normY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-      bgMovers.forEach((mover) => {
-        mover.x(-normX * 16);
-        mover.y(-normY * 12);
-      });
       if (setContentX) setContentX(normX * 8);
       if (setContentY) setContentY(normY * 6);
       cardMovers.forEach((mover) => {
@@ -342,10 +318,6 @@ function initHeroMotion(heroSection) {
       });
     };
     const onLeave = () => {
-      bgMovers.forEach((mover) => {
-        mover.x(0);
-        mover.y(0);
-      });
       if (setContentX) setContentX(0);
       if (setContentY) setContentY(0);
       cardMovers.forEach((mover) => {
@@ -385,19 +357,6 @@ function initHeroMotion(heroSection) {
     });
   });
 
-  const parallaxBg = heroSection.querySelector('.hero-bg-parallax');
-  if (parallaxBg) {
-    gsap.to(parallaxBg, {
-      yPercent: 12,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: heroSection,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 0.6,
-      },
-    });
-  }
   if (heroContent) {
     gsap.to(heroContent, {
       y: -25,
@@ -414,7 +373,7 @@ function initHeroMotion(heroSection) {
   return () => {
     heroTL.kill();
     cleanups.forEach((fn) => fn());
-    gsap.killTweensOf([heroBgArt, heroContent, parallaxBg, ...servicesCards, ...ctaButtons].filter(Boolean));
+    gsap.killTweensOf([heroContent, ...servicesCards, ...ctaButtons].filter(Boolean));
   };
 }
 

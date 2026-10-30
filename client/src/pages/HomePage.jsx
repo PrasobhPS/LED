@@ -4,7 +4,7 @@ import ProjectClose from '../components/ProjectClose';
 import { installations } from '../data/installations';
 
 const heroSlideIds = [
-  'nss-college-pandalam',
+  'mahila-jewellers',
   'vara-alath-tower',
   'bosque-furniture-bangalore',
   'aakash-edappally',
@@ -44,8 +44,13 @@ export default function HomePage() {
       {/* Slider Track Container */}
       <div id="hero-slider" className="absolute inset-0 w-full h-full z-0 flex transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)]">
         {heroSlides.map((slide) => (
-          <div key={slide.id} className="relative w-full h-full flex-shrink-0">
-            <img src={slide.image} className="hero-bg-art w-full h-full object-cover" style={{ objectPosition: slide.focus }} alt={slide.title} />
+          <div key={slide.id} className="relative w-full h-full flex-shrink-0 bg-[#071521]">
+            <img
+              src={slide.image}
+              className={`hero-bg-art w-full h-full ${slide.id === 'mahila-jewellers' ? 'object-contain' : 'object-cover'}`}
+              style={{ objectPosition: slide.id === 'mahila-jewellers' ? 'center' : slide.focus }}
+              alt={slide.title}
+            />
             <div className="hero-slide-overlay" style={heroSlideOverlay} />
             <aside className="hero-screen-card" aria-label={`${slide.title} screen details`}>
               <div className="hero-services-card">
@@ -155,7 +160,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="overflow-hidden rounded-md shadow-sm border border-gray-100" style={{ height: 320 }}>
-          <img src="/images/work/mar-evanios-convent-school.png" className="w-full h-full object-cover" style={{ objectPosition: 'center' }} alt="Mar Evanios Convent School, Pune" />
+          <img src="/images/work/kanju-hut.png" className="w-full h-full object-cover" style={{ objectPosition: 'center 28%' }} alt="Kanji Hut illuminated storefront" />
         </div>
       </div>
     </div>
