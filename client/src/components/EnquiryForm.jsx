@@ -1,13 +1,13 @@
 import { DISPLAY_TYPES } from '../data/enquiry';
 
-const fieldClass = 'w-full bg-white border border-gray-200 rounded-sm py-3.5 px-4 text-[13px] text-[#071521] focus:outline-none focus:border-[#168BEB] shadow-sm transition-colors';
+const fieldClass = 'w-full bg-white border border-gray-200 rounded-lg py-3.5 px-4 text-[13px] text-[#071521] focus:outline-none focus:border-[#168BEB] focus:ring-2 focus:ring-[#168BEB]/15 shadow-sm transition-all';
 
 export default function EnquiryForm() {
   return (
     <form className="space-y-8" id="leadForm" noValidate>
       <input type="hidden" name="intent" value="led_wall" />
       <div>
-        <h2 className="text-2xl font-bold text-[#071521] mb-2">LED Wall Enquiry</h2>
+        <h2 className="text-2xl font-bold text-[#071521] mb-2 tracking-tight">LED Wall Enquiry</h2>
         <p className="text-[13px] text-gray-500 leading-relaxed">
           Tell us what you need. This is the same form used everywhere on the site.
         </p>
@@ -61,13 +61,13 @@ export default function EnquiryForm() {
         </div>
         <div className="dynamic-group shared-photo md:col-span-2">
           <label className="block text-[11px] uppercase tracking-widest text-gray-500 mb-2 font-semibold">Location Photo</label>
-          <div className="w-full bg-white border-2 border-dashed border-gray-300 rounded-sm p-8 text-center hover:border-[#071521] hover:bg-gray-50 transition-colors cursor-pointer group shadow-sm">
-            <svg className="w-6 h-6 mx-auto mb-3 text-gray-400 group-hover:text-[#071521] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+          <div className="w-full bg-white border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-[#168BEB] hover:bg-sky-50/20 transition-all cursor-pointer group shadow-sm">
+            <svg className="w-6 h-6 mx-auto mb-3 text-gray-400 group-hover:text-[#168BEB] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
             <p className="text-[13px] text-gray-500">Drag &amp; drop files or <span className="text-[#071521] font-semibold">browse</span></p>
           </div>
         </div>
         <div className="md:col-span-2 pt-2">
-          <button type="submit" id="enquiry-submit" className="w-full py-4 bg-[#071521] rounded-lg text-[13px] font-bold uppercase tracking-widest text-white shadow-md hover:bg-[#0D2942] transition-colors flex items-center justify-center gap-2 group">
+          <button type="submit" id="enquiry-submit" className="w-full py-4 bg-[#071521] hover:bg-[#168BEB] rounded-xl text-[13px] font-bold uppercase tracking-widest text-white shadow-lg shadow-black/10 transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer">
             <span>Submit Enquiry</span>
             <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -611,7 +611,7 @@ export function useSiteEffects(title) {
         scrollTrigger: {
           trigger: pinnedSection,
           pin: true,
-          start: 'center center',
+          start: 'top 72px',
           end: '+=2500',
           scrub: 1,
         },
