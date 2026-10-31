@@ -42,24 +42,18 @@ export default function ProjectsPage() {
             style={{ objectPosition: 'center' }}
             alt="The biggest screen in Kerala"
           />
-          <div
-            className="absolute inset-0 w-full h-full"
-            style={{
-              background: 'linear-gradient(to top, #071521 0%, transparent 25%), linear-gradient(to right, #071521 0%, #071521 38%, rgba(7, 21, 33, 0.85) 60%, rgba(7, 21, 33, 0.35) 100%)',
-              pointerEvents: 'none',
-            }}
-          />
+          <div className="project-hero-overlay" />
         </div>
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 w-full py-16 md:py-24">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-5 md:mb-6">
               <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Projects</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] xl:text-[62px] font-bold text-white leading-[1.15] mb-6 tracking-tight">
+            <h1 className="hero-title text-[28px] sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight">
               LED installations.<br />Completed work.
             </h1>
-            <p className="text-gray-300 text-[15px] md:text-base leading-relaxed max-w-[520px]">
-              Outdoor walls, facades, billboards, indoor displays and retail installations from completed work.
+            <p className="text-gray-300 text-[15px] md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[480px]">
+              Outdoor walls, facades, billboards, indoor displays<br /> and retail installations from completed work.
             </p>
           </div>
         </div>
@@ -75,11 +69,10 @@ export default function ProjectsPage() {
                   setFilter(item);
                   e.currentTarget.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }}
-                className={`filter-btn ${
-                  item === filter
-                    ? 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase bg-[#071521] text-white rounded-full shadow-sm'
-                    : 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase text-gray-500 hover:text-[#071521] hover:bg-gray-100 transition-colors rounded-full'
-                }`}
+                className={`filter-btn ${item === filter
+                  ? 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase bg-[#071521] text-white rounded-full shadow-sm'
+                  : 'px-6 py-2.5 text-[12px] font-bold tracking-wider uppercase text-gray-500 hover:text-[#071521] hover:bg-gray-100 transition-colors rounded-full'
+                  }`}
               >
                 {item}
               </button>
@@ -111,7 +104,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-          {active && createPortal(
+      {active && createPortal(
         <div
           className="project-lightbox"
           role="dialog"

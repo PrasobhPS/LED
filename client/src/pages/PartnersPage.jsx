@@ -212,14 +212,18 @@ export default function PartnersPage() {
         </div>
         <div className="partners-hero-overlay" />
         <div className="partners-hero-container">
-          <div className="partners-eyebrow">Our Partners</div>
-          <h1 className="partners-hero-title">
-            Technology, supply<br />
-            and the people we <span className="accent-build">build for.</span>
-          </h1>
-          <p className="partners-hero-desc">
-            The display technology, the supply behind an installation, and the brands and clients on the walls we deliver.
-          </p>
+          <div className="max-w-2xl w-full">
+            <div className="flex items-center gap-3 mb-5 md:mb-6">
+              <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Our Partners</span>
+            </div>
+            <h1 className="hero-title text-[28px] sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight">
+              Technology, supply<br />
+              and the people we <span className="">build for.</span>
+            </h1>
+            <p className="text-gray-300 text-[15px] md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[540px]">
+              The display technology, the supply behind an installation,<br /> and the brands and clients on the walls we deliver.
+            </p>
+          </div>
         </div>
       </section>
 

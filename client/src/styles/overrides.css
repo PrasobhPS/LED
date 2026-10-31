@@ -69,8 +69,7 @@ nav button:active,
     letter-spacing: -0.015em !important;
   }
 
-  .hero-title,
-  .partners-hero-title {
+  .hero-title {
     font-size: 1.85rem !important; /* ~29.5px */
     line-height: 1.2 !important;
   }
@@ -238,18 +237,19 @@ nav button:active,
   box-shadow: 0 18px 40px -18px rgba(7, 21, 33, 0.22);
 }
 
+.project-spec-photo img,
 .project-spec-card img {
   display: block;
   width: 100%;
   height: 100%;
   min-height: 0;
-  object-fit: contain;
+  object-fit: cover;
   background: transparent;
-  transition: transform 0.45s ease;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-spec-card:hover img {
-  transform: scale(1.035);
+  transform: scale(1.05);
 }
 
 .project-spec-body {
@@ -338,16 +338,15 @@ nav button:active,
 }
 
 .project-spec-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   margin: 0;
-  padding: 0.85rem;
+  padding: 0;
   border: 0;
   border-bottom: 1px solid #e8edf2;
-  background: #f4f7fa;
+  background: #071521;
   cursor: zoom-in;
   overflow: hidden;
 }
@@ -405,4 +404,40 @@ nav button:active,
   color: #fff;
   font-size: 15px;
   font-weight: 600;
+}
+
+/* About Page Hero Section Responsive Height */
+.about-hero-section {
+  min-height: auto;
+}
+@media (min-width: 768px) {
+  .about-hero-section {
+    min-height: 500px;
+  }
+}
+
+
+/* ==========================================================================
+   Common Responsive Typography (Mobile Consistency)
+   ========================================================================== */
+@media (max-width: 767px) {
+  /* Common Hero Title (28px) across all pages */
+  .hero-title,
+  .partners-hero-title,
+  h1.hero-title {
+    font-size: 1.75rem !important; /* 28px */
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  /* Common Section Heading (24px) across all pages and sections */
+  section h2,
+  h2.text-3xl,
+  h2.text-4xl,
+  .partners-section-title,
+  .partners-cta-title {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.25 !important;
+    letter-spacing: -0.015em !important;
+  }
 }

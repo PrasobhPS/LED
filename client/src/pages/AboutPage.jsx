@@ -6,26 +6,26 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section: Index Mirror Layout */}
-      <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[540px] md:min-h-[620px] lg:min-h-[680px]">
+      <section className="about-hero-section relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521]">
         {/* Right Side Image Container (With Feathered Left Edge) */}
         <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)' }}>
-          <img src="/images/work/biggest-screen-kerala.jpg" className="w-full h-full object-cover" alt="The biggest screen in Kerala" />
+          <img src="/images/work/event-stage.png" className="w-full h-full object-cover" alt="Event stage LED display installation" />
           <div className="hero-slide-overlay" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)' }} />
         </div>
-        <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-20 md:py-28 lg:py-32">
-          <div className="max-w-2xl w-full py-4 md:py-8 gsap-fade-up">
+        <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full pt-12 pb-16 sm:py-16 md:py-24">
+          <div className="max-w-2xl w-full gsap-fade-up">
             <div className="flex items-center gap-3 mb-5 md:mb-6">
               <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">LED Screen
                 Solutions</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight">
+            <h1 className="hero-title text-[28px] sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight">
               Big Screens.<br />Bigger Impressions.
             </h1>
             <p className="text-gray-300 text-[15px] md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[500px]">
               We design, supply and install high-quality LED screens for events, retail, corporate and public
               spaces. Turn your ideas into stunning visual experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-1 sm:pt-0">
               <Link to="/contact" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#168BEB] text-white text-[13px] font-bold hover:bg-[#0D2942] transition-colors rounded-lg group">
                 Get an LED Wall
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,14 +37,14 @@ export default function AboutPage() {
         </div>
       </section>
       {/* About Us */}
-      <section id="about" className="py-24 md:py-32 bg-white border-t border-gray-100 stagger-section">
+      <section id="about" className="pt-8 pb-16 md:py-24 lg:py-32 bg-white border-t border-gray-100 stagger-section">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid lg:grid-cols-2 items-center gap-16">
           {/* Left Side: Content & Vertical Features */}
           <div className="gsap-fade-up lg:pr-8">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">About Us</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
               Visual Technology for a Brighter Tomorrow
             </h2>
             <p className="text-gray-500 text-[15px] leading-relaxed mb-10">
@@ -122,7 +122,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-3 mb-6">
               <span className="text-[12px] font-bold tracking-[0.2em] text-[#071521] uppercase">Our Solutions</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.22] tracking-tight text-[#071521] mb-8">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-[1.25] md:leading-[1.22] tracking-tight text-[#071521] mb-6 md:mb-8">
               Screens for<br />Every Space
             </h2>
             <p className="text-lg leading-relaxed text-gray-600 mb-8 max-w-md">
@@ -287,7 +287,7 @@ export default function AboutPage() {
                 <span className="text-[10px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Our
                   Advantage</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.22] mb-6 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-white leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
                 Why Partner<br />With Us?
               </h2>
               <p className="text-gray-400 text-[15px] leading-relaxed mb-8">
@@ -384,7 +384,7 @@ export default function AboutPage() {
                 <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">Featured
                   Projects</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
                 Real Screens. Real Impact.
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-10">
@@ -445,7 +445,7 @@ export default function AboutPage() {
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase text-center">Trusted
               By</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#071521] leading-[1.22] tracking-tight text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#071521] leading-[1.25] md:leading-[1.22] tracking-tight text-center">
             Leading Brands &amp; Businesses
           </h2>
         </div>
@@ -471,7 +471,7 @@ export default function AboutPage() {
               <span className="w-2 h-2 rounded-full bg-[#168BEB] animate-pulse" />
               <span className="text-[11px] font-bold tracking-[0.22em] text-[#35C1F4] uppercase">Turnkey Execution Framework</span>
             </div>
-            <h2 className="text-3xl md:text-5xl lg:text-[48px] font-bold text-white tracking-tight leading-[1.18] mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-white tracking-tight leading-[1.25] md:leading-[1.18] mb-4 md:mb-6">
               From Blueprint to <span className="text-[#168BEB]">Illuminated Screen.</span>
             </h2>
             <p className="text-gray-400 text-[15px] md:text-[17px] max-w-2xl mx-auto leading-relaxed font-normal">
@@ -662,7 +662,7 @@ export default function AboutPage() {
                 <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#071521]">Client
                   Testimonials</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
                 What Our Clients Say
               </h2>
               <p className="text-gray-500 text-[15px] leading-relaxed mb-8">

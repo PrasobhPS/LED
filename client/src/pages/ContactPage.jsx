@@ -4,8 +4,15 @@ import EnquiryForm from '../components/EnquiryForm';
 export default function ContactPage() {
   return (
     <section className="min-h-screen flex flex-col lg:flex-row mt-[72px]" id="enquiry">
-      {/* Left Sticky Sidebar */}
-      <div className="contact-sidebar-sticky w-full lg:w-[45%] bg-[#071521] text-white p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col relative justify-center">
+      {/* Form Container: First in DOM for mobile view, Order 2 on Desktop */}
+      <div className="contact-form-container w-full lg:w-[55%] bg-slate-50 p-6 sm:p-10 md:p-16 lg:p-20 xl:p-24 flex items-center lg:border-l border-gray-100 lg:order-2">
+        <div className="w-full max-w-2xl mx-auto">
+          <EnquiryForm />
+        </div>
+      </div>
+
+      {/* Sticky Sidebar: Second in DOM for mobile view, Order 1 on Desktop */}
+      <div className="contact-sidebar-sticky w-full lg:w-[45%] bg-[#071521] text-white p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col relative justify-center border-t border-white/[0.08] lg:border-t-0 lg:order-1">
         {/* Subtle ambient lighting glows */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-[#168BEB] rounded-full blur-[140px] opacity-15 pointer-events-none" />
         <div className="absolute bottom-10 left-0 w-64 h-64 bg-[#0ea5e9] rounded-full blur-[130px] opacity-10 pointer-events-none" />
@@ -105,13 +112,6 @@ export default function ContactPage() {
               </div>
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Right Form Container */}
-      <div className="w-full lg:w-[55%] bg-slate-50 p-6 sm:p-10 md:p-16 lg:p-20 xl:p-24 flex items-center border-l border-gray-100">
-        <div className="w-full max-w-2xl mx-auto">
-          <EnquiryForm />
         </div>
       </div>
     </section>

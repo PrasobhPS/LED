@@ -81,6 +81,7 @@ select.is-invalid {
 
 @media (min-width: 1024px) {
   .contact-sidebar-sticky {
+    order: 1 !important;
     position: sticky;
     top: 72px;
     height: calc(100vh - 72px);
@@ -108,5 +109,12 @@ select.is-invalid {
 @media (min-width: 1280px) {
   .contact-sidebar-sticky {
     padding: 2.5rem 4rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .contact-form-container {
+    order: 2 !important;
   }
 }
