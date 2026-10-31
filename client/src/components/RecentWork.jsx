@@ -10,7 +10,7 @@ export default function RecentWork() {
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">Projects</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-4 tracking-tight">Recent Work.</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 tracking-tight">Recent Work.</h2>
           <p className="text-gray-500 text-[15px] leading-relaxed max-w-xl mb-10">
             A short look at LED walls we have supplied and installed.
           </p>

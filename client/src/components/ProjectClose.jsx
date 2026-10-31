@@ -11,7 +11,7 @@ export default function ProjectClose() {
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">Next step</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold mb-6 leading-[1.22] tracking-tight">Have a project in mind?</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold mb-4 md:mb-6 leading-[1.25] md:leading-[1.22] tracking-tight">Have a project in mind?</h2>
           <p className="text-gray-300 max-w-md mb-8 text-[13px] leading-relaxed">
             Share the location, size and how you want the display to be used. Every enquiry uses the same LED wall form.
           </p>

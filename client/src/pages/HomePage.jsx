@@ -53,38 +53,45 @@ export default function HomePage() {
             />
             <div className="hero-slide-overlay" style={heroSlideOverlay} />
             <aside className="hero-screen-card" aria-label={`${slide.title} screen details`}>
-              <div className="hero-services-card">
-              <p className="hero-screen-kicker">This screen</p>
-              <p className="hero-screen-title">{slide.title}</p>
-              <ul className="hero-screen-list">
-                <li className="hero-service-row">
-                  <span className="hero-screen-icon hero-screen-icon-blue" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
-                      <circle cx="12" cy="10" r="2.2" />
-                    </svg>
+              <div className="hero-screen-badge">
+                <div className="hero-badge-header">
+                  <span className="hero-badge-kicker flex items-center gap-1.5 text-[#38bdf8]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse" aria-hidden="true" />
+                    FEATURED PROJECT
                   </span>
-                  <span>{slide.location}</span>
-                </li>
-                <li className="hero-service-row">
-                  <span className="hero-screen-icon hero-screen-icon-green" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" />
-                    </svg>
-                  </span>
-                  <span>{slide.environment}</span>
-                </li>
-                <li className="hero-service-row">
-                  <span className="hero-screen-icon hero-screen-icon-amber" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="5" width="18" height="12" rx="2" />
-                      <path d="M8 21h8M12 17v4" />
-                    </svg>
-                  </span>
-                  <span>{slide.type}</span>
-                </li>
-              </ul>
+                </div>
+                <span className="hero-badge-divider hero-badge-main-divider" aria-hidden="true" />
+                <div className="hero-badge-details">
+                  <div className="hero-badge-item">
+                    <span className="hero-badge-icon hero-badge-icon-blue" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+                        <circle cx="12" cy="10" r="2.5" />
+                      </svg>
+                    </span>
+                    <span className="hero-badge-text">{slide.location}</span>
+                  </div>
+                  <span className="hero-badge-divider" aria-hidden="true" />
+                  <div className="hero-badge-item">
+                    <span className="hero-badge-icon hero-badge-icon-green" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6" />
+                      </svg>
+                    </span>
+                    <span className="hero-badge-text">{slide.environment}</span>
+                  </div>
+                  <span className="hero-badge-divider" aria-hidden="true" />
+                  <div className="hero-badge-item">
+                    <span className="hero-badge-icon hero-badge-icon-blue" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="4" width="18" height="12" rx="2" />
+                        <path d="M8 20h8M12 16v4" />
+                      </svg>
+                    </span>
+                    <span className="hero-badge-text">{slide.type}</span>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
@@ -107,7 +114,7 @@ export default function HomePage() {
           <span className="hero-eyebrow-tech text-[11px] font-bold tracking-[0.2em] text-gray-400 uppercase">Custom LED Walls</span>
         </div>
         {/* Headline (slightly reduced max-width to respect the slant) */}
-        <h1 className="hero-title font-bold text-white leading-[1.2] mb-6 tracking-tight text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] max-w-[500px]">
+        <h1 className="hero-title font-bold text-white leading-[1.2] mb-5 md:mb-6 tracking-tight text-[28px] sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] max-w-[500px]">
           <span className="hero-title-line block">Make Your Location</span>
           <span className="hero-title-line block">Impossible to Miss.</span>
         </h1>
@@ -147,7 +154,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3 mb-4">
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">Custom LED Walls</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
             A display built around your space.</h2>
           <p className="text-gray-500 max-w-lg leading-relaxed text-[15px] mb-8">
             From storefronts and building facades to indoor venues, we supply LED walls sized for the location, the viewing distance and the job the screen has to do.
@@ -175,7 +182,7 @@ export default function HomePage() {
             <span className="text-[11px] font-bold tracking-[0.2em] text-[#071521] uppercase">LED
               Solutions</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
             LED Solutions for Real-World Spaces
           </h2>
           <p className="text-gray-500 text-[15px] md:text-base leading-relaxed mb-8">
@@ -270,7 +277,7 @@ export default function HomePage() {
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">Billboard
               Conversion</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
             Turn Existing Signage Into a Digital
             Opportunity.</h2>
           <p className="text-gray-500 mb-8 leading-relaxed text-[15px]">
@@ -305,7 +312,7 @@ export default function HomePage() {
             <span className="text-[10px] font-bold tracking-[0.2em] text-[#071521] uppercase">Flagship
               Portfolio</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-[#071521] leading-[1.22] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] tracking-tight">
             Recent Installations.
           </h2>
           <p className="text-gray-500 text-[14px] leading-relaxed mt-1.5 max-w-xl">
@@ -371,7 +378,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3 mb-6">
             <span className="text-[11px] font-bold tracking-[0.2em] text-[#071521] uppercase">Our Process</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.22] mb-6 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.22] mb-4 md:mb-6 tracking-tight">
             From First Conversation to Installation.
           </h2>
           <p className="text-gray-500 text-[15px] md:text-base leading-relaxed mb-8">
@@ -499,7 +506,7 @@ export default function HomePage() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#168BEB]" />
               <span className="text-[11px] font-bold tracking-[0.2em] text-[#071521] uppercase">Why Choose SANS GLOWMETRIC</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.2] tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] font-bold text-[#071521] leading-[1.25] md:leading-[1.2] tracking-tight">
               Built Around Your Goals.
             </h2>
           </div>

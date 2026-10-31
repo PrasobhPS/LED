@@ -60,6 +60,20 @@ nav button:active,
 }
 
 @media (max-width: 767px) {
+  /* Common responsive heading font sizes across all sections */
+  section h2,
+  h2.text-3xl,
+  .partners-section-title {
+    font-size: 1.5rem !important; /* 24px */
+    line-height: 1.25 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .hero-title,
+  .partners-hero-title {
+    font-size: 1.85rem !important; /* ~29.5px */
+    line-height: 1.2 !important;
+  }
   #gsap-pinned-stack #stack-container {
     height: auto !important;
     display: flex;
