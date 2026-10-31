@@ -563,27 +563,45 @@ export function useSiteEffects(title) {
     }
 
     document.querySelectorAll('.gsap-fade-up').forEach((element) => {
-      gsap.fromTo(element, { y: 50, opacity: 0 }, {
-        scrollTrigger: { trigger: element, start: 'top 85%' },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        ease: 'power3.out',
-      });
+      const rect = element.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.95) {
+        gsap.to(element, { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' });
+      } else {
+        gsap.fromTo(element, { y: 35, opacity: 0 }, {
+          scrollTrigger: { trigger: element, start: 'top 95%', once: true },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power2.out',
+        });
+      }
     });
 
     document.querySelectorAll('.stagger-section').forEach((section) => {
       const cards = section.querySelectorAll('.stagger-card');
       if (cards.length === 0) return;
-      gsap.fromTo(cards, { y: 50, opacity: 0 }, {
-        scrollTrigger: { trigger: section, start: 'top 80%' },
-        y: 0,
-        opacity: 1,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power3.out',
-      });
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.95) {
+        gsap.to(cards, { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out' });
+      } else {
+        gsap.fromTo(cards, { y: 35, opacity: 0 }, {
+          scrollTrigger: { trigger: section, start: 'top 92%', once: true },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.12,
+          ease: 'power2.out',
+        });
+      }
     });
+
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+    const refreshTimer = window.setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 250);
+    track(() => window.clearTimeout(refreshTimer));
 
     const pinnedSection = document.getElementById('gsap-pinned-stack');
     const stackItems = gsap.utils.toArray('.stack-item');

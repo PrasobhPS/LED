@@ -6,14 +6,14 @@ export default function AboutPage() {
   return (
 <>
   {/* Hero Section: Index Mirror Layout */}
-  <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[500px] md:min-h-[580px] lg:min-h-[620px]">
+  <section className="relative w-full overflow-hidden flex items-center mt-[72px] bg-[#071521] min-h-[440px] md:min-h-[500px] lg:min-h-[540px]">
     {/* Right Side Image Container (With Feathered Left Edge) */}
     <div className="hero-slider-wrap absolute top-0 right-0 w-full md:w-[45%] lg:w-[60vw] h-full overflow-hidden z-10" style={{WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%)'}}>
       <img src="/images/work/biggest-screen-kerala.jpg" className="w-full h-full object-cover" alt="The biggest screen in Kerala" />
       <div className="hero-slide-overlay" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', background: 'linear-gradient(rgba(7, 21, 33, 0.22), rgba(7, 21, 33, 0.22)), linear-gradient(to right, rgba(7, 21, 33, 0.5) 0%, rgba(7, 21, 33, 0.22) 35%, rgba(7, 21, 33, 0.05) 70%, transparent 100%), linear-gradient(to top, rgba(7, 21, 33, 0.95) 0%, rgba(7, 21, 33, 0.45) 20%, transparent 55%), linear-gradient(to bottom, rgba(7, 21, 33, 0.45) 0%, transparent 20%)'}} />
     </div>
-    <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-12 md:py-24 lg:py-28">
-      <div className="max-w-2xl w-full py-2 md:py-6 gsap-fade-up">
+    <div className="relative z-20 max-w-[1400px] mx-auto px-6 md:px-12 flex items-center h-full w-full py-10 md:py-16 lg:py-20">
+      <div className="max-w-2xl w-full py-2 md:py-4">
         <div className="flex items-center gap-3 mb-5 md:mb-6">
           <span className="text-[11px] font-bold tracking-[0.2em] text-[#168BEB] uppercase">LED Screen
             Solutions</span>
@@ -37,7 +37,7 @@ export default function AboutPage() {
     </div>
   </section>
   {/* About Us */}
-  <section id="about" className="py-24 bg-white border-t border-gray-100 stagger-section">
+  <section id="about" className="py-12 md:py-16 lg:py-20 bg-white border-t border-gray-100 stagger-section">
     <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid lg:grid-cols-2 items-center gap-16">
       {/* Left Side: Content & Vertical Features */}
       <div className="gsap-fade-up lg:pr-8">
@@ -55,7 +55,7 @@ export default function AboutPage() {
         {/* Premium Vertical Feature List */}
         <div className="mb-10 border-t border-gray-100 pt-8">
           {/* Feature 1 */}
-          <div className="flex items-start stagger-card" style={{gap: '1.5rem', marginBottom: '2.5rem'}}>
+          <div className="flex items-start stagger-card" style={{gap: '1.5rem', marginBottom: '1.75rem'}}>
             <div className="w-12 h-12 rounded-full bg-slate-50 border border-gray-200 flex items-center justify-center text-[#168BEB] shrink-0 shadow-sm">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -89,7 +89,7 @@ export default function AboutPage() {
         </Link>
       </div>
       {/* Right Side: Image Collage */}
-      <div className="relative gsap-fade-up mt-12 lg:mt-0" style={{paddingBottom: '10%', paddingRight: '8%'}}>
+      <div className="relative gsap-fade-up mt-12 lg:mt-0" style={{paddingBottom: '4%', paddingRight: '4%'}}>
         {/* Main Background Image */}
         <div className="rounded-sm overflow-hidden relative z-10 shadow-lg border border-gray-100 bg-gray-100" style={{aspectRatio: '4/3'}}>
           <img src="/images/work/susi-fragrances.png" alt="SUSI Fragrances storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" style={{ objectPosition: 'center 28%' }} />
@@ -115,7 +115,7 @@ export default function AboutPage() {
     </div>
   </section>
   {/* Our Solutions (Split GSAP Pinned Stack) */}
-  <section id="gsap-pinned-stack" className="bg-gray-50 py-24 border-t border-gray-100 overflow-hidden">
+  <section id="gsap-pinned-stack" className="bg-gray-50 py-14 md:py-18 border-t border-gray-100 overflow-hidden">
     <div className="mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center gap-12" style={{maxWidth: 1400}}>
       {/* Left Side: Heading */}
       <div className="lg:w-[40%] flex flex-col justify-center">
@@ -273,7 +273,7 @@ export default function AboutPage() {
     </div>
   </section>
   {/* Why Choose Us */}
-  <section className="py-24 bg-[#071521] relative overflow-hidden">
+  <section className="py-14 md:py-20 bg-[#071521] relative overflow-hidden">
     {/* Abstract geometric accent */}
     <div className="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-[#168BEB] rounded-full blur-[120px] opacity-10 pointer-events-none">
     </div>
