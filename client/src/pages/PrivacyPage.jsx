@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         <h2>How long we keep it</h2>
         <p>We keep enquiry records for as long as we need them to respond and to maintain a project history, then delete them when they are no longer needed.</p>
         <h2>Contact</h2>
-        <p>Questions about this policy can be sent to <a href="mailto:contact@sansglowmetric.com">contact@sansglowmetric.com</a> or by phone at <a href="tel:+919746021869">+91 97460 21869</a>.</p>
+        <p>Questions about this policy can be sent to <a href="mailto:contact@sansglowmetric.com">contact@sansglowmetric.com</a> or by phone at <a href="tel:+916238059449">+91 62380 59449</a>.</p>
         <p><Link to="/contact">Back to the enquiry form</Link></p>
       </article>
     </>

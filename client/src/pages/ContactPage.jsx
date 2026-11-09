@@ -78,7 +78,7 @@ export default function ContactPage() {
 
             {/* Call Direct Full-Width Card */}
             <a
-              href="tel:+919746021869"
+              href="tel:+916238059449"
               className="rounded-2xl border border-white/[0.08] bg-[#0b1b2b]/60 backdrop-blur-md p-4 sm:p-5 hover:border-[#168BEB]/40 transition-all duration-300 shadow-sm flex items-center gap-4 group"
             >
               <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/90 shrink-0 group-hover:border-[#168BEB]/40 transition-colors">
@@ -89,7 +89,7 @@ export default function ContactPage() {
               <div className="min-w-0">
                 <p className="text-[10px] font-bold tracking-[0.16em] text-slate-400 uppercase mb-0.5">Call Direct</p>
                 <p className="text-[14px] font-bold text-white group-hover:text-[#168BEB] transition-colors">
-                  +91 97460 21869
+                  +91 62380 59449
                 </p>
               </div>
             </a>
